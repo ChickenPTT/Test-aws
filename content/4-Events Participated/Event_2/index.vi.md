@@ -6,117 +6,117 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# B�i thu ho?ch "AWS AI & Cloud Operations Workshop"
+# Bài thu hoạch "AWS AI & Cloud Operations Workshop"
 
-### M?c ��ch C?a S? Ki?n
+### Mục Đích Của Sự Kiện
 
-- C?p nh?t xu hu?ng ?ng d?ng AI Agent trong v?n h�nh h? t?ng cloud, DevOps v� x? l� s? c? h? th?ng.
-- T�m hi?u c�c b�i to�n th?c t? v? AI Voice, x? l� ti?ng Vi?t, d? tr? ph?n h?i v� tr?i nghi?m h?i tho?i t? nhi�n.
-- Kh�m ph� c�ch AI h? tr? doanh nghi?p trong tuy?n d?ng, onboarding, d�nh gi� ?ng vi�n v� t?i uu quy tr�nh nh�n s?.
-- Li�n h? ki?n th?c s? ki?n v?i proposal u?c t�nh chi ph� AWS cho h? th?ng serverless x? l� h�ng h�a hu h?ng.
+- Cập nhật xu hướng ứng dụng AI Agent trong vận hành hạ tầng cloud, DevOps và xử lý sự cố hệ thống.
+- Tìm hiểu các bài toán thực tế về AI Voice, xử lý tiếng Việt, độ trễ phản hồi và trải nghiệm hội thoại tự nhiên.
+- Khám phá cách AI hỗ trợ doanh nghiệp trong tuyển dụng, onboarding, đánh giá ứng viên và tối ưu quy trình nhân sự.
+- Liên hệ kiến thức sự kiện với proposal ước tính chi phí AWS cho hệ thống serverless xử lý hàng hóa hư hỏng.
 
-### Danh S�ch Di?n Gi?
+### Danh Sách Diễn Giả
 
-- **Truong Tran** � AI Solution Sales, Noventiq
-- **Steve Tran** � CTO/Founder, CloudThinker
-- **Trung Vu** � CEO, Revve AI
-- **Anh Dang** � Solution Sales, Noventiq
-- **Nghi Danh** � AI Engineer, Renova Cloud
-- **Kiet Tran** � AI Engineer, AWS Student Builder Group
-- **Bao Phan** � Cloud Engineer, Cloud Kinetics
-- **Nguyen Nguyen** � Cloud Engineer, Cloud Kinetics
-- **Toan Nguyen** � AWS Security Builder
+- **Truong Tran** – AI Solution Sales, Noventiq
+- **Steve Tran** – CTO/Founder, CloudThinker
+- **Trung Vu** – CEO, Revve AI
+- **Anh Dang** – Solution Sales, Noventiq
+- **Nghi Danh** – AI Engineer, Renova Cloud
+- **Kiet Tran** – AI Engineer, AWS Student Builder Group
+- **Bao Phan** – Cloud Engineer, Cloud Kinetics
+- **Nguyen Nguyen** – Cloud Engineer, Cloud Kinetics
+- **Toan Nguyen** – AWS Security Builder
 
 ---
 
-### N?i Dung N?i B?t
+### Nội Dung Nổi Bật
 
 #### AgenticOps for Your Cloud
 
-Di?n gi? **Steve Tran** chia s? v? th?c tr?ng v?n h�nh cloud trong c�c h? th?ng microservices ph?c t?p. Khi log, tracing, metric v� alert b? ph�n t�n ? nhi?u noi, k? su v?n h�nh thu?ng m?t nhi?u th?i gian d? di?u tra nguy�n nh�n g?c r? c?a s? c?.
+Diễn giả **Steve Tran** chia sẻ về thực trạng vận hành cloud trong các hệ thống microservices phức tạp. Khi log, tracing, metric và alert bị phân tán ở nhiều nơi, kỹ sư vận hành thường mất nhiều thời gian để điều tra nguyên nhân gốc rễ của sự cố.
 
-- **Th?c tr?ng v?n h�nh cloud**: C�c h? th?ng hi?n d?i c� nhi?u th�nh ph?n d?c l?p, l�m cho qu� tr�nh gi�m s�t, truy v?t l?i v� ph?n h?i s? c? tr? n�n kh� khan hon.
-- **Gi?i ph�p AgenticOps**: AI Agent du?c d�ng d? t? d?ng h�a c�c bu?c di?u tra, t?ng h?p d? li?u v� d? xu?t hu?ng x? l�, gi�p gi?m th?i gian ph�n t�ch t? h�ng gi? xu?ng c�n v�i ph�t.
-- **Quy tr�nh ho?t d?ng**:
-  - **Classification**: Ph�n lo?i s? c? t? alert ho?c y�u c?u tr?c ti?p.
-  - **Investigation**: Ph�n t�ch log, metric, topology v� gi? thuy?t nguy�n nh�n.
-  - **Mitigation**: G?i � phuong �n kh?c ph?c an to�n d? k? su quy?t d?nh.
-  - **Optimization**: �? xu?t c?i ti?n d�i h?n nh?m h?n ch? l?i t�i di?n.
+- **Thực trạng vận hành cloud**: Các hệ thống hiện đại có nhiều thành phần độc lập, làm cho quá trình giám sát, truy vết lỗi và phản hồi sự cố trở nên khó khăn hơn.
+- **Giải pháp AgenticOps**: AI Agent được dùng để tự động hóa các bước điều tra, tổng hợp dữ liệu và đề xuất hướng xử lý, giúp giảm thời gian phân tích từ hàng giờ xuống còn vài phút.
+- **Quy trình hoạt động**:
+  - **Classification**: Phân loại sự cố từ alert hoặc yêu cầu trực tiếp.
+  - **Investigation**: Phân tích log, metric, topology và giả thuyết nguyên nhân.
+  - **Mitigation**: Gợi ý phương án khắc phục an toàn để kỹ sư quyết định.
+  - **Optimization**: Đề xuất cải tiến dài hạn nhằm hạn chế lỗi tái diễn.
 
-#### Gi?ng N�i C?a AI (AI Voice)
+#### Giọng Nói Của AI (AI Voice)
 
-Ph?n chia s? c?a **Trung Vu**, **Nghi Danh** v� **Kiet Tran** t?p trung v�o c�ch x�y d?ng tr?i nghi?m h?i tho?i b?ng gi?ng n�i c� d? tr? th?p v� ph� h?p v?i ngu?i d�ng Vi?t Nam.
+Phần chia sẻ của **Trung Vu**, **Nghi Danh** và **Kiet Tran** tập trung vào cách xây dựng trải nghiệm hội thoại bằng giọng nói có độ trễ thấp và phù hợp với người dùng Việt Nam.
 
-- **Y�u c?u v? d? tr?**: �? h?i tho?i t? nhi�n, h? th?ng c?n x? l� theo co ch? streaming t? Speech-to-Text, LLM d?n Text-to-Speech, thay v� d?i ngu?i d�ng n�i xong to�n b? c�u l?nh.
-- **Th�ch th?c c?a ti?ng Vi?t**: AI c?n hi?u c�ch xung h�, gi?i t�nh, ng? c?nh giao ti?p v� s?c th�i ng�n ng? d? tr�nh ph?n h?i thi?u t? nhi�n ho?c thi?u t�n tr?ng.
-- **X? l� gi?ng v�ng mi?n**: D? li?u hu?n luy?n c?n c� t? l? gi?ng v�ng mi?n ph� h?p d? c?i thi?n kh? nang nh?n di?n, nhung v?n c?n ki?m so�t d? AI kh�ng t? d?ng b?t chu?c gi?ng d?a phuong m?t c�ch thi?u chuy�n nghi?p.
+- **Yêu cầu về độ trễ**: Để hội thoại tự nhiên, hệ thống cần xử lý theo cơ chế streaming từ Speech-to-Text, LLM đến Text-to-Speech, thay vì đợi người dùng nói xong toàn bộ câu lệnh.
+- **Thách thức của tiếng Việt**: AI cần hiểu cách xưng hô, giới tính, ngữ cảnh giao tiếp và sắc thái ngôn ngữ để tránh phản hồi thiếu tự nhiên hoặc thiếu tôn trọng.
+- **Xử lý giọng vùng miền**: Dữ liệu huấn luyện cần có tỷ lệ giọng vùng miền phù hợp để cải thiện khả năng nhận diện, nhưng vẫn cần kiểm soát để AI không tự động bắt chước giọng địa phương một cách thiếu chuyên nghiệp.
 
-#### Kh�a C?nh K? Thu?t V� ?ng D?ng Th?c T? C?a DevOps Agent
+#### Khía Cạnh Kỹ Thuật Và Ứng Dụng Thực Tế Của DevOps Agent
 
-C�c di?n gi? minh h?a t�nh hu?ng website b? ch?m ho?c l?i do lu?ng request tang d?t bi?n. Trong h? th?ng truy?n th?ng, k? su ph?i t? truy c?p nhi?u dashboard kh�c nhau d? gom log, tracing v� metric. V?i AI Agent, qu� tr�nh n�y c� th? du?c t? d?ng h�a theo hu?ng c� ki?m so�t.
+Các diễn giả minh họa tình huống website bị chậm hoặc lỗi do luồng request tăng đột biến. Trong hệ thống truyền thống, kỹ sư phải tự truy cập nhiều dashboard khác nhau để gom log, tracing và metric. Với AI Agent, quá trình này có thể được tự động hóa theo hướng có kiểm soát.
 
-- **Incident Investigation**: AI Agent t?ng h?p d? li?u quan s�t du?c, t?o topology h? th?ng v� dua ra gi? thuy?t v? nguy�n nh�n g�y l?i.
-- **Kh? nang m? r?ng**: Agent c� th? t�ch h?p v?i MCP (Model Context Protocol), Slack, ServiceNow ho?c c�c c�ng c? v?n h�nh kh�c.
-- **Luu � b?o m?t**: Agent ch? n�n truy c?p d? li?u du?c c?p quy?n r� r�ng. N?u log chua du?c export ra CloudWatch ho?c h? th?ng quan s�t t?p trung, Agent kh�ng n�n t? � SSH v�o m�y ch? d? l?y d? li?u.
-- **Demo th?c t?**: T�nh hu?ng gi? l?p DDoS v?i 1.000 request/gi�y v�o ALB, AI Agent ph�t hi?n 10 ECS Tasks b? spam v� g?i � l?nh d?ng c�c task li�n quan.
+- **Incident Investigation**: AI Agent tổng hợp dữ liệu quan sát được, tạo topology hệ thống và đưa ra giả thuyết về nguyên nhân gây lỗi.
+- **Khả năng mở rộng**: Agent có thể tích hợp với MCP (Model Context Protocol), Slack, ServiceNow hoặc các công cụ vận hành khác.
+- **Lưu ý bảo mật**: Agent chỉ nên truy cập dữ liệu được cấp quyền rõ ràng. Nếu log chưa được export ra CloudWatch hoặc hệ thống quan sát tập trung, Agent không nên tự ý SSH vào máy chủ để lấy dữ liệu.
+- **Demo thực tế**: Tình huống giả lập DDoS với 1.000 request/giây vào ALB, AI Agent phát hiện 10 ECS Tasks bị spam và gợi ý lệnh dừng các task liên quan.
 
-#### Case Study Th?c T?
+#### Case Study Thực Tế
 
-- **M?t tru?ng d?i h?c tr?c tuy?n**: Gi?m MTTR t? 2 ti?ng xu?ng c�n 28 ph�t, tuong duong nhanh hon kho?ng 77%.
-- **N?n t?ng c�ng ngh? nh� h�ng Zenchef**: Ph�t hi?n l?i c?u h�nh trong kho?ng 20 ph�t.
+- **Một trường đại học trực tuyến**: Giảm MTTR từ 2 tiếng xuống còn 28 phút, tương đương nhanh hơn khoảng 77%.
+- **Nền tảng công nghệ nhà hàng Zenchef**: Phát hiện lỗi cấu hình trong khoảng 20 phút.
 
-#### AI V� Ngu?n Nh�n L?c Trong Doanh Nghi?p
+#### AI Và Nguồn Nhân Lực Trong Doanh Nghiệp
 
-Ph?n tr�nh b�y c?a **Truong Tran** v� **Anh Dang** d? c?p d?n c�ch AI h? tr? b? ph?n HR trong tuy?n d?ng v� v?n h�nh nh�n s?.
+Phần trình bày của **Truong Tran** và **Anh Dang** đề cập đến cách AI hỗ trợ bộ phận HR trong tuyển dụng và vận hành nhân sự.
 
-- **Gi? ch�n nh�n t�i**: Doanh nghi?p c?n gi?m r?i ro m?t nh�n s? sau qu� tr�nh d�o t?o v� onboarding.
-- **��nh gi� ?ng vi�n**: AI h? tr? d?i chi?u CV v?i m� t? c�ng vi?c, ki?m tra k? nang, kinh nghi?m v� m?c d? ph� h?p.
-- **T? d?ng h�a onboarding**: R�t ng?n th?i gian nh�n s? m?i h�a nh?p v?i quy tr�nh, t�i li?u v� h? th?ng n?i b?.
-- **No-code/Low-code v?i Amazon Q**: HR c� th? x�y d?ng ?ng d?ng qu?n l� tuy?n d?ng ho?c h? tr? ph�n t�ch h? so m� kh�ng c?n l?p tr�nh ph?c t?p.
-- **Live demo**: Amazon Q du?c d�ng d? t?o JD cho v? tr� Junior Cloud Engineer, so s�nh nang l?c ?ng vi�n theo k? nang k? thu?t, tu duy gi?i quy?t v?n d?, giao ti?p v� tham kh?o m?c luong ph� h?p.
-
----
-
-### Nh?ng G� H?c �u?c
-
-#### Tu Duy V?n H�nh Cloud V?i AI Agent
-
-- Hi?u r� AI Agent kh�ng thay th? ho�n to�n k? su v?n h�nh, m� d�ng vai tr� tr? l� ph�n t�ch d? li?u, gom ng? c?nh v� d? xu?t phuong �n x? l�.
-- Nh?n ra t?m quan tr?ng c?a observability trong cloud: log, metric, tracing v� alert ph?i du?c thi?t k? t?t th� Agent m?i c� d? li?u d�ng tin c?y d? ph�n t�ch.
-- N?m du?c quy tr�nh v?n h�nh s? c? theo c�c bu?c ph�n lo?i, di?u tra, gi?m thi?u t�c d?ng v� t?i uu d�i h?n.
-
-#### K? Thu?t X�y D?ng ?ng D?ng AI Voice
-
-- H?c du?c r?ng tr?i nghi?m AI Voice ph? thu?c r?t l?n v�o latency v� kh? nang streaming li�n t?c gi?a c�c th�nh ph?n.
-- Nh?n th?c r� hon v? nh?ng kh� khan ri�ng c?a ti?ng Vi?t nhu c�ch xung h�, gi?ng v�ng mi?n v� ng? c?nh giao ti?p.
-- Hi?u r?ng d? li?u hu?n luy?n c?n du?c l?a ch?n c?n th?n d? c�n b?ng gi?a d? ch�nh x�c, t�nh t? nhi�n v� s? chuy�n nghi?p.
-
-#### ?ng D?ng AI Trong Doanh Nghi?p
-
-- AI c� th? gi�p t? d?ng h�a c�c c�ng vi?c l?p l?i trong tuy?n d?ng, ph�n t�ch CV, l�n l?ch ph?ng v?n v� h? tr? onboarding.
-- C�c c�ng c? nhu Amazon Q gi�p ngu?i d�ng nghi?p v? t?o ?ng d?ng n?i b? nhanh hon, d?c bi?t trong c�c quy tr�nh c� nhi?u d? li?u v� ti�u ch� d�nh gi�.
-- Khi �p d?ng AI v�o doanh nghi?p, c?n ch� � d?n quy?n truy c?p d? li?u, t�nh minh b?ch v� kh? nang ki?m so�t quy?t d?nh cu?i c�ng b?i con ngu?i.
+- **Giữ chân nhân tài**: Doanh nghiệp cần giảm rủi ro mất nhân sự sau quá trình đào tạo và onboarding.
+- **Đánh giá ứng viên**: AI hỗ trợ đối chiếu CV với mô tả công việc, kiểm tra kỹ năng, kinh nghiệm và mức độ phù hợp.
+- **Tự động hóa onboarding**: Rút ngắn thời gian nhân sự mới hòa nhập với quy trình, tài liệu và hệ thống nội bộ.
+- **No-code/Low-code với Amazon Q**: HR có thể xây dựng ứng dụng quản lý tuyển dụng hoặc hỗ trợ phân tích hồ sơ mà không cần lập trình phức tạp.
+- **Live demo**: Amazon Q được dùng để tạo JD cho vị trí Junior Cloud Engineer, so sánh năng lực ứng viên theo kỹ năng kỹ thuật, tư duy giải quyết vấn đề, giao tiếp và tham khảo mức lương phù hợp.
 
 ---
 
-### ?ng D?ng V�o Proposal V� D? �n AWS
+### Những Gì Học Được
 
-- **Thi?t k? v?n h�nh cho h? th?ng serverless**: Ki?n th?c v? AgenticOps c� th? �p d?ng v�o h? th?ng ph�t hi?n v� x? l� h�ng h�a hu h?ng tr�n AWS b?ng c�ch chu?n h�a log t? Lambda, API Gateway, SQS, S3, Rekognition, Textract v� DynamoDB v? CloudWatch.
-- **T?i uu chi ph� theo hu?ng quan s�t du?c**: Proposal chi ph� AWS cho th?y h? th?ng th? nghi?m v?n n?m trong Free Tier. Tuy nhi�n khi m? r?ng, c?n theo d�i metric s? d?ng theo t?ng d?ch v? d? ki?m so�t chi ph� v� ph�t hi?n b?t thu?ng s?m.
-- **Tang d? tin c?y c?a quy tr�nh x? l� ?nh**: AI Agent c� th? h? tr? ki?m tra l?i trong pipeline S3 ? SQS ? Lambda ? Rekognition/Textract ? DynamoDB, d?c bi?t khi ?nh x? l� th?t b?i ho?c d? tin c?y AI th?p.
-- **C?i thi?n tr?i nghi?m ngu?i d�ng**: Ki?n th?c AI Voice c� th? m? r?ng cho ch?c nang nh?p th�ng tin b?ng gi?ng n�i trong tuong lai, gi�p nh�n vi�n kho b�o c�o t�nh tr?ng h�ng h�a nhanh hon.
+#### Tư Duy Vận Hành Cloud Với AI Agent
+
+- Hiểu rõ AI Agent không thay thế hoàn toàn kỹ sư vận hành, mà đóng vai trò trợ lý phân tích dữ liệu, gom ngữ cảnh và đề xuất phương án xử lý.
+- Nhận ra tầm quan trọng của observability trong cloud: log, metric, tracing và alert phải được thiết kế tốt thì Agent mới có dữ liệu đáng tin cậy để phân tích.
+- Nắm được quy trình vận hành sự cố theo các bước phân loại, điều tra, giảm thiểu tác động và tối ưu dài hạn.
+
+#### Kỹ Thuật Xây Dựng Ứng Dụng AI Voice
+
+- Học được rằng trải nghiệm AI Voice phụ thuộc rất lớn vào latency và khả năng streaming liên tục giữa các thành phần.
+- Nhận thức rõ hơn về những khó khăn riêng của tiếng Việt như cách xưng hô, giọng vùng miền và ngữ cảnh giao tiếp.
+- Hiểu rằng dữ liệu huấn luyện cần được lựa chọn cẩn thận để cân bằng giữa độ chính xác, tính tự nhiên và sự chuyên nghiệp.
+
+#### Ứng Dụng AI Trong Doanh Nghiệp
+
+- AI có thể giúp tự động hóa các công việc lặp lại trong tuyển dụng, phân tích CV, lên lịch phỏng vấn và hỗ trợ onboarding.
+- Các công cụ như Amazon Q giúp người dùng nghiệp vụ tạo ứng dụng nội bộ nhanh hơn, đặc biệt trong các quy trình có nhiều dữ liệu và tiêu chí đánh giá.
+- Khi áp dụng AI vào doanh nghiệp, cần chú ý đến quyền truy cập dữ liệu, tính minh bạch và khả năng kiểm soát quyết định cuối cùng bởi con người.
 
 ---
 
-### Tr?i Nghi?m Trong S? Ki?n
+### Ứng Dụng Vào Proposal Và Dự Án AWS
 
-S? ki?n mang l?i g�c nh�n th?c t? v? c�ch AI dang du?c dua v�o v?n h�nh cloud, DevOps v� quy tr�nh doanh nghi?p. �i?m d�ng ch� � l� c�c ph?n tr�nh b�y kh�ng ch? n�i v? � tu?ng AI t?ng qu�t, m� di s�u v�o c�c t�nh hu?ng c� th? �p d?ng ngay nhu di?u tra s? c?, ph�n t�ch log, gi?m MTTR, x? l� gi?ng n�i ti?ng Vi?t v� t? d?ng h�a tuy?n d?ng.
+- **Thiết kế vận hành cho hệ thống serverless**: Kiến thức về AgenticOps có thể áp dụng vào hệ thống phát hiện và xử lý hàng hóa hư hỏng trên AWS bằng cách chuẩn hóa log từ Lambda, API Gateway, SQS, S3, Rekognition, Textract và DynamoDB về CloudWatch.
+- **Tối ưu chi phí theo hướng quan sát được**: Proposal chi phí AWS cho thấy hệ thống thử nghiệm vẫn nằm trong Free Tier. Tuy nhiên khi mở rộng, cần theo dõi metric sử dụng theo từng dịch vụ để kiểm soát chi phí và phát hiện bất thường sớm.
+- **Tăng độ tin cậy của quy trình xử lý ảnh**: AI Agent có thể hỗ trợ kiểm tra lỗi trong pipeline S3 → SQS → Lambda → Rekognition/Textract → DynamoDB, đặc biệt khi ảnh xử lý thất bại hoặc độ tin cậy AI thấp.
+- **Cải thiện trải nghiệm người dùng**: Kiến thức AI Voice có thể mở rộng cho chức năng nhập thông tin bằng giọng nói trong tương lai, giúp nhân viên kho báo cáo tình trạng hàng hóa nhanh hơn.
 
-- **Kh�ng gian h?c h?i th?c t?**: Ngu?i tham gia du?c nghe c�c case study c? th? t? cloud operations, AI Voice v� HR automation.
-- **G�c nh�n k? thu?t r� r�ng**: C�c di?n gi? gi?i th�ch c�ch AI Agent ph?i h?p v?i telemetry, MCP, CloudWatch v� c�c c�ng c? v?n h�nh d? h? tr? k? su.
-- **Li�n h? t?t v?i d? �n c� nh�n**: N?i dung s? ki?n gi�p c?ng c? c�ch thi?t k? h? th?ng AWS kh�ng ch? ch?y du?c, m� c�n c?n d? quan s�t, d? ki?m so�t chi ph� v� d? x? l� s? c?.
+---
 
-#### M?t s? h�nh ?nh khi tham gia s? ki?n
+### Trải Nghiệm Trong Sự Kiện
+
+Sự kiện mang lại góc nhìn thực tế về cách AI đang được đưa vào vận hành cloud, DevOps và quy trình doanh nghiệp. Điểm đáng chú ý là các phần trình bày không chỉ nói về ý tưởng AI tổng quát, mà đi sâu vào các tình huống có thể áp dụng ngay như điều tra sự cố, phân tích log, giảm MTTR, xử lý giọng nói tiếng Việt và tự động hóa tuyển dụng.
+
+- **Không gian học hỏi thực tế**: Người tham gia được nghe các case study cụ thể từ cloud operations, AI Voice và HR automation.
+- **Góc nhìn kỹ thuật rõ ràng**: Các diễn giả giải thích cách AI Agent phối hợp với telemetry, MCP, CloudWatch và các công cụ vận hành để hỗ trợ kỹ sư.
+- **Liên hệ tốt với dự án cá nhân**: Nội dung sự kiện giúp củng cố cách thiết kế hệ thống AWS không chỉ chạy được, mà còn cần dễ quan sát, dễ kiểm soát chi phí và dễ xử lý sự cố.
+
+#### Một số hình ảnh khi tham gia sự kiện
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
   <img src="/images/4-Events-Participated/Image_event/event2-1.png" alt="AWS AI and Cloud Operations Workshop 1" width="45%" />
