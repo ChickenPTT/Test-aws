@@ -56,5 +56,5 @@ Thay vì mất hàng tuần để xây dựng các bộ lọc OCR không ổn đ
 - **Hiệu quả về chi phí:** Mô hình trả tiền theo mức sử dụng, không phát sinh chi phí bảo trì hạ tầng
 
 ### Tài Liệu Tham Khảo & Bài Đăng Gốc
-
+- **Bài đăng trên cộng đồng AWS Study Group FCJ:** [Xem bài viết trên Facebook]()
 - **Bài viết gốc trên AWS GameTech Blog:** [Ensuring fair play by detecting and preventing profile alterations with Amazon Textract](https://aws.amazon.com/blogs/gametech/ensuring-fair-play-by-detecting-and-preventing-profile-alterations-with-amazon-textract/)

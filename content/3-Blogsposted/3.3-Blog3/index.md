@@ -60,5 +60,5 @@ Instead of spending weeks building unstable OCR filters, combining Amazon Textra
 - **Cost-effective:** Pay-per-use model with no infrastructure maintenance overhead
 
 ### References & Published Posts
-
+- **Post on AWS Study Group FCJ Community:** [Bài viết trên Facebook ]()
 - **Original AWS GameTech Blog Post:** [Ensuring fair play by detecting and preventing profile alterations with Amazon Textract](https://aws.amazon.com/blogs/gametech/ensuring-fair-play-by-detecting-and-preventing-profile-alterations-with-amazon-textract/)
