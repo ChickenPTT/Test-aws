@@ -1,7 +1,7 @@
 baseURL = "https://chickenptt.github.io/Test-aws/"
 relativeURLs = false
-canonifyURLs = false
-defaultContentLanguage = "vi"
+canonifyURLs = true
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 # Change the default theme to be use when building the site with Hugo
