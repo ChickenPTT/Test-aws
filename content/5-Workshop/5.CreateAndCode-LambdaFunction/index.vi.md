@@ -1,88 +1,88 @@
 ---
-title: "T?o v� vi?t code cho AWS Lambda"
+title: "Tạo và viết code cho AWS Lambda"
 date: 2026-06-21
 weight: 5
 chapter: false
 pre: ""
 ---
 
-# Bu?c 4: T?o v� vi?t code cho AWS Lambda
+# Bước 4: Tạo và viết code cho AWS Lambda
 
-### M?c ti�u
+### Mục tiêu
 
-Trong bu?c n�y, b?n s? t?o Lambda Function d? nh?n message t? Amazon SQS, d?c th�ng tin ?nh du?c upload l�n Amazon S3 v� g?i c�c d?ch v? AI nhu Amazon Rekognition v� Amazon Textract d? ph�n t�ch ?nh.
+Trong bước này, bạn sẽ tạo Lambda Function để nhận message từ Amazon SQS, đọc thông tin ảnh được upload lên Amazon S3 và gọi các dịch vụ AI như Amazon Rekognition và Amazon Textract để phân tích ảnh.
 
 ---
 
-### 4.1 - T?o Lambda Function
+### 4.1 - Tạo Lambda Function
 
-1. Truy c?p **AWS Lambda**, ch?n **Create function**.
+1. Truy cập **AWS Lambda**, chọn **Create function**.
 
-![Truy c?p AWS Lambda](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image1.png)
+![Truy cập AWS Lambda](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image1.png)
 
-2. Ch?n **Author from scratch**.
+2. Chọn **Author from scratch**.
 
-![Ch?n Author from scratch](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image2.png)
+![Chọn Author from scratch](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image2.png)
 
-![T?o Lambda function](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image3.png)
+![Tạo Lambda function](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image3.png)
 
-3. C?u h�nh Lambda Function.
+3. Cấu hình Lambda Function.
 
-![C?u h�nh Lambda function](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image4.png)
+![Cấu hình Lambda function](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image4.png)
 
-![Ch?n runtime v� role](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image5.png)
+![Chọn runtime và role](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image5.png)
 
-G?i � c?u h�nh:
+Gợi ý cấu hình:
 
 - Function name: **image-quality-processor**
 - Runtime: **Python 3.x**
-- Execution role: ch?n IAM Role **Lambda-ImageProcessing-Role** d� t?o ? bu?c 1
+- Execution role: chọn IAM Role **Lambda-ImageProcessing-Role** đã tạo ở bước 1
 
-4. Ch?n **Create function**.
+4. Chọn **Create function**.
 
 ![Create function](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image6.png)
 
-5. V�o tab **Configuration**, ch?n **General configuration**, sau d� ch?n **Edit**.
+5. Vào tab **Configuration**, chọn **General configuration**, sau đó chọn **Edit**.
 
-![M? General configuration](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image7.png)
+![Mở General configuration](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image7.png)
 
-6. �?t **Timeout = 60 gi�y**, sau d� luu c?u h�nh.
+6. Đặt **Timeout = 60 giây**, sau đó lưu cấu hình.
 
-![�?t timeout cho Lambda](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image8.png)
+![Đặt timeout cho Lambda](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image8.png)
 
 ---
 
-### 4.2 - G?n SQS l�m Trigger
+### 4.2 - Gắn SQS làm Trigger
 
-1. ? trang Lambda Function, ch?n **Add trigger**.
+1. Ở trang Lambda Function, chọn **Add trigger**.
 
 ![Add trigger cho Lambda](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image9.png)
 
-2. Ch?n source l� **SQS**.
+2. Chọn source là **SQS**.
 
-![Ch?n SQS trigger](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image10.png)
+![Chọn SQS trigger](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image10.png)
 
-3. Ch?n queue **image-processing-queue**.
+3. Chọn queue **image-processing-queue**.
 
-4. C?u h�nh **Batch size = 1**.
+4. Cấu hình **Batch size = 1**.
 
-Batch size b?ng 1 gi�p Lambda x? l� t?ng message m?t, ph� h?p cho lab v� d? quan s�t log v� debug.
+Batch size bằng 1 giúp Lambda xử lý từng message một, phù hợp cho lab và dễ quan sát log và debug.
 
-5. Ch?n **Add**.
+5. Chọn **Add**.
 
-![C?u h�nh SQS trigger](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image11.png)
+![Cấu hình SQS trigger](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image11.png)
 
 ---
 
-### 4.3 - Vi?t code Python
+### 4.3 - Viết code Python
 
-1. V�o tab **Code**.
+1. Vào tab **Code**.
 
-2. X�a code m?u, d�n do?n code Python x? l� SQS message, sau d� ch?n **Deploy** d? luu code.
+2. Xóa code mẫu, dán đoạn code Python xử lý SQS message, sau đó chọn **Deploy** để lưu code.
 
-![Vi?t code Lambda v� Deploy](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image12.png)
+![Viết code Lambda và Deploy](/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image12.png)
 
-Code m?u:
+Code mẫu:
 
 ```python
 import json

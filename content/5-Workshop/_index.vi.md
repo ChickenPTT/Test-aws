@@ -6,20 +6,20 @@ chapter: true
 pre: " <b> 5. </b> "
 ---
 
-# Gi?i ph�p t? d?ng h�a gi�m s�t ch?t lu?ng h�ng h�a d?a tr�n Serverless v� AI/ML
+# Giải pháp tự động hóa giám sát chất lượng hàng hóa dựa trên Serverless và AI/ML
 
-#### T?ng quan
+#### Tổng quan
 
-Workshop n�y hu?ng d?n x�y d?ng h? th?ng t? d?ng h�a gi�m s�t ch?t lu?ng h�ng h�a d?a tr�n ki?n tr�c Serverless v� Tr� tu? nh�n t?o (AI/ML) tr�n AWS. H? th?ng cho ph�p nh�n vi�n giao h�ng ho?c kh�ch h�ng ch?p ?nh ki?n h�ng g?p s? c? nhu r�ch, v?, m�p m�o ho?c hu h?ng, sau d� t?i tr?c ti?p h�nh ?nh l�n h? th?ng d? du?c ph�n t�ch t? d?ng.
+Workshop này hướng dẫn xây dựng hệ thống tự động hóa giám sát chất lượng hàng hóa dựa trên kiến trúc Serverless và Trí tuệ nhân tạo (AI/ML) trên AWS. Hệ thống cho phép nhân viên giao hàng hoặc khách hàng chụp ảnh kiện hàng gặp sự cố như rách, vỡ, móp méo hoặc hư hỏng, sau đó tải trực tiếp hình ảnh lên hệ thống để được phân tích tự động.
 
-H? th?ng s? d?ng Amazon Rekognition d? ph�n t�ch h�nh ?nh h�ng h�a v� nh?n di?n d?u hi?u hu h?ng, Amazon Textract d? tr�ch xu?t th�ng tin v?n don, luu tr? b?ng ch?ng v� g?i c?nh b�o cho b? ph?n li�n quan. Nh? d�, quy tr�nh x? l� s? c? c� th? du?c r�t ng?n t? v�i gi? ho?c v�i ng�y xu?ng c�n v�i gi�y.
+Hệ thống sử dụng Amazon Rekognition để phân tích hình ảnh hàng hóa và nhận diện dấu hiệu hư hỏng, Amazon Textract để trích xuất thông tin vận đơn, lưu trữ bằng chứng và gửi cảnh báo cho bộ phận liên quan. Nhờ đó, quy trình xử lý sự cố có thể được rút ngắn từ vài giờ hoặc vài ngày xuống còn vài giây.
 
-#### N?i dung
+#### Nội dung
 
-1. [T?ng quan Workshop](1.workshop-overview/)
-2. [Chu?n b? IAM Role](2.iam-role-prepare/)
-3. [T?o Chat Queue v?i AWS SQS](3.create-chat-queueaws-sqs/)
-4. [C?u h�nh S3 v� Event Notification](4.congif-save-and-eventaws-s3/)
-5. [T?o v� Code Lambda Function](5.createandcode-lambdafunction/)
-6. [Testing v� Validation](6.testing-validation/)
-7. [D?n d?p t�i nguy�n](7.cleanup/)
+1. [Tổng quan Workshop](1.Workshop-overview/index.vi.md)
+2. [Chuẩn bị IAM Role](2.IAM-Role-Prepare/index.vi.md)
+3. [Tạo Chat Queue với AWS SQS](3.Create-Chat-Queue(AWS-SQS)/index.vi.md)
+4. [Cấu hình S3 và Event Notification](4.Congif-Save-And-Event(AWS-S3)/index.vi.md)
+5. [Tạo và Code Lambda Function](5.CreateAndCode-LambdaFunction/index.vi.md)
+6. [Testing và Validation](6.Testing-Validation/index.vi.md)
+7. [Dọn dẹp tài nguyên](7.CleanUp/index.vi.md)

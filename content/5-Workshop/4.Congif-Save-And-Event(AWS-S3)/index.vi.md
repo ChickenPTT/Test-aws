@@ -1,54 +1,54 @@
 ---
-title: "C?u h�nh luu tr? v� s? ki?n Amazon S3"
+title: "Cấu hình lưu trữ và sự kiện Amazon S3"
 date: 2026-06-21
 weight: 4
 chapter: false
 pre: ""
 ---
 
-# Bu?c 3: C?u h�nh luu tr? v� s? ki?n Amazon S3
+# Bước 3: Cấu hình lưu trữ và sự kiện Amazon S3
 
-### M?c ti�u
+### Mục tiêu
 
-Trong bu?c n�y, b?n s? t?o S3 bucket d? luu ?nh v� c?u h�nh d? m?i khi c� ?nh m?i du?c t?i l�n, Amazon S3 t? d?ng g?i th�ng b�o v�o SQS queue d� t?o ? bu?c tru?c.
-
----
-
-### 3.1 - T?o S3 Bucket
-
-1. Truy c?p **Amazon S3**, sau d� ch?n **Create bucket**.
-
-![T?o S3 bucket](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image19.png)
-
-2. �?t t�n bucket theo d?nh d?ng **logistics-raw-images-&lt;t�n-b?n&gt;**.
-
-T�n bucket ph?i l� duy nh?t tr�n to�n b? AWS.
-
-![�?t t�n S3 bucket](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image20.png)
-
-3. Ch?n Region **ap-southeast-1 (Singapore)** d? g?n Vi?t Nam.
-
-![Ch?n Region Singapore](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image21.png)
-
-4. Gi? nguy�n c�c c�i d?t m?c d?nh, sau d� ch?n **Create bucket**.
-
-![Gi? c�i d?t m?c d?nh](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image22.png)
-
-![T?o bucket th�nh c�ng](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image23.png)
+Trong bước này, bạn sẽ tạo S3 bucket để lưu ảnh và cấu hình để mỗi khi có ảnh mới được tải lên, Amazon S3 tự động gửi thông báo vào SQS queue đã tạo ở bước trước.
 
 ---
 
-### 3.2 - C?p quy?n cho S3 g?i th�ng b�o v�o SQS
+### 3.1 - Tạo S3 Bucket
 
-1. V�o **SQS Console**, ch?n queue **image-processing-queue**.
+1. Truy cập **Amazon S3**, sau đó chọn **Create bucket**.
 
-2. M? tab **Access policy**, ch?n ch?nh s?a policy.
+![Tạo S3 bucket](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image19.png)
 
-3. Th�m policy cho ph�p S3 g?i message v�o SQS.
+2. Đặt tên bucket theo định dạng **logistics-raw-images-&lt;tên-bạn&gt;**.
 
-![M? Access policy c?a SQS](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image24.png)
+Tên bucket phải là duy nhất trên toàn bộ AWS.
 
-V� d? policy:
+![Đặt tên S3 bucket](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image20.png)
+
+3. Chọn Region **ap-southeast-1 (Singapore)** để gần Việt Nam.
+
+![Chọn Region Singapore](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image21.png)
+
+4. Giữ nguyên các cài đặt mặc định, sau đó chọn **Create bucket**.
+
+![Giữ cài đặt mặc định](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image22.png)
+
+![Tạo bucket thành công](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image23.png)
+
+---
+
+### 3.2 - Cấp quyền cho S3 gửi thông báo vào SQS
+
+1. Vào **SQS Console**, chọn queue **image-processing-queue**.
+
+2. Mở tab **Access policy**, chọn chỉnh sửa policy.
+
+3. Thêm policy cho phép S3 gửi message vào SQS.
+
+![Mở Access policy của SQS](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image24.png)
+
+Ví dụ policy:
 
 ```json
 {
@@ -71,38 +71,38 @@ V� d? policy:
 }
 ```
 
-Thay **&lt;account-id&gt;** b?ng AWS Account ID c?a b?n v� thay **logistics-raw-images-&lt;ten-ban&gt;** b?ng t�n bucket d� t?o.
+Thay **&lt;account-id&gt;** bằng AWS Account ID của bạn và thay **logistics-raw-images-&lt;ten-ban&gt;** bằng tên bucket đã tạo.
 
-![Th�m policy cho S3 g?i message v�o SQS](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image25.png)
+![Thêm policy cho S3 gửi message vào SQS](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image25.png)
 
 ---
 
-### 3.3 - C?u h�nh S3 Event Notification
+### 3.3 - Cấu hình S3 Event Notification
 
-1. V�o bucket v?a t?o, m? tab **Properties**, k�o xu?ng ph?n **Event notifications**, sau d� ch?n **Create event notification**.
+1. Vào bucket vừa tạo, mở tab **Properties**, kéo xuống phần **Event notifications**, sau đó chọn **Create event notification**.
 
-![M? Event notifications](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image26.png)
+![Mở Event notifications](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image26.png)
 
 ![Create event notification](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image27.png)
 
-2. �?t t�n event l� **new-image-uploaded**.
+2. Đặt tên event là **new-image-uploaded**.
 
-![�?t t�n event notification](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image28.png)
+![Đặt tên event notification](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image28.png)
 
-3. ? ph?n **Event types**, t�ch ch?n **s3:ObjectCreated:***.
+3. Ở phần **Event types**, tích chọn **s3:ObjectCreated:***.
 
-![Ch?n event type ObjectCreated](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image29.png)
+![Chọn event type ObjectCreated](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image29.png)
 
-4. ? ph?n **Prefix/Suffix**, nh?p c�c suffix ?nh nhu **.jpg**, **.jpeg**, **.png** d? ch? k�ch ho?t khi c� ?nh t?i l�n.
+4. Ở phần **Prefix/Suffix**, nhập các suffix ảnh như **.jpg**, **.jpeg**, **.png** để chỉ kích hoạt khi có ảnh tải lên.
 
-C?u h�nh n�y gi�p b? qua c�c file kh�ng ph?i ?nh nhu `.txt` ho?c `.pdf`.
+Cấu hình này giúp bỏ qua các file không phải ảnh như `.txt` hoặc `.pdf`.
 
-![C?u h�nh suffix file ?nh](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image30.png)
+![Cấu hình suffix file ảnh](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image30.png)
 
-5. ? ph?n **Destination**, ch?n **SQS Queue**, sau d� ch?n queue **image-processing-queue**.
+5. Ở phần **Destination**, chọn **SQS Queue**, sau đó chọn queue **image-processing-queue**.
 
-![Ch?n SQS queue l�m destination](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image31.png)
+![Chọn SQS queue làm destination](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image31.png)
 
-6. Ch?n **Save changes** d? luu c?u h�nh.
+6. Chọn **Save changes** để lưu cấu hình.
 
-![Luu event notification](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image32.png)
+![Lưu event notification](/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image32.png)

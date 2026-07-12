@@ -1,33 +1,35 @@
 ---
-title: "T?ng quan v? Workshop"
+title: "Tổng quan về Workshop"
 date: 2026-06-21
 weight: 1
 chapter: false
 pre: ""
 ---
 
-# X�y d?ng lu?ng x? l� h�nh ?nh b?t d?ng b? s? d?ng Amazon S3, SQS v� AWS Lambda
+# Xây dựng luồng xử lý hình ảnh bất đồng bộ sử dụng Amazon S3, SQS và AWS Lambda
 
-### T�m t?t v? workshop
+### Tóm tắt về workshop
 
-Workshop n�y hu?ng d?n b?n x�y d?ng m?t lu?ng x? l� ?nh b?t d?ng b? (asynchronous) theo m� h�nh Event-Driven tr�n AWS, gi?i quy?t b�i to�n �nhi?u ngu?i d�ng upload ?nh c�ng l�c� nhung v?n d?m b?o h? th?ng ?n d?nh, d? m? r?ng v� ki?m so�t chi ph�.
+Workshop này hướng dẫn bạn xây dựng một luồng xử lý ảnh bất đồng bộ (asynchronous) theo mô hình Event-Driven trên AWS, giải quyết bài toán "nhiều người dùng upload ảnh cùng lúc" nhưng vẫn đảm bảo hệ thống ổn định, dễ mở rộng và kiểm soát chi phí.
 
 ---
 
-### M?c ti�u ch�nh
+### Mục tiêu chính
 
-- Thi?t k? ki?n tr�c **S3 ? SQS ? Lambda** d? x? l� ?nh theo h�ng d?i, tr�nh Lambda b? g?i ? ?t khi c� nhi?u upload d?ng th?i.
-- Vi?t Lambda (Python) d?:
-    - Nh?n message t? SQS (ch?a s? ki?n t? S3)
-    - T?i ?nh t? S3
-    - G?i Amazon Rekognition d? g?i � nh�n/nh?n di?n t�nh tr?ng (v� d?: ki?n h�ng hu h?ng)
-    - G?i Amazon Textract d? tr�ch xu?t van b?n tr�n nh�n d�n (m� v?n don, th�ng tin tuy?n, S�T, �)
-    - Ghi k?t qu? ra CloudWatch Logs d? quan s�t v� ki?m th?
-### B?n s? h?c du?c g�
-- V� sao c?n SQS l�m �buffer� gi?a S3 v� Lambda trong h? th?ng c� t?i cao.
-- C�ch c?u h�nh IAM Role theo nguy�n t?c Least Privilege (c?p d�ng quy?n c?n thi?t).
-- C�ch t?o & c?u h�nh:
-    - S3 bucket v� Event Notification
-    - SQS Standard Queue v?i c�c th�ng s? quan tr?ng (Visibility Timeout, retention�)
-    - Lambda Trigger t? SQS v� x? l� t?ng message (batch size nh? d? d? quan s�t)
-- Quy tr�nh Testing & Validation end-to-end v� Clean up t�i nguy�n d? tr�nh ph�t sinh chi ph�.
+- Thiết kế kiến trúc **S3 → SQS → Lambda** để xử lý ảnh theo hàng đợi, tránh Lambda bị gọi ồ ạt khi có nhiều upload đồng thời.
+- Viết Lambda (Python) để:
+  - Nhận message từ SQS (chứa sự kiện từ S3)
+  - Tải ảnh từ S3
+  - Gọi Amazon Rekognition để gợi ý nhãn/nhận diện tình trạng (ví dụ: kiện hàng hư hỏng)
+  - Gọi Amazon Textract để trích xuất văn bản trên nhãn dán (mã vận đơn, thông tin tuyến, SĐT, …)
+  - Ghi kết quả ra CloudWatch Logs để quan sát và kiểm thử
+
+### Bạn sẽ học được gì
+
+- Vì sao cần SQS làm "buffer" giữa S3 và Lambda trong hệ thống có tải cao.
+- Cách cấu hình IAM Role theo nguyên tắc Least Privilege (cấp đúng quyền cần thiết).
+- Cách tạo & cấu hình:
+  - S3 bucket và Event Notification
+  - SQS Standard Queue với các thông số quan trọng (Visibility Timeout, retention…)
+  - Lambda Trigger từ SQS và xử lý từng message (batch size nhỏ để dễ quan sát)
+- Quy trình Testing & Validation end-to-end và Clean up tài nguyên để tránh phát sinh chi phí.

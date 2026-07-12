@@ -1,66 +1,66 @@
 ---
-title: "Ki?m th? h? th?ng"
+title: "Kiểm thử hệ thống"
 date: 2026-06-21
 weight: 6
 chapter: false
 pre: ""
 ---
 
-# Bu?c 5: Ki?m th? h? th?ng
+# Bước 5: Kiểm thử hệ thống
 
-### M?c ti�u
+### Mục tiêu
 
-X�c nh?n to�n b? lu?ng **S3 -> SQS -> Lambda -> AI** ho?t d?ng d�ng.
+Xác nhận toàn bộ luồng **S3 -> SQS -> Lambda -> AI** hoạt động đúng.
 
-Trong bu?c n�y, b?n s? upload ?nh l�n S3, ki?m tra Lambda x? l� message t? SQS v� xem k?t qu? ph�n t�ch trong CloudWatch Logs.
-
----
-
-### 5.1 - Chu?n b? ?nh test
-
-Chu?n b? �t nh?t 2 lo?i ?nh:
-
-- ?nh ki?n h�ng b? m�p ho?c r�ch d? ki?m tra Amazon Rekognition ph�t hi?n d�ng n?i dung ?nh.
-- ?nh c� nh�n d�n v?i m� v?n don r� r�ng d? ki?m tra Amazon Textract tr�ch xu?t d�ng van b?n.
+Trong bước này, bạn sẽ upload ảnh lên S3, kiểm tra Lambda xử lý message từ SQS và xem kết quả phân tích trong CloudWatch Logs.
 
 ---
 
-### 5.2 - T?i ?nh l�n S3
+### 5.1 - Chuẩn bị ảnh test
 
-1. V�o S3 bucket **logistics-raw-images-&lt;t�n-b?n&gt;**, sau d� ch?n **Upload**.
+Chuẩn bị ít nhất 2 loại ảnh:
 
-2. T?i l�n kho?ng **5-10 ?nh** c�ng l�c d? ki?m tra kh? nang x? l� song song.
-
-3. Ch?n **Upload** d? b?t d?u t?i ?nh.
-
-![Upload ?nh l�n S3](/images/5-Workshop/6.Testing-Validation/images/image13.png)
-
-![Ho�n t?t upload ?nh](/images/5-Workshop/6.Testing-Validation/images/image14.png)
+- Ảnh kiện hàng bị móp hoặc rách để kiểm tra Amazon Rekognition phát hiện đúng nội dung ảnh.
+- Ảnh có nhãn dán với mã vận đơn rõ ràng để kiểm tra Amazon Textract trích xuất đúng văn bản.
 
 ---
 
-### 5.3 - Ki?m tra CloudWatch Logs
+### 5.2 - Tải ảnh lên S3
 
-1. Truy c?p **CloudWatch**, ch?n **Log groups**.
+1. Vào S3 bucket **logistics-raw-images-&lt;tên-bạn&gt;**, sau đó chọn **Upload**.
 
-2. T�m log group **/aws/lambda/image-quality-processor**.
+2. Tải lên khoảng **5-10 ảnh** cùng lúc để kiểm tra khả năng xử lý song song.
 
-3. Ch?n log stream m?i nh?t v� ki?m tra output t? Lambda.
+3. Chọn **Upload** để bắt đầu tải ảnh.
 
-![Ki?m tra CloudWatch Log groups](/images/5-Workshop/6.Testing-Validation/images/image15.png)
+![Upload ảnh lên S3](/images/5-Workshop/6.Testing-Validation/images/image13.png)
 
-![Ki?m tra output Lambda](/images/5-Workshop/6.Testing-Validation/images/image16.png)
+![Hoàn tất upload ảnh](/images/5-Workshop/6.Testing-Validation/images/image14.png)
 
 ---
 
-### 5.4 - Ki?m tra SQS d� x? l� s?ch
+### 5.3 - Kiểm tra CloudWatch Logs
 
-1. V�o **SQS Console**, ch?n queue **image-processing-queue**.
+1. Truy cập **CloudWatch**, chọn **Log groups**.
 
-2. Ch?n **Send and receive messages**.
+2. Tìm log group **/aws/lambda/image-quality-processor**.
 
-3. Ch?n **Poll for messages**.
+3. Chọn log stream mới nhất và kiểm tra output từ Lambda.
 
-N?u queue tr?ng, nghia l� Lambda d� x? l� h?t to�n b? tin nh?n th�nh c�ng.
+![Kiểm tra CloudWatch Log groups](/images/5-Workshop/6.Testing-Validation/images/image15.png)
 
-![Ki?m tra message trong SQS](/images/5-Workshop/6.Testing-Validation/images/image17.png)
+![Kiểm tra output Lambda](/images/5-Workshop/6.Testing-Validation/images/image16.png)
+
+---
+
+### 5.4 - Kiểm tra SQS đã xử lý sạch
+
+1. Vào **SQS Console**, chọn queue **image-processing-queue**.
+
+2. Chọn **Send and receive messages**.
+
+3. Chọn **Poll for messages**.
+
+Nếu queue trống, nghĩa là Lambda đã xử lý hết toàn bộ tin nhắn thành công.
+
+![Kiểm tra message trong SQS](/images/5-Workshop/6.Testing-Validation/images/image17.png)

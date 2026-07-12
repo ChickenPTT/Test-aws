@@ -1,63 +1,63 @@
 ---
-title: "Chu?n b? IAM Role cho Lambda"
+title: "Chuẩn bị IAM Role cho Lambda"
 date: 2026-06-21
 weight: 2
 chapter: false
 pre: ""
 ---
 
-# Bu?c 1: Chu?n b? IAM Role cho Lambda
+# Bước 1: Chuẩn bị IAM Role cho Lambda
 
-### Gi?i thi?u
+### Giới thiệu
 
-IAM Role l� quy?n m� Lambda s? d?ng d? truy c?p c�c d?ch v? AWS c?n thi?t trong workshop nhu Amazon S3, Amazon SQS, Amazon Rekognition v� Amazon Textract.
+IAM Role là quyền mà Lambda sử dụng để truy cập các dịch vụ AWS cần thiết trong workshop như Amazon S3, Amazon SQS, Amazon Rekognition và Amazon Textract.
 
-Trong bu?c n�y, b?n s? t?o m?t IAM Role cho Lambda v� g?n c�c policy c?n thi?t d? Lambda c� th? d?c d? li?u, nh?n message v� ghi log trong qu� tr�nh x? l� ?nh.
-
----
-
-### C�c bu?c th?c hi?n
-
-1. Truy c?p **AWS Console**, t�m d?ch v? **IAM**.
-
-![T�m d?ch v? IAM](/images/5-Workshop/2.IAM-Role-Prepare/images/image1.png)
-
-2. Ch?n **Roles**, sau d� ch?n **Create role**.
-
-![Ch?n Roles v� Create role](/images/5-Workshop/2.IAM-Role-Prepare/images/image2.png)
-
-3. ? ph?n **Trusted entity type**, ch?n **AWS service**.
-
-4. ? ph?n **Use case**, ch?n **Lambda**, sau d� ch?n **Next**.
-
-![Ch?n AWS service v� Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image3.png)
-
-5. T�m v� g?n l?n lu?t c�c policy c?n thi?t cho Lambda.
-
-![T�m policy cho Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image4.png)
-
-![Ch?n policy cho Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image5.png)
-
-![G?n policy AWSLambdaBasicExecutionRole](/images/5-Workshop/2.IAM-Role-Prepare/images/image6.png)
-
-![G?n policy AmazonS3ReadOnlyAccess](/images/5-Workshop/2.IAM-Role-Prepare/images/image7.png)
-
-![G?n policy AmazonSQSFullAccess](/images/5-Workshop/2.IAM-Role-Prepare/images/image8.png)
-
-![G?n policy Rekognition v� Textract](/images/5-Workshop/2.IAM-Role-Prepare/images/image9.png)
-
-6. �?t t�n role l� **Lambda-ImageProcessing-Role**, sau d� ch?n **Create role**.
-
-![�?t t�n IAM Role](/images/5-Workshop/2.IAM-Role-Prepare/images/image10.png)
-
-![T?o IAM Role](/images/5-Workshop/2.IAM-Role-Prepare/images/image11.png)
+Trong bước này, bạn sẽ tạo một IAM Role cho Lambda và gắn các policy cần thiết để Lambda có thể đọc dữ liệu, nhận message và ghi log trong quá trình xử lý ảnh.
 
 ---
 
-### Luu � b?o m?t
+### Các bước thực hiện
 
-Trong m�i tru?ng th?c t?, thay v� d�ng policy c� s?n c?a AWS, b?n n�n t? vi?t **Custom Policy** d? gi?i h?n quy?n ch? tr�n d�ng bucket ho?c queue c? th?.
+1. Truy cập **AWS Console**, tìm dịch vụ **IAM**.
 
-��y l� best practice b?o m?t theo nguy�n t?c **Least Privilege**, t?c l� ch? c?p d�ng quy?n c?n thi?t v� kh�ng c?p du quy?n.
+![Tìm dịch vụ IAM](/images/5-Workshop/2.IAM-Role-Prepare/images/image1.png)
 
-![Custom policy theo nguy�n t?c Least Privilege](/images/5-Workshop/2.IAM-Role-Prepare/images/image12.png)
+2. Chọn **Roles**, sau đó chọn **Create role**.
+
+![Chọn Roles và Create role](/images/5-Workshop/2.IAM-Role-Prepare/images/image2.png)
+
+3. Ở phần **Trusted entity type**, chọn **AWS service**.
+
+4. Ở phần **Use case**, chọn **Lambda**, sau đó chọn **Next**.
+
+![Chọn AWS service và Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image3.png)
+
+5. Tìm và gắn lần lượt các policy cần thiết cho Lambda.
+
+![Tìm policy cho Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image4.png)
+
+![Chọn policy cho Lambda](/images/5-Workshop/2.IAM-Role-Prepare/images/image5.png)
+
+![Gắn policy AWSLambdaBasicExecutionRole](/images/5-Workshop/2.IAM-Role-Prepare/images/image6.png)
+
+![Gắn policy AmazonS3ReadOnlyAccess](/images/5-Workshop/2.IAM-Role-Prepare/images/image7.png)
+
+![Gắn policy AmazonSQSFullAccess](/images/5-Workshop/2.IAM-Role-Prepare/images/image8.png)
+
+![Gắn policy Rekognition và Textract](/images/5-Workshop/2.IAM-Role-Prepare/images/image9.png)
+
+6. Đặt tên role là **Lambda-ImageProcessing-Role**, sau đó chọn **Create role**.
+
+![Đặt tên IAM Role](/images/5-Workshop/2.IAM-Role-Prepare/images/image10.png)
+
+![Tạo IAM Role](/images/5-Workshop/2.IAM-Role-Prepare/images/image11.png)
+
+---
+
+### Lưu ý bảo mật
+
+Trong môi trường thực tế, thay vì dùng policy có sẵn của AWS, bạn nên tự viết **Custom Policy** để giới hạn quyền chỉ trên đúng bucket hoặc queue cụ thể.
+
+Đây là best practice bảo mật theo nguyên tắc **Least Privilege**, tức là chỉ cấp đúng quyền cần thiết và không cấp dư quyền.
+
+![Custom policy theo nguyên tắc Least Privilege](/images/5-Workshop/2.IAM-Role-Prepare/images/image12.png)
