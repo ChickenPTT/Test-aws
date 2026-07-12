@@ -49,7 +49,7 @@ Instead of spending weeks building unstable OCR filters, combining Amazon Textra
 
 ### Architecture Diagram
 
-![Image 1](blog3.jpg)
+![Image 1](../../../static/images/Blog/Blog3/blog3.jpg)
 
 ### Technical Implementation Highlights
 
