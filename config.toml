@@ -1,0 +1,77 @@
+baseURL = "https://workshop-sample.awsfcaj.com/"
+relativeURLs = false
+canonifyURLs = false
+defaultContentLanguage = "vi"
+defaultContentLanguageInSubdir = false
+
+# Change the default theme to be use when building the site with Hugo
+theme = "hugo-theme-learn"
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS"]
+
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "workshop"
+  # Git hub repo link
+  editURL = ""
+  description = "Internship Report - Workforce Bootcamp First Cloud AI Journey"
+  author = "Nguyen Van A"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  # Disable search
+  disableSearch = true
+  
+[Languages]
+[Languages.en]
+title = "Internship Report"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
+identifier = "AWS Study Group"
+url = "https://awsstudygroup.com"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-facebook'></i> AWS Study Group - FB Group"
+identifier = "AWS Study Group FB"
+url = "https://www.facebook.com/groups/awsstudygroupfcj"
+weight = 21
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-cloud'></i> AWS Console"
+identifier = "AWS Console"
+url = "https://console.aws.amazon.com/"
+weight = 22
+
+[Languages.vi]
+title = "Báo cáo thực tập"
+weight = 2
+languageName = "Tiếng Việt"
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
+identifier = "AWS Study Group"
+url = "http://awsstudygroup.com"
+weight = 20
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB"
+identifier = "AWS Study Group FB"
+url = "https://www.facebook.com/groups/awsstudygroupfcj"
+weight = 21
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fas fa-cloud'></i> AWS Console"
+identifier = "AWS Console"
+url = "https://console.aws.amazon.com/"
+weight = 22
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
