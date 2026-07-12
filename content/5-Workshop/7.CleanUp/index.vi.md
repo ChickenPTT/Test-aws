@@ -1,67 +1,67 @@
 ---
-title: "D?n d?p t�i nguy�n"
+title: "Dọn dẹp tài nguyên"
 date: 2026-06-21
 weight: 7
 chapter: false
 pre: ""
 ---
 
-# Bu?c 6: D?n d?p t�i nguy�n
+# Bước 6: Dọn dẹp tài nguyên
 
-### M?c ti�u
+### Mục tiêu
 
-Sau khi ho�n th�nh workshop, b?n c?n x�a c�c t�i nguy�n d� t?o d? tr�nh ph�t sinh chi ph� kh�ng c?n thi?t.
-
----
-
-### 1. X�a SQS Queue
-
-1. Truy c?p **Amazon SQS**.
-
-2. Ch?n queue d� t?o trong workshop, sau d� ch?n **Delete**.
-
-![X�a SQS queue](/images/5-Workshop/7.CleanUp/images/image1.png)
-
-3. Nh?p **Confirm** d? x�c nh?n x�a queue.
-
-![X�c nh?n x�a SQS queue](/images/5-Workshop/7.CleanUp/images/image2.png)
+Sau khi hoàn thành workshop, bạn cần xóa các tài nguyên đã tạo để tránh phát sinh chi phí không cần thiết.
 
 ---
 
-### 2. X�a Lambda Function
+### 1. Xóa SQS Queue
 
-1. Truy c?p **AWS Lambda**.
+1. Truy cập **Amazon SQS**.
 
-2. Ch?n function d� t?o trong workshop, sau d� ch?n **Delete**.
+2. Chọn queue đã tạo trong workshop, sau đó chọn **Delete**.
 
-![X�a Lambda function](/images/5-Workshop/7.CleanUp/images/image3.png)
+![Xóa SQS queue](/images/5-Workshop/7.CleanUp/images/image1.png)
 
-3. Nh?p x�c nh?n d? x�a function.
+3. Nhập **Confirm** để xác nhận xóa queue.
 
-![X�c nh?n x�a Lambda function](/images/5-Workshop/7.CleanUp/images/image4.png)
-
----
-
-### 3. X�a S3 Bucket
-
-1. Truy c?p **Amazon S3**.
-
-2. V�o bucket d� t?o trong workshop.
-
-3. Ch?n bucket c?n x�a, sau d� ch?n **Delete**.
-
-Luu �: S3 bucket c?n du?c l�m tr?ng tru?c khi x�a. N?u bucket c�n object, h�y x�a to�n b? object trong bucket tru?c.
-
-![X�a S3 bucket](/images/5-Workshop/7.CleanUp/images/image5.png)
+![Xác nhận xóa SQS queue](/images/5-Workshop/7.CleanUp/images/image2.png)
 
 ---
 
-### 4. X�a IAM Role
+### 2. Xóa Lambda Function
 
-1. Truy c?p **IAM**.
+1. Truy cập **AWS Lambda**.
 
-2. Ch?n **Roles**.
+2. Chọn function đã tạo trong workshop, sau đó chọn **Delete**.
 
-3. Ch?n IAM Role **Lambda-ImageProcessing-Role** d� t?o trong workshop, sau d� x�a role.
+![Xóa Lambda function](/images/5-Workshop/7.CleanUp/images/image3.png)
 
-![X�a IAM Role](/images/5-Workshop/7.CleanUp/images/image6.png)
+3. Nhập xác nhận để xóa function.
+
+![Xác nhận xóa Lambda function](/images/5-Workshop/7.CleanUp/images/image4.png)
+
+---
+
+### 3. Xóa S3 Bucket
+
+1. Truy cập **Amazon S3**.
+
+2. Vào bucket đã tạo trong workshop.
+
+3. Chọn bucket cần xóa, sau đó chọn **Delete**.
+
+Lưu ý: S3 bucket cần được làm trống trước khi xóa. Nếu bucket còn object, hãy xóa toàn bộ object trong bucket trước.
+
+![Xóa S3 bucket](/images/5-Workshop/7.CleanUp/images/image5.png)
+
+---
+
+### 4. Xóa IAM Role
+
+1. Truy cập **IAM**.
+
+2. Chọn **Roles**.
+
+3. Chọn IAM Role **Lambda-ImageProcessing-Role** đã tạo trong workshop, sau đó xóa role.
+
+![Xóa IAM Role](/images/5-Workshop/7.CleanUp/images/image6.png)
