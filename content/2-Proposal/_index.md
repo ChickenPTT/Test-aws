@@ -1,143 +1,127 @@
 ﻿---
-title: "Proposal"
+title: "Project Proposal"
 date: 2026-06-21
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# Giải pháp tự động hóa giám sát chất lượng hàng hóa dựa trên Serverless và AI/ML
+# Automated Goods Quality Monitoring Solution Based on Serverless and AI/ML
 
-### Tóm tắt điều hành
+### Executive Summary
 
-Trong lĩnh vực Logistics, doanh nghiệp đang chịu áp lực lớn về thời gian xử lý, độ chính xác dữ liệu và khả năng kiểm soát tổn thất hàng hóa. Việc giám sát chất lượng hàng hóa tại kho hiện nay phần lớn vẫn phụ thuộc vào con người, dẫn đến tình trạng xử lý sự cố chậm, dữ liệu bị phân tán và khó cập nhật theo thời gian thực.
+In the Logistics field, businesses are under significant pressure regarding processing time, data accuracy, and the ability to control goods loss. Current goods quality monitoring in warehouses largely depends on human labor, leading to slow incident handling, scattered data, and difficulty in real-time updates.
 
-Nhóm đề xuất xây dựng hệ thống **"Giải pháp tự động hóa giám sát chất lượng hàng hóa dựa trên kiến trúc Serverless và Trí tuệ nhân tạo (AI/ML)"**. Đây là một hệ thống phần mềm ứng dụng các dịch vụ của Amazon Web Services (AWS), cho phép nhân viên giao hàng hoặc khách hàng chụp ảnh kiện hàng gặp sự cố như rách, vỡ, móp méo hoặc hư hỏng, sau đó tải trực tiếp hình ảnh lên hệ thống để được phân tích tự động.
+The team proposes building a system **"Automated Goods Quality Monitoring Solution Based on Serverless Architecture and Artificial Intelligence (AI/ML)"**. This is a software system applying Amazon Web Services (AWS) services, allowing delivery staff or customers to take photos of goods with incidents such as tears, breaks, dents, or damage, then directly upload images to the system for automatic analysis.
 
-Hệ thống sử dụng AI/ML để nhận diện mức độ hư hại của hàng hóa, trích xuất thông tin vận đơn, lưu trữ bằng chứng và gửi cảnh báo cho bộ phận liên quan. Nhờ đó, quy trình xử lý sự cố có thể được rút ngắn từ vài giờ hoặc vài ngày xuống còn vài giây, đồng thời giúp doanh nghiệp giảm chi phí vận hành, hạn chế sai sót thủ công và nâng cao chất lượng dịch vụ.
-
----
-
-### Tuyên bố vấn đề
-
-#### Vấn đề hiện tại
-
-Theo khảo sát thực tế, việc ghi nhận và xử lý hàng hóa hư hỏng hiện nay đang gặp nhiều điểm lỗi trong quy trình vận hành:
-
-- **Quy trình thủ công, tốn thời gian và dễ sai sót:** Khi phát hiện hàng hóa bị hư hỏng, nhân viên thường phải tự chụp ảnh bằng điện thoại cá nhân, gửi qua nhóm chat hoặc lập tờ trình giấy. Bộ phận thẩm định sau đó phải tổng hợp các thông tin rời rạc này để nhập lại vào hệ thống ERP và xử lý thủ tục bồi hoàn cho khách hàng. Quy trình này mất nhiều thời gian và dễ gây nhầm lẫn dữ liệu.
-
-- **Thiếu khả năng tự động hóa và cảnh báo tức thời:** Do chưa có phần mềm tự động phân tích hình ảnh và đọc thông tin đơn hàng, quản lý kho thường không biết ngay mức độ hư hỏng của hàng hóa để đưa ra quyết định xử lý kịp thời. Việc phản hồi chậm làm ảnh hưởng đến trải nghiệm khách hàng và uy tín dịch vụ.
-
-- **Thiếu khả năng mở rộng hệ thống:** Vào mùa cao điểm, số lượng hàng hóa đổ về kho tăng mạnh. Quy trình kiểm tra thủ công không thể xử lý song song nhiều đơn hàng cùng lúc, dẫn đến quá tải, bỏ sót hàng hóa hư hỏng hoặc để sản phẩm lỗi tiếp tục đi đến tay người tiêu dùng.
-
-- **Dữ liệu lưu trữ phân mảnh, khó truy xuất:** Hồ sơ sự cố hiện có thể nằm rải rác trong sổ tay, file Excel hoặc các nhóm chat. Khi cần thống kê tỷ lệ tổn thất theo tháng/quý để báo cáo cho ban giám đốc, nhân viên phải rà soát thủ công, mất thời gian và dễ sai lệch.
-
-- **Chi phí vận hành cao:** Doanh nghiệp phải duy trì nhân sự chuyên trách tại từng điểm kho để kiểm tra, nhập liệu và xử lý sự cố. Bên cạnh chi phí nhân công, các sai sót thông tin và tranh chấp đền bù kéo dài cũng làm suy giảm lợi nhuận và uy tín của doanh nghiệp Logistics.
+The system uses AI/ML to identify the degree of goods damage, extract shipping information, store evidence, and send alerts to relevant departments. As a result, the incident handling process can be shortened from several hours or days to just a few seconds, while helping businesses reduce operating costs, limit manual errors, and improve service quality.
 
 ---
 
-### Giải pháp đề xuất
+### Problem Statement
 
-Nhóm đề xuất xây dựng hệ thống tự động hóa quy trình giám sát chất lượng hàng hóa dựa trên kiến trúc Serverless và AI/ML. Hệ thống tập trung vào các khả năng cốt lõi sau:
+#### Current Issues
 
-- **Tự động hóa bằng AI thông minh:** Hệ thống sử dụng Amazon Rekognition để phân tích hình ảnh hàng hóa và nhận diện dấu hiệu hư hỏng. Kết quả phân tích có thể bao gồm nhãn trạng thái, mức độ hư hại và điểm tin cậy. Amazon Textract được dùng để trích xuất mã vận đơn, địa chỉ hoặc các thông tin văn bản liên quan từ ảnh mà không cần nhập tay.
+According to practical surveys, the recording and handling of damaged goods currently encounters many operational issues:
 
-- **Xử lý bất đồng bộ theo thời gian thực:** Hình ảnh sau khi được tải lên Amazon S3 sẽ kích hoạt luồng xử lý tự động. Dữ liệu hình ảnh, mã vận đơn và kết quả phân tích được đồng bộ về Amazon DynamoDB để tra cứu, thống kê và xuất báo cáo. Cách xử lý này giúp rút ngắn thời gian ghi nhận và phản hồi từ vài ngày xuống còn vài giây.
+- **Manual, time-consuming, and error-prone process:** When discovering damaged goods, employees often have to take photos with personal phones, send them via chat groups, or create paper reports. The appraisal department then has to compile this scattered information to re-enter into the ERP system and process compensation procedures for customers. This process takes time and easily causes data confusion.
 
-- **Hạ tầng Serverless tự động co giãn:** Hệ thống chạy trên các dịch vụ Serverless của AWS, có thể tự động mở rộng khi số lượng ảnh tăng đột biến vào mùa cao điểm. Doanh nghiệp không cần quản lý máy chủ thủ công nhưng vẫn đảm bảo khả năng xử lý nhiều yêu cầu cùng lúc.
+- **Lack of automation and real-time alerts:** Since there is no software to automatically analyze images and read order information, warehouse managers often do not immediately know the extent of goods damage to make timely handling decisions. Slow feedback affects customer experience and service reputation.
 
-- **Quản lý tập trung và minh bạch dữ liệu:** Tất cả lịch sử quét, hình ảnh bằng chứng, mã vận đơn và trạng thái xử lý được lưu trữ tập trung. Người quản lý có thể tra cứu lịch sử bất kỳ lúc nào, kiểm tra bằng chứng và xuất báo cáo thống kê tình hình hàng hóa hư hỏng.
+- **Lack of system scalability:** During peak seasons, the volume of goods arriving at warehouses increases significantly. Manual inspection processes cannot handle multiple orders simultaneously, leading to overload, missed damaged goods, or allowing defective products to continue reaching consumers.
 
-- **Tối ưu hóa chi phí vận hành:** Việc đưa AI vào quy trình giúp giảm sai sót so với nhập liệu thủ công, giảm nhu cầu nhân sự chuyên trách tại từng kho, rút ngắn thời gian giải quyết tranh chấp và nâng cao độ tin cậy trong xử lý bồi hoàn.
+- **Fragmented data storage, difficult to retrieve:** Current incident records may be scattered in notebooks, Excel files, or chat groups. When needing to统计 loss rates by month/quarter to report to the board of directors, employees have to manually review, which is time-consuming and prone to errors.
+
+- **High operating costs:** Businesses must maintain dedicated personnel at each warehouse point to inspect, enter data, and handle incidents. Besides labor costs, information errors and prolonged compensation disputes also reduce the profits and reputation of Logistics businesses.
 
 ---
 
-### Kiến trúc giải pháp
+### Proposed Solution
 
-#### Kiến trúc tổng quan
+The team proposes building a system to automate the goods quality monitoring process based on Serverless and AI/ML architecture. The system focuses on the following core capabilities:
+
+- **Smart AI automation:** The system uses Amazon Rekognition to analyze goods images and identify signs of damage. Analysis results can include status labels, damage levels, and confidence scores. Amazon Textract is used to extract tracking numbers, addresses, or related text information from images without manual entry.
+
+- **Real-time asynchronous processing:** After images are uploaded to Amazon S3, an automatic processing flow is triggered. Image data, tracking numbers, and analysis results are synchronized to Amazon DynamoDB for lookup, statistics, and report generation. This processing method helps shorten recording and response time from several days to just a few seconds.
+
+- **Auto-scaling Serverless infrastructure:** The system runs on AWS Serverless services, which can automatically scale when the number of images increases suddenly during peak seasons. Businesses do not need to manually manage servers but still ensure the ability to handle multiple requests simultaneously.
+
+- **Centralized and transparent data management:** All scan history, evidence images, tracking numbers, and processing status are stored centrally. Managers can look up history at any time, check evidence, and export statistical reports on damaged goods situations.
+
+- **Operating cost optimization:** Bringing AI into the process helps reduce errors compared to manual entry, reduces the need for dedicated personnel at each warehouse, shortens dispute resolution time, and increases reliability in compensation processing.
+
+---
+
+### Solution Architecture
+
+#### Overall Architecture
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
       <img src="/images/2-Proposal/DiagramStructure.png" alt="" width="1939" />
 
 </div>
 
-Hệ thống được thiết kế theo mô hình kiến trúc hướng sự kiện, sử dụng các dịch vụ AWS để tự động co giãn theo lưu lượng thực tế. Toàn bộ vòng đời của một yêu cầu giám sát chất lượng hàng hóa được chia thành 4 lớp công nghệ chính:
+The system is designed according to event-driven architecture, using AWS services to automatically scale according to actual traffic. The entire lifecycle of a goods quality monitoring request is divided into 4 main technology layers:
 
-| Lớp kiến trúc | Vai trò | Dịch vụ AWS đề xuất |
+| Architecture Layer | Role | Proposed AWS Services |
 | --- | --- | --- |
-| Frontend & Auth | Cung cấp giao diện web, quản lý đăng nhập/đăng ký, cấp JWT Token và kiểm soát quyền truy cập API | AWS Amplify, Amazon Cognito, Amazon API Gateway |
-| Storage | Tiếp nhận và lưu trữ ảnh hàng hóa hư hỏng do người dùng tải lên | Amazon S3 |
-| Backend & AI/ML | Xử lý sự kiện tải ảnh, phân tích hình ảnh, trích xuất thông tin vận đơn, đánh giá mức độ hư hại và cập nhật dữ liệu | Amazon SQS, AWS Lambda, Amazon Rekognition, Amazon Textract, Amazon DynamoDB |
-| Giám sát & Bảo mật | Theo dõi hoạt động hệ thống, quản lý log, phân quyền truy cập theo nguyên tắc least privilege | Amazon CloudWatch, AWS IAM |
+| Frontend & Auth | Provides web interface, manages login/registration, issues JWT Token and controls API access | AWS Amplify, Amazon Cognito, Amazon API Gateway |
+| Storage | Receives and stores damaged goods images uploaded by users | Amazon S3 |
+| Backend & AI/ML | Processes image upload events, analyzes images, extracts shipping information, evaluates damage levels, and updates data | Amazon SQS, AWS Lambda, Amazon Rekognition, Amazon Textract, Amazon DynamoDB |
+| Monitoring & Security | Monitors system activity, manages logs, controls access according to least privilege principle | Amazon CloudWatch, AWS IAM |
 
-#### Luồng xử lý chính
+#### Main Processing Flow
 
-| Bước | Mô tả |
+| Step | Description |
 | --- | --- |
-| 1 | Người dùng đăng nhập vào hệ thống thông qua giao diện web được triển khai bằng AWS Amplify và xác thực bằng Amazon Cognito. |
-| 2 | Người dùng tải ảnh kiện hàng bị hư hỏng lên hệ thống. Ảnh được lưu vào Amazon S3 Raw Image Bucket. |
-| 3 | S3 Event Notification phát sinh sự kiện sau khi ảnh được tải lên thành công và đưa thông tin xử lý vào Amazon SQS. |
-| 4 | Lambda orchestrator-function đọc sự kiện từ SQS, sau đó gọi Amazon Rekognition để phát hiện hư hỏng và Amazon Textract để đọc mã vận đơn/thông tin văn bản. |
-| 5 | Lambda evaluator-function đánh giá mức độ hư hại dựa trên kết quả AI/ML và xác định trạng thái xử lý. |
-| 6 | Lambda processor-function lưu kết quả vào Amazon DynamoDB, cập nhật trạng thái hồ sơ và kích hoạt cảnh báo nếu cần. |
-| 7 | Amazon SNS gửi thông báo Email/SMS cho quản lý kho hoặc bộ phận xử lý khi phát hiện sự cố nghiêm trọng. |
-| 8 | Amazon CloudWatch ghi nhận log, metrics và hỗ trợ theo dõi lỗi trong toàn bộ quá trình vận hành. |
+| 1 | Users log into the system through the web interface deployed by AWS Amplify and authenticated by Amazon Cognito. |
+| 2 | Users upload images of damaged goods to the system. Images are stored in Amazon S3 Raw Image Bucket. |
+| 3 | S3 Event Notification generates an event after the image is successfully uploaded and puts processing information into Amazon SQS. |
+| 4 | Lambda orchestrator-function reads events from SQS, then calls Amazon Rekognition to detect damage and Amazon Textract to read tracking numbers/text information. |
+| 5 | Lambda evaluator-function evaluates the damage level based on AI/ML results and determines processing status. |
+| 6 | Lambda processor-function saves results to Amazon DynamoDB, updates record status, and triggers alerts if needed. |
+| 7 | Amazon SNS sends Email/SMS notifications to warehouse managers or processing departments when serious incidents are detected. |
+| 8 | Amazon CloudWatch records logs, metrics, and supports error tracking throughout the operation process. |
 
 ---
 
-### Các dịch vụ AWS sử dụng
+### AWS Services Used
 
 #### Frontend & Auth
 
-- **AWS Amplify:** Lưu trữ và phân phối giao diện web cho người dùng.
-- **Amazon Cognito:** Quản lý đăng nhập, đăng ký và cấp JWT Token.
-- **Amazon API Gateway:** Tiếp nhận API request, kiểm tra token và chuyển tiếp yêu cầu đến backend.
+- **AWS Amplify:** Hosts and distributes the web interface for users.
+- **Amazon Cognito:** Manages login, registration, and issues JWT Token.
+- **Amazon API Gateway:** Receives API requests, validates tokens, and forwards requests to the backend.
 
 #### Storage
 
-- **Amazon S3:** Lưu trữ ảnh gốc của hàng hóa, đóng vai trò điểm tiếp nhận dữ liệu đầu vào.
+- **Amazon S3:** Stores original images of goods, serving as the data entry point for the entire system. Images are organized into separate buckets for raw images and processed results.
 
-#### Backend Serverless & AI/ML
+#### Backend & AI/ML
 
-- **Amazon SQS:** Làm hàng đợi trung gian, giúp hệ thống xử lý bất đồng bộ và tránh quá tải khi nhiều ảnh được tải lên cùng lúc.
-- **AWS Lambda orchestrator-function:** Đọc sự kiện từ SQS và điều phối các tác vụ phân tích AI/ML.
-- **Amazon Rekognition:** Phân tích hình ảnh để phát hiện dấu hiệu hư hỏng của kiện hàng.
-- **Amazon Textract:** Trích xuất văn bản, mã vận đơn hoặc thông tin giao hàng từ ảnh.
-- **AWS Lambda evaluator-function:** Đánh giá mức độ hư hại và phân loại trạng thái xử lý.
-- **AWS Lambda processor-function:** Lưu kết quả, cập nhật hồ sơ và kích hoạt các bước xử lý tiếp theo.
-- **Amazon DynamoDB:** Lưu trữ kết quả phân tích, lịch sử xử lý, trạng thái đơn hàng và dữ liệu phục vụ báo cáo.
-- **Amazon SNS:** Gửi cảnh báo Email/SMS cho bộ phận liên quan.
+- **Amazon SQS:** Queue service for asynchronous processing, helps prevent system overload when multiple images are uploaded simultaneously.
+- **AWS Lambda:** Serverless compute service that processes images, calls AI/ML services, and updates data without managing servers.
+- **Amazon Rekognition:** AI service for image analysis, detects signs of damage on goods.
+- **Amazon Textract:** AI service for extracting text and tracking numbers from images automatically.
+- **Amazon DynamoDB:** NoSQL database for storing scan history, processing results, and tracking information.
 
-#### Giám sát & Bảo mật
+#### Monitoring & Security
 
-- **Amazon CloudWatch:** Theo dõi log, metrics, cảnh báo lỗi và hiệu năng của hệ thống.
-- **AWS IAM:** Quản lý quyền truy cập theo nguyên tắc least privilege, đảm bảo từng dịch vụ chỉ có quyền cần thiết để hoạt động.
+- **Amazon CloudWatch:** Monitoring service that tracks system activity, collects logs, and sets up alerts for unusual activities.
+- **AWS IAM:** Identity and access management service, applies least privilege principle for each Lambda function.
 
 ---
 
-### Đánh giá rủi ro
+### Benefits
 
-| Rủi ro | Ảnh hưởng | Hướng xử lý |
-| --- | --- | --- |
-| Chất lượng ảnh đầu vào kém | AI có thể nhận diện sai hoặc không trích xuất được mã vận đơn | Hướng dẫn người dùng chụp ảnh rõ nét, đủ sáng; kiểm tra định dạng và kích thước ảnh trước khi tải lên |
-| Kết quả AI/ML chưa chính xác trong một số trường hợp | Có thể phân loại sai mức độ hư hỏng | Cho phép người quản lý xác nhận thủ công với các trường hợp có điểm tin cậy thấp |
-| Lưu lượng tăng cao vào mùa cao điểm | Hệ thống có thể phát sinh độ trễ nếu không kiểm soát hàng đợi tốt | Sử dụng SQS để điều tiết tải, Lambda tự động co giãn và CloudWatch để giám sát backlog |
-| Rò rỉ dữ liệu hình ảnh hoặc thông tin vận đơn | Ảnh hưởng đến bảo mật dữ liệu khách hàng | Áp dụng Cognito, IAM least privilege, phân quyền truy cập S3 và mã hóa dữ liệu khi lưu trữ |
-| Chi phí tăng nếu xử lý số lượng ảnh quá lớn | Ảnh hưởng đến ngân sách vận hành | Theo dõi usage bằng CloudWatch, đặt cảnh báo chi phí và tối ưu kích thước ảnh trước khi phân tích |
-
----
-
-### Kết quả kỳ vọng
-
-- Rút ngắn thời gian ghi nhận và xử lý sự cố hàng hóa từ vài giờ hoặc vài ngày xuống còn vài giây.
-- Tự động nhận diện dấu hiệu hư hỏng của hàng hóa bằng AI, giảm phụ thuộc vào kiểm tra thủ công.
-- Tự động trích xuất mã vận đơn và thông tin liên quan, hạn chế lỗi nhập liệu.
-- Tập trung hóa dữ liệu sự cố, hình ảnh bằng chứng và trạng thái xử lý trên một hệ thống duy nhất.
-- Hỗ trợ quản lý kho tra cứu lịch sử, thống kê tỷ lệ tổn thất và xuất báo cáo nhanh chóng.
-- Tăng khả năng mở rộng trong mùa cao điểm nhờ kiến trúc Serverless.
-- Giảm chi phí nhân sự vận hành, giảm tranh chấp đền bù và nâng cao uy tín dịch vụ Logistics.
+- **Reduces incident handling time:** From several hours/days to just a few seconds.
+- **Improves data accuracy:** Automated analysis reduces human errors in data entry.
+- **Cost optimization:** Serverless architecture only pays for actual usage, no need to maintain servers.
+- **Enhances customer experience:** Fast and transparent incident handling process.
+- **Scalability:** System automatically scales during peak seasons without manual intervention.
+- **Data transparency:** Centralized storage makes tracking and reporting easier.
 
 ---
 
-### Kết luận
+### Conclusion
 
-Giải pháp tự động hóa giám sát chất lượng hàng hóa dựa trên Serverless và AI/ML giúp doanh nghiệp Logistics chuyển đổi quy trình xử lý sự cố từ thủ công sang tự động, tập trung và có khả năng mở rộng. Việc kết hợp Amazon S3, SQS, Lambda, Rekognition, Textract, DynamoDB, SNS, CloudWatch và IAM tạo ra một kiến trúc phù hợp cho bài toán xử lý hình ảnh theo thời gian thực, đồng thời tối ưu chi phí vận hành và cải thiện chất lượng dịch vụ khách hàng.
+The proposed solution leverages AWS Serverless and AI/ML services to automate the goods quality monitoring process, addressing current operational challenges in Logistics. The system not only improves efficiency and accuracy but also optimizes costs and enhances service quality for businesses.

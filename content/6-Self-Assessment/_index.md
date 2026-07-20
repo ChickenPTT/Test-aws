@@ -1,36 +1,36 @@
 ---
-title: "Tự đánh giá"
+title: "Self-Assessment"
 date: 2026-07-11
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **03/05/2026** đến **05/08/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia làm workshop với nhóm 4 người với đề tài **Giải pháp tự động hóa giám sát chất lượng hàng hóa dựa trên Serverless và AI/ML**, qua đó cải thiện kỹ năng **quản lý nhóm 4 người, phân chia công việc phù hợp với từng cá nhân, hiểu được quy trình những dịch vụ.**.
+During my internship at **Amazon Web Services Vietnam LLC** from **03/05/2026** to **05/08/2026**, I had the opportunity to learn, practice, and apply the knowledge equipped at school to a real work environment.  
+I participated in a workshop with a team of 4 people on the topic **"Automated solution for goods quality monitoring based on Serverless and AI/ML"**, through which I improved my skills in **managing a 4-person team, assigning work appropriate to each individual, and understanding the processes of various services.**
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Regarding work style, I always strive to complete tasks well, comply with regulations, and actively exchange with colleagues to improve work efficiency.
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+To objectively reflect the internship process, I would like to self-assess based on the following criteria:
 
 
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
+| No. | Criteria                            | Description                                                                                            | Good | Fair | Average |
 | --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ✅   |  ☐  | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ☐   | ✅   | ☐          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ✅   | ☐   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+| 1   | **Professional knowledge and skills** | Understanding of the industry, applying knowledge to practice, tool usage skills, work quality | ✅   | ☐   | ☐          |
+| 2   | **Learning ability**                | Absorbing new knowledge, learning quickly                                                            | ✅   |  ☐  | ☐          |
+| 3   | **Proactiveness**                        | Self-research, taking tasks without waiting for instructions                                                  | ✅   | ☐   | ☐          |
+| 4   | **Sense of responsibility**           | Completing work on time, ensuring quality                                                | ✅   | ☐   | ☐          |
+| 5   | **Discipline**                         | Adhering to schedules, regulations, work processes                                                   | ☐   | ✅   | ☐          |
+| 6   | **Progressiveness**                   | Ready to receive feedback and improve oneself                                                     | ☐   | ✅   | ☐          |
+| 7   | **Communication**                       | Presenting ideas, reporting work clearly                                                     | ✅   | ☐   | ☐          |
+| 8   | **Teamwork**                    | Working effectively with colleagues, participating in teams                                                 | ✅   | ☐   | ☐          |
+| 9   | **Professional conduct**            | Respecting colleagues, partners, work environment                                              | ✅   | ☐   | ☐          |
+| 10  | **Problem-solving thinking**        | Identifying problems, proposing solutions, creativity                                                    | ☐   | ✅   | ☐          |
+| 11  | **Contribution to project/organization**      | Work effectiveness, improvement initiatives, recognition from team                                         | ✅   | ☐   | ☐          |
+| 12  | **Overall**                        | General assessment of the entire internship process                                                     | ✅   | ☐   | ☐          |
 
-### Cần cải thiện
+### Areas for improvement
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+* Improve discipline, strictly comply with company regulations or any organization
+* Improve problem-solving thinking
+* Learn to communicate better in daily communication and work, handle situations
