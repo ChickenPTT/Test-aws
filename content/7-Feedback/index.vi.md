@@ -1,7 +1,7 @@
 ---
-title: "Chia sẽ và góp ý"
+title: "Feedback and Sharing"
 date: 2026-07-11
 weight: 7
-chapter: false
+chapter: true
 pre: " <b> 7. </b> "
 ---
