@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Intership Report on Internship Report</title><link>https://chickenptt.github.io/Test-aws/</link><description>Recent content in Intership Report on Internship Report</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chickenptt.github.io/Test-aws/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog 1</title><link>https://chickenptt.github.io/Test-aws/3-blogsposted/3.1-blog1/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/3-blogsposted/3.1-blog1/</guid><description>&lt;h1 id="s3-intelligent-tiering--when-storage-knows-where-it-should-live">S3 INTELLIGENT-TIERING – WHEN STORAGE &amp;ldquo;KNOWS&amp;rdquo; WHERE IT SHOULD LIVE&lt;/h1>
+&lt;p>During the process of building a data lake on S3, many teams encounter a common problem: data volume keeps growing, but the access patterns for each type of data are hard to predict. Some files are read continuously, some are read only a few times then forgotten, and some are hardly touched after upload. Leaving everything on S3 Standard can drive up costs, while manually reviewing and moving storage classes is operationally expensive. This is where &lt;strong>S3 Intelligent-Tiering&lt;/strong> proves useful.&lt;/p></description></item><item><title>Workshop Overview</title><link>https://chickenptt.github.io/Test-aws/5-workshop/1.workshop-overview/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/1.workshop-overview/</guid><description>&lt;h1 id="build-an-asynchronous-image-processing-flow-with-amazon-s3-sqs-and-aws-lambda">Build an Asynchronous Image Processing Flow with Amazon S3, SQS, and AWS Lambda&lt;/h1>
+&lt;h3 id="workshop-summary">Workshop Summary&lt;/h3>
+&lt;p>This workshop guides you through building an asynchronous image processing flow using an event-driven architecture on AWS. The goal is to handle the case where many users upload images at the same time while keeping the system stable, scalable, and cost-aware.&lt;/p>
+&lt;hr>
+&lt;h3 id="main-objectives">Main Objectives&lt;/h3>
+&lt;ul>
+&lt;li>Design an &lt;strong>S3 -&amp;gt; SQS -&amp;gt; Lambda&lt;/strong> architecture to process images through a queue, preventing Lambda from being invoked too aggressively when many uploads happen at the same time.&lt;/li>
+&lt;li>Write a Lambda function in Python to:
+&lt;ul>
+&lt;li>Receive messages from SQS that contain S3 events.&lt;/li>
+&lt;li>Download images from S3.&lt;/li>
+&lt;li>Call Amazon Rekognition to detect labels or identify package conditions, such as damaged parcels.&lt;/li>
+&lt;li>Call Amazon Textract to extract text from package labels, such as tracking codes, route information, phone numbers, and other details.&lt;/li>
+&lt;li>Write processing results to CloudWatch Logs for observation and testing.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="what-you-will-learn">What You Will Learn&lt;/h3>
+&lt;ul>
+&lt;li>Why SQS is needed as a buffer between S3 and Lambda in high-load systems.&lt;/li>
+&lt;li>How to configure an IAM Role using the least privilege principle.&lt;/li>
+&lt;li>How to create and configure:
+&lt;ul>
+&lt;li>An S3 bucket and Event Notification.&lt;/li>
+&lt;li>An SQS Standard Queue with important settings such as Visibility Timeout and retention.&lt;/li>
+&lt;li>A Lambda trigger from SQS with a small batch size for easier observation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to run end-to-end testing and validation.&lt;/li>
+&lt;li>How to clean up resources to avoid unnecessary costs.&lt;/li>
+&lt;/ul></description></item><item><title>Worklog Week 1</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week1/</link><pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week1/</guid><description>&lt;h3 id="week-1-goals">Week 1 Goals:&lt;/h3>
+&lt;ul>
+&lt;li>Master foundational knowledge about AWS Cloud Platform, basic services, and cloud architecture&lt;/li>
+&lt;li>Get familiar with AWS management tools: AWS Management Console &amp;amp; AWS CLI&lt;/li>
+&lt;li>Master concepts about cost management, IAM security, and VPC networking&lt;/li>
+&lt;li>Practice Infrastructure as Code to automate deployment on AWS&lt;/li>
+&lt;li>Build good relationships with members in First Cloud AI Journey&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Material&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">Get acquainted with members and mentors at FCAJ &lt;br> Read and note regulations and policies at the internship unit &lt;br> Study 5 theory videos from FCAJ Workforce Bootcamp - 2026: &lt;br>  + Introduction to AWS &lt;br>  + What is FCAJ and the knowledge you will receive &lt;br>  + Generative AI on AWS: Kuro AI &lt;br>  + Management Console Guide: Sign in ROOT USER &amp;amp; IAM USER &lt;br>  + Cost optimization on AWS &lt;br>  + AWS Global Infrastructure: Data center, Availability Zone, Region, Cost optimization, Edge location&lt;/td>
+ &lt;td style="text-align: left">05/04/2026&lt;/td>
+ &lt;td style="text-align: left">05/04/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://www.youtube.com/watch?v=Gz56QzLQ_Yo&amp;list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x">https://www.youtube.com/watch?v=Gz56QzLQ_Yo&amp;list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">Learn basics of drawing AWS architecture on draw.io &lt;br> Explore AWS and service types &lt;br>  + Basic infrastructure services &lt;br>  + Storage and Databases &lt;br>  + Management and Optimization &lt;br>&lt;/td>
+ &lt;td style="text-align: left">05/05/2026&lt;/td>
+ &lt;td style="text-align: left">05/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://www.youtube.com/watch?v=l8isyDe-GwY&amp;list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&amp;index=2">https://www.youtube.com/watch?v=l8isyDe-GwY&amp;list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&amp;index=2&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Managing AWS spending with AWS Budgets&lt;/strong> &lt;br>  + Create Cost Budget &lt;br>  + Create Budget &lt;br>  + Create Usage Budget &lt;br>  + Create Reserved Instance Budget &lt;br>  + Create Savings Plans Budget &lt;br> - Learn about AWS support requests&lt;/td>
+ &lt;td style="text-align: left">05/06/2026&lt;/td>
+ &lt;td style="text-align: left">05/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000007.awsstudygroup.com/vi/">https://000007.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000009.awsstudygroup.com/vi/3-manage-cases/">https://000009.awsstudygroup.com/vi/3-manage-cases/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Managing access with AWS Identity and Access Management (IAM)&lt;/strong> &lt;br>  + Introduction to IAM &lt;br>  + Create IAM group and IAM user &lt;br>  + Create IAM role and operation user &lt;br>  + Switch IAM Role &lt;br>&lt;strong>Hands-on lab: Amazon Virtual Private Cloud (VPC)&lt;/strong> &lt;br>  + Introduction to Amazon VPC: &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.1-subnets/">Subnets&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.2-routetable/">Route Table&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.3-internetgateway/">Internet Gateway&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.4-natgateway/">NAT Gateway&lt;/a> &lt;br>  + Firewall in VPC &lt;br>  + Preparation steps before deploying to EC2 &lt;br>  + Deploy EC2 instance&lt;/td>
+ &lt;td style="text-align: left">05/07/2026&lt;/td>
+ &lt;td style="text-align: left">05/08/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/">https://000003.awsstudygroup.com/vi/1-introduce/&lt;/a> &lt;br> &lt;a href="https://000002.awsstudygroup.com/vi/">https://000002.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">6&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab continued: Amazon Virtual Private Cloud (VPC)&lt;/strong> &lt;br>  + Introduction to site-to-site VPN &lt;br>  + Hands-on practice: &lt;br>   • Create a VPN environment &lt;br>   • Configure VPN connection &lt;br>   • Configure VPN using strongSwan with Transit Gateway &lt;br>  + Automate VPC deployment with Infrastructure as Code &lt;br> Review Week 1 knowledge&lt;/td>
+ &lt;td style="text-align: left">05/08/2026&lt;/td>
+ &lt;td style="text-align: left">05/08/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/">https://000003.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-1-results-achieved">Week 1 Results Achieved:&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Understand basic AWS services and service groups:
+&lt;br> + Compute (EC2)
+&lt;br> + Networking (VPC, Route 53)
+&lt;br> + Cost Management (AWS Budgets, Cost Explorer)
+&lt;br> + Security (IAM, Security Groups)&lt;/p></description></item><item><title>Prepare IAM Role for Lambda</title><link>https://chickenptt.github.io/Test-aws/5-workshop/2.iam-role-prepare/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/2.iam-role-prepare/</guid><description>&lt;h1 id="step-1-prepare-an-iam-role-for-lambda">Step 1: Prepare an IAM Role for Lambda&lt;/h1>
+&lt;h3 id="introduction">Introduction&lt;/h3>
+&lt;p>An IAM Role defines the permissions that Lambda uses to access the AWS services required in this workshop, such as Amazon S3, Amazon SQS, Amazon Rekognition, and Amazon Textract.&lt;/p>
+&lt;p>In this step, you will create an IAM Role for Lambda and attach the required policies so Lambda can read data, receive messages, and write logs while processing images.&lt;/p>
+&lt;hr>
+&lt;h3 id="implementation-steps">Implementation Steps&lt;/h3>
+&lt;ol>
+&lt;li>Open the &lt;strong>AWS Console&lt;/strong> and search for the &lt;strong>IAM&lt;/strong> service.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Search for IAM service" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/2.IAM-Role-Prepare/images/image1.png">&lt;/p></description></item><item><title>Proposal: Estimated System Operating Costs on AWS</title><link>https://chickenptt.github.io/Test-aws/2-proposal/_proposal-price/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/2-proposal/_proposal-price/</guid><description>&lt;h1 id="estimated-system-operating-costs-on-aws">Estimated System Operating Costs on AWS&lt;/h1>
+&lt;h3 id="executive-summary">Executive Summary&lt;/h3>
+&lt;p>This document estimates AWS costs for the system of detecting and processing damaged goods in warehousing, based on serverless architecture using Amplify, Cognito, API Gateway, S3, SQS, Lambda, Rekognition, Textract, DynamoDB, SNS, CloudWatch, and IAM.&lt;/p>
+&lt;p>The estimate is built for a testing/actual operation scenario over 1 week, with a volume of approximately 245 images/week and ~30 active users. Within this assumption scope, the actual total cost of a new AWS account remains $0.00 because all usage falls within the corresponding Free Tier. If calculated at standard rates without applying Free Tier, the total cost for 1 week is approximately $1.57 USD.&lt;/p></description></item><item><title>Worklog Week 2</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week2/</link><pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week2/</guid><description>&lt;h3 id="week-2-objectives">Week 2 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Build a solid foundation in Amazon EC2 and its core features such as Instance types, AMI, Snapshots&lt;/li>
+&lt;li>Practice deploying a Node.js application on EC2 instances running Amazon Linux and Windows&lt;/li>
+&lt;li>Understand how to manage access permissions and limit resource usage using AWS IAM&lt;/li>
+&lt;li>Get familiar with the AWS Cloud9 IDE for developing applications directly on the cloud&lt;/li>
+&lt;li>Master hosting a static website on Amazon S3 with advanced features&lt;/li>
+&lt;li>Optimize website performance using CloudFront CDN&lt;/li>
+&lt;li>Manage object versioning and perform data replication between regions on S3&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Materials&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Getting started and deploying an application on Amazon Compute Cloud (Amazon EC2)&lt;/strong> &lt;br>  + Introduction to AWS (Amazon Elastic Compute Cloud) - EC2 &lt;br>   • Instance type &lt;br>   • AMI/Backup/Keypair &lt;br>  + Preparation steps: &lt;br>   • Create VPC for Linux/Windows &lt;br>   • Security group for Linux/Windows &lt;br>  + Launch a Windows/Linux instance &lt;br>  + EC2 basics: &lt;br>   • Change EC2 configuration &lt;br>   • Create a snapshot &lt;br>   • Custom AMI &lt;br>   • Create an instance from a Custom AMI &lt;br>   • Access EC2 after losing the keypair (Linux and Windows) &lt;br>   • Configure a desktop GUI for EC2-ubuntu 22.04 &lt;br>   • Amazon EBS Snapshot archive&lt;/td>
+ &lt;td style="text-align: left">05/11/2026&lt;/td>
+ &lt;td style="text-align: left">05/12/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/5-amazonec2basic/">https://000004.awsstudygroup.com/vi/5-amazonec2basic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Continue completing the EC2 hands-on lab&lt;/strong> &lt;br>  + Deploy a Node.js app on Amazon Linux: &lt;br>   • Download the LAMP web server &lt;br>   • Prepare LAMP &lt;br>   • Configure and install phpMyAdmin &lt;br>   • Install Node.js on Linux &lt;br>   • Deploy the app on the Linux instance &lt;br>  + Deploy a Node.js app on Amazon Windows: &lt;br>   • Install XAMPP on the Windows instance &lt;br>   • Install Node.js on the Windows instance &lt;br>   • Deploy on the Windows instance &lt;br>  + Limit resource usage using the IAM service &lt;br>   • Restrict usage to a specific Region &lt;br>   • Restrict EC2 by instance family &lt;br>   • Restrict EC2 by instance type &lt;br>   • Restrict EBS volume &lt;br>   • Restrict resource deletion permissions &lt;br>   • Restrict resource deletion by time window &lt;br> &lt;strong>Hands-on lab: Granting application access to AWS services with IAM Role&lt;/strong> &lt;br>  + Create an EC2 instance &lt;br>  + Create an S3 bucket &lt;br>  + Use an access key: create an IAM user, access key, and use the access key &lt;br>  + Create an IAM role &lt;br>  + Use the IAM role&lt;/td>
+ &lt;td style="text-align: left">05/12/2026&lt;/td>
+ &lt;td style="text-align: left">05/12/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000048.awsstudygroup.com/vi/3-iamroleec2/">https://000048.awsstudygroup.com/vi/3-iamroleec2/&lt;/a> &lt;br> &lt;a href="https://000004.awsstudygroup.com/vi/5-amazonec2basic/">https://000004.awsstudygroup.com/vi/5-amazonec2basic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Using a browser-based Cloud IDE with AWS Cloud9&lt;/strong> &lt;br>  + Overview of AWS Cloud9 &lt;br>  + Create a Cloud9 instance &lt;br>  + Basic features: &lt;br>   • Using the command line &lt;br>   • Working with text files &lt;br>   • Dashboard interface &lt;br>  + Using the AWS CLI &lt;br> &lt;strong>Hands-on lab: Hosting a static website with Amazon S3&lt;/strong> &lt;br>  + General theoretical overview &lt;br>  + Create an S3 bucket &lt;br>  + Upload data &lt;br>  + Enable static website hosting &lt;br>  + Configure Block Public Access &lt;br>  + Configure public object access &lt;br>  + Test the website&lt;/td>
+ &lt;td style="text-align: left">05/13/2026&lt;/td>
+ &lt;td style="text-align: left">05/14/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000057.awsstudygroup.com/vi/1-introduce/">https://000057.awsstudygroup.com/vi/1-introduce/&lt;/a> &lt;br> &lt;a href="https://000049.awsstudygroup.com/vi/">https://000049.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Hosting a static website with Amazon S3 (continued)&lt;/strong> &lt;br>  + Speed up the static website with CloudFront &lt;br>  + Block public access to S3 &lt;br>  + Configure Amazon CloudFront &lt;br>  + Verify Amazon CloudFront &lt;br>  + Bucket versioning: &lt;br>   • Introduction &lt;br>   • How it works &lt;br>   • Step-by-step guide &lt;br>  + Move an Object &lt;br>  + Replicate an S3 Object to another region&lt;/td>
+ &lt;td style="text-align: left">05/14/2026&lt;/td>
+ &lt;td style="text-align: left">05/14/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000057.awsstudygroup.com/vi/1-introduce/">https://000057.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-2-results-achieved">Week 2 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>EC2 Core Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Blog 3</title><link>https://chickenptt.github.io/Test-aws/3-blogsposted/3.3-blog3/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/3-blogsposted/3.3-blog3/</guid><description>&lt;h1 id="ensuring-fair-play-by-detecting-and-preventing-profile-alterations-with-amazon-textract">ENSURING FAIR PLAY BY DETECTING AND PREVENTING PROFILE ALTERATIONS WITH AMAZON TEXTRACT&lt;/h1>
+&lt;p>In the development and operation of multiplayer online games, maintaining a fair and healthy gaming environment is always a top priority. Typically, we focus on anti-hack/cheat measures in game code, but there is a very subtle form of cheating that traditional security systems often overlook: profile picture abuse.&lt;/p>
+&lt;p>When initially building a game system, I thought simply that users could upload whatever image they wanted, and at most we&amp;rsquo;d use a filter to check for sensitive images. However, when digging deeper into collusion schemes and reading AWS&amp;rsquo;s solution sharing, I realized that &amp;ldquo;clever&amp;rdquo; players often embed phone numbers, Discord links, or private chat room codes directly into their profile pictures to communicate secretly, cheat in pairs, or lure players away from the system.&lt;/p></description></item><item><title>Create an Amazon SQS Message Queue</title><link>https://chickenptt.github.io/Test-aws/5-workshop/3.create-chat-queueaws-sqs/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/3.create-chat-queueaws-sqs/</guid><description>&lt;h1 id="step-2-create-an-amazon-sqs-message-queue">Step 2: Create an Amazon SQS Message Queue&lt;/h1>
+&lt;h3 id="introduction">Introduction&lt;/h3>
+&lt;p>Amazon SQS acts as an intermediate message queue between Amazon S3 and AWS Lambda.&lt;/p>
+&lt;p>When a user uploads an image to S3, S3 sends a notification to SQS. Lambda then reads messages from SQS and processes them gradually, helping the system remain stable when many images are uploaded at the same time.&lt;/p>
+&lt;hr>
+&lt;h3 id="implementation-steps">Implementation Steps&lt;/h3>
+&lt;ol>
+&lt;li>Open the &lt;strong>AWS Console&lt;/strong>, search for &lt;strong>Amazon SQS&lt;/strong>, then choose &lt;strong>Create queue&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Search for Amazon SQS" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/3.Create-Chat-Queue(AWS-SQS)/images/image13.png">&lt;/p></description></item><item><title>Worklog Week 3</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week3/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week3/</guid><description>&lt;h3 id="week-3-objectives">Week 3 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Gain a solid foundational understanding of Amazon Relational Database Service (Amazon RDS) and its database management features&lt;/li>
+&lt;li>Practice creating and configuring an RDS database instance on AWS&lt;/li>
+&lt;li>Understand how to set up VPC, Security Groups, and DB Subnet Groups for RDS&lt;/li>
+&lt;li>Practice Backup and Restore operations on RDS&lt;/li>
+&lt;li>Get familiar with Amazon Lightsail for deploying lightweight, cost-effective applications&lt;/li>
+&lt;li>Understand how to deploy applications on Lightsail (WordPress, PrestaShop, Akaunting)&lt;/li>
+&lt;li>Grasp the concepts of Lightsail management features such as Snapshots, instance scaling, and monitoring&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-be-carried-out-this-week">Tasks to be carried out this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Source&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Creating a database on Amazon Relational Database Service (Amazon RDS)&lt;/strong> &lt;br>  + Overview and introduction &lt;br>  + Preparation steps: &lt;br>   • Create a VPC &lt;br>   • Create an EC2 security group &lt;br>   • Create an RDS subnet group &lt;br>   • Create a DB Subnet group &lt;br>  + Create an EC2 instance &lt;br>  + Create an RDS database instance &lt;br>  + Deploy the application &lt;br>  + Backup and restore&lt;/td>
+ &lt;td style="text-align: left">05/18/2026&lt;/td>
+ &lt;td style="text-align: left">05/18/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000005.awsstudygroup.com/vi/">https://000005.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Optimizing computing costs with Amazon Lightsail&lt;/strong> &lt;br>  + Overview and introduction &lt;br>  + Deploy a Lightsail database &lt;br>  + Deploy a WordPress Instance: &lt;br>   • Deploy the instance &lt;br>   • Configure Ubuntu &lt;br>   • Configure Networking &lt;br>   • Configure WordPress &lt;br>  + Deploy a PrestaShop E-Commerce Instance: &lt;br>   • Deploy the instance &lt;br>   • Configure Networking &lt;br>   • Deploy the application &lt;br>  + Deploy an Akaunting Instance: &lt;br>   • Deploy the instance &lt;br>   • Configure networking &lt;br>   • Deploy the application &lt;br>  + Secure the application &lt;br>  + Create a Snapshot &lt;br>  + Switch to a larger instance as application resource usage increases &lt;br>  + Set up alerts for high CPU resource usage&lt;/td>
+ &lt;td style="text-align: left">05/19/2026&lt;/td>
+ &lt;td style="text-align: left">05/20/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000045.awsstudygroup.com/vi/8-create-alarms/">https://000045.awsstudygroup.com/vi/8-create-alarms/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Automatically scaling an application with Amazon EC2 Autoscaling&lt;/strong> &lt;br>  + Overview and benefits of an Auto Scaling Group &lt;br>  + Introduction to Auto Scaling Group &lt;br>  + Preparation steps: &lt;br>   • Set up the network infrastructure &lt;br>   • Initialize the EC2 instance &lt;br>   • Initialize a Database instance with RDS &lt;br>   • Install the database data &lt;br>   • Deploy the web server &lt;br>   • Prepare metrics for Predictive Scaling &lt;br>   • Create a Launch Template&lt;/td>
+ &lt;td style="text-align: left">05/20/2026&lt;/td>
+ &lt;td style="text-align: left">05/20/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000006.awsstudygroup.com/vi/1-introduction/">https://000006.awsstudygroup.com/vi/1-introduction/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Continued hands-on lab: Automatically scaling an application with Amazon EC2 Autoscaling&lt;/strong> &lt;br>  + Set up the load balancer &lt;br>  + Check the results &lt;br>  + Create an auto scaling group &lt;br>  + Test the solutions: &lt;br>   • Manual scaling &lt;br>   • Scheduled scaling &lt;br>   • Dynamic scaling &lt;br>   • Predictive scaling &lt;br>  + Review the Autoscaling lab&lt;/td>
+ &lt;td style="text-align: left">05/21/2026&lt;/td>
+ &lt;td style="text-align: left">05/21/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000006.awsstudygroup.com/vi/1-introduction/">https://000006.awsstudygroup.com/vi/1-introduction/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-3-results-achieved">Week 3 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>RDS Core Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Configure Amazon S3 Storage and Events</title><link>https://chickenptt.github.io/Test-aws/5-workshop/4.congif-save-and-eventaws-s3/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/4.congif-save-and-eventaws-s3/</guid><description>&lt;h1 id="step-3-configure-amazon-s3-storage-and-events">Step 3: Configure Amazon S3 Storage and Events&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>In this step, you will create an S3 bucket to store images and configure Amazon S3 to automatically send a notification to the SQS queue created in the previous step whenever a new image is uploaded.&lt;/p>
+&lt;hr>
+&lt;h3 id="31---create-an-s3-bucket">3.1 - Create an S3 Bucket&lt;/h3>
+&lt;ol>
+&lt;li>Open &lt;strong>Amazon S3&lt;/strong>, then choose &lt;strong>Create bucket&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Create S3 bucket" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image19.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Name the bucket using the format &lt;strong>logistics-raw-images-&amp;lt;your-name&amp;gt;&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>The bucket name must be globally unique across AWS.&lt;/p></description></item><item><title>AWS AI &amp; Cloud Operations Workshop</title><link>https://chickenptt.github.io/Test-aws/4-events-participated/event_2/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/4-events-participated/event_2/</guid><description>&lt;h1 id="aws-ai--cloud-operations-workshop-learning-summary">&amp;ldquo;AWS AI &amp;amp; Cloud Operations Workshop&amp;rdquo; Learning Summary&lt;/h1>
+&lt;h3 id="purpose-of-the-event">Purpose of the Event&lt;/h3>
+&lt;ul>
+&lt;li>Get up to date on trends in applying AI Agents to cloud infrastructure operations, DevOps, and incident handling.&lt;/li>
+&lt;li>Explore real-world problems in AI Voice, Vietnamese language processing, response latency, and natural conversational experience.&lt;/li>
+&lt;li>Discover how AI supports businesses in recruitment, onboarding, candidate evaluation, and HR process optimization.&lt;/li>
+&lt;li>Connect the event&amp;rsquo;s knowledge to an AWS cost-estimation proposal for a serverless system that handles damaged goods.&lt;/li>
+&lt;/ul>
+&lt;h3 id="list-of-speakers">List of Speakers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Truong Tran&lt;/strong> – AI Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Steve Tran&lt;/strong> – CTO/Founder, CloudThinker&lt;/li>
+&lt;li>&lt;strong>Trung Vu&lt;/strong> – CEO, Revve AI&lt;/li>
+&lt;li>&lt;strong>Anh Dang&lt;/strong> – Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Nghi Danh&lt;/strong> – AI Engineer, Renova Cloud&lt;/li>
+&lt;li>&lt;strong>Kiet Tran&lt;/strong> – AI Engineer, AWS Student Builder Group&lt;/li>
+&lt;li>&lt;strong>Bao Phan&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Nguyen Nguyen&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Toan Nguyen&lt;/strong> – AWS Security Builder&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;h4 id="agenticops-for-your-cloud">AgenticOps for Your Cloud&lt;/h4>
+&lt;p>Speaker &lt;strong>Steve Tran&lt;/strong> shared insights on the current state of cloud operations in complex microservices systems. When logs, tracing, metrics, and alerts are scattered across many locations, operations engineers often spend a great deal of time investigating the root cause of an incident.&lt;/p></description></item><item><title>Worklog Week 4</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week4/</link><pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week4/</guid><description>&lt;h3 id="week-4-goals">Week 4 Goals:&lt;/h3>
+&lt;ul>
+&lt;li>Master knowledge about Amazon CloudWatch for monitoring and tracking AWS resources&lt;/li>
+&lt;li>Practice creating metrics, logs, alarms, and dashboards on CloudWatch&lt;/li>
+&lt;li>Understand how to set up hybrid DNS with Route 53 Resolver&lt;/li>
+&lt;li>Get familiar with AWS CLI and how to use it on EC2 instances&lt;/li>
+&lt;li>Practice AWS CLI with various AWS services (S3, SNS, IAM, VPC)&lt;/li>
+&lt;li>Review knowledge of basic services: EC2, VPC, IAM Role, S3&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Material&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Creating a system monitoring dashboard with Amazon CloudWatch&lt;/strong> &lt;br>  + Introduction to CloudWatch &lt;br>  + Setting up AWS CloudFormation Stack &lt;br>  + CloudWatch Metrics: &lt;br>   • View metrics &lt;br>   • Perform searches &lt;br>   • Perform mathematical operations &lt;br>   • Create dynamic labels &lt;br>  + CloudWatch Logs: &lt;br>   • CloudWatch Logs Insight &lt;br>   • CloudWatch Metric Filters &lt;br>  + CloudWatch Alarms &lt;br>  + CloudWatch Dashboards&lt;/td>
+ &lt;td style="text-align: left">05/25/2026&lt;/td>
+ &lt;td style="text-align: left">05/25/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000008.awsstudygroup.com/vi/">https://000008.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Setting up Hybrid DNS with Route 53 Resolver&lt;/strong> &lt;br>  + Introduction to Route 53 &lt;br>  + Preparation steps: &lt;br>   • Create keypair &lt;br>   • Create Cloud Formation Template &lt;br>   • Initialize security group &lt;br>   • Connect to RDGW (Remote Desktop Gateway) &lt;br>   • Deploy Microsoft AD &lt;br>   • Setup DNS &lt;br>  + Create Route 53 Outbound Endpoint &lt;br>  + Create Route 53 Resolver Rules &lt;br>  + Create Route 53 Inbound Endpoints &lt;br>  + Test result&lt;/td>
+ &lt;td style="text-align: left">05/26/2026&lt;/td>
+ &lt;td style="text-align: left">05/26/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000010.awsstudygroup.com/vi/">https://000010.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Using AWS CLI on Amazon EC2 (Windows/Ubuntu)&lt;/strong> &lt;br>  + Familiarize with AWS CLI: &lt;br>   • What is AWS CLI? &lt;br>   • Supported environments &lt;br>   • AWS CLI capabilities &lt;br>   • Output formats &lt;br>   • Basic configuration &lt;br>  + IAM User Group: &lt;br>   • IAM User &lt;br>   • AWS Access Key &lt;br>   • EC2 Instance and SSH access permission setup &lt;br>   • Install AWS CLI &lt;br>  + Check resources via CLI &lt;br>  + AWS CLI with Amazon S3 &lt;br>  + AWS CLI with Amazon SNS &lt;br>  + AWS CLI with Amazon IAM &lt;br>  + AWS CLI with Amazon VPC &lt;br>  + Create EC2 and use AWS CLI &lt;br>  + Troubleshooting&lt;/td>
+ &lt;td style="text-align: left">05/27/2026&lt;/td>
+ &lt;td style="text-align: left">05/27/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000011.awsstudygroup.com/vi/1-introduce/">https://000011.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Review services from previous labs&lt;/strong> &lt;br>  + EC2 &lt;br>  + VPC &lt;br>  + IAM Role (AWS IAM) &lt;br>  + S3 bucket&lt;/td>
+ &lt;td style="text-align: left">05/28/2026&lt;/td>
+ &lt;td style="text-align: left">05/28/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/">https://000004.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000003.awsstudygroup.com/vi/">https://000003.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000048.awsstudygroup.com/vi/">https://000048.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000057.awsstudygroup.com/vi/">https://000057.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-4-results-achieved">Week 4 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Amazon CloudWatch Knowledge:&lt;/strong>&lt;/p></description></item><item><title>AWS Community Day 2026</title><link>https://chickenptt.github.io/Test-aws/4-events-participated/event_1/</link><pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/4-events-participated/event_1/</guid><description>&lt;h1 id="aws-community-day-workshop-learning-summary">&amp;ldquo;AWS Community Day Workshop&amp;rdquo; Learning Summary&lt;/h1>
+&lt;h3 id="purpose-of-the-event">Purpose of the Event&lt;/h3>
+&lt;ul>
+&lt;li>Share best practices in modern application design and effective learning methods.&lt;/li>
+&lt;li>Provide in-depth information, practical knowledge, and real-world case studies on Amazon CloudFront applications.&lt;/li>
+&lt;li>Introduce advanced AI tools and models to help optimize the entire development lifecycle.&lt;/li>
+&lt;/ul>
+&lt;h3 id="list-of-speakers">List of Speakers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Vy Lam&lt;/strong> – Senior Business Systems Analyst, VPBank&lt;/li>
+&lt;li>&lt;strong>Duc Dao&lt;/strong> – Solutions Architect, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Thao Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Mai Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Uyen Le&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Anh Pham&lt;/strong> – Cloud Consultant, G-AsiaPacific Vietnam&lt;/li>
+&lt;li>&lt;strong>Tinh Truong&lt;/strong> – Platform Engineer, GoTymeX&lt;/li>
+&lt;li>&lt;strong>Thinh Nguyen&lt;/strong> – DevOps Engineer, FCAJ&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;h4 id="real-world-project-from-the-36h-code-competition">Real-World Project from the 36H Code Competition&lt;/h4>
+&lt;ul>
+&lt;li>Shared the journey of overcoming time pressure from the GenAI Engineers team (&lt;strong>Thao Nguyen, Mai Nguyen, Uyen Le&lt;/strong>).&lt;/li>
+&lt;li>How to break down a large problem into smaller tasks and apply Generative AI to speed up coding and quickly complete a working prototype.&lt;/li>
+&lt;/ul>
+&lt;h4 id="ai-trends-and-mindset">AI Trends and Mindset&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>AI-first Mindset&lt;/strong>: Reshaping how problems are solved by placing AI at the center of operational processes and system optimization to achieve the highest performance.&lt;/li>
+&lt;li>&lt;strong>Second AI Brain&lt;/strong>: The concept of building an AI-powered &amp;ldquo;auxiliary brain&amp;rdquo; to help people store knowledge, perform in-depth data analysis, and make more accurate decisions.&lt;/li>
+&lt;/ul>
+&lt;h4 id="the-track-line-content-mean-thinking-framework">The &amp;ldquo;Track Line Content Mean&amp;rdquo; Thinking Framework&lt;/h4>
+&lt;p>Modeling a method for delivering coherent and persuasive content through a 4-step core structure:&lt;/p></description></item><item><title>Create and Code an AWS Lambda Function</title><link>https://chickenptt.github.io/Test-aws/5-workshop/5.createandcode-lambdafunction/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/5.createandcode-lambdafunction/</guid><description>&lt;h1 id="step-4-create-and-code-an-aws-lambda-function">Step 4: Create and Code an AWS Lambda Function&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>In this step, you will create a Lambda Function that receives messages from Amazon SQS, reads information about images uploaded to Amazon S3, and calls AI services such as Amazon Rekognition and Amazon Textract to analyze the images.&lt;/p>
+&lt;hr>
+&lt;h3 id="41---create-a-lambda-function">4.1 - Create a Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>Open &lt;strong>AWS Lambda&lt;/strong> and choose &lt;strong>Create function&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Open AWS Lambda" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image1.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Select &lt;strong>Author from scratch&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Select Author from scratch" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image2.png">&lt;/p></description></item><item><title>Worklog Week 5</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week5/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week5/</guid><description>&lt;h3 id="week-5-objectives">Week 5 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Build a solid understanding of how to optimize EC2 costs using AWS Lambda&lt;/li>
+&lt;li>Practice creating Lambda functions to automate EC2 instance control&lt;/li>
+&lt;li>Review all knowledge learned from previous weeks (Week 1-4)&lt;/li>
+&lt;li>Systematize basic AWS services and their usage&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Materials&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on lab: Optimize EC2 costs with Lambda&lt;/strong> &lt;br>  + Introduction &lt;br>  + Preparation steps: &lt;br>   • Create a VPC &lt;br>   • Create a Security Group &lt;br>   • EC2 instance &lt;br>   • Incoming Web-hooks stack &lt;br>   • Create tags for the instance &lt;br>   • Create a role for Lambda &lt;br>  + Create a Lambda function: &lt;br>   • Stop function &lt;br>   • Start function &lt;br>  + Verify results&lt;/td>
+ &lt;td style="text-align: left">06/01/2026&lt;/td>
+ &lt;td style="text-align: left">06/01/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000022.awsstudygroup.com/vi/">https://000022.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Review content for each week&lt;/strong> &lt;br>  + Week 1: AWS Foundation &amp;amp; IAM &lt;br>  + Week 2: EC2, S3, CloudFront, CloudFormation &lt;br>  + Week 3: RDS, Lightsail, EC2 Autoscaling &lt;br> &lt;strong>Create Worklog&lt;/strong> + Week 1 and Week 2&lt;br>&lt;/td>
+ &lt;td style="text-align: left">06/02/2026&lt;/td>
+ &lt;td style="text-align: left">06/02/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/">https://000004.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000005.awsstudygroup.com/vi/">https://000005.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000045.awsstudygroup.com/vi/">https://000045.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Review content for each week&lt;/strong> &lt;br>  + Week 4: CloudWatch, Route 53 Resolver, AWS CLI &lt;br>  &lt;strong>Create Worklog&lt;/strong> + Week 3 and Week 4&lt;/td>
+ &lt;td style="text-align: left">06/03/2026&lt;/td>
+ &lt;td style="text-align: left">06/03/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000008.awsstudygroup.com/vi/">https://000008.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000010.awsstudygroup.com/vi/">https://000010.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000011.awsstudygroup.com/vi/">https://000011.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Create Worklog&lt;/strong> &lt;br>+ Week 5&lt;br>&lt;strong>Plan for Workshop&lt;/strong> &lt;br>+ Review team members&amp;rsquo; ideas &lt;br> + Schedule meeting times &lt;br> + Research sample workshop projects and proposal writing &lt;br> + Understand workshop requirements and proposals &lt;br> + Understand the architecture based on the team&amp;rsquo;s ideas&lt;/td>
+ &lt;td style="text-align: left">06/04/2026&lt;/td>
+ &lt;td style="text-align: left">06/04/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-5-results-achieved">Week 5 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>AWS Lambda Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Test the System</title><link>https://chickenptt.github.io/Test-aws/5-workshop/6.testing-validation/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/6.testing-validation/</guid><description>&lt;h1 id="step-5-test-the-system">Step 5: Test the System&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>Confirm that the full &lt;strong>S3 -&amp;gt; SQS -&amp;gt; Lambda -&amp;gt; AI&lt;/strong> flow works correctly.&lt;/p>
+&lt;p>In this step, you will upload images to S3, verify that Lambda processes messages from SQS, and review the analysis results in CloudWatch Logs.&lt;/p>
+&lt;hr>
+&lt;h3 id="51---prepare-test-images">5.1 - Prepare Test Images&lt;/h3>
+&lt;p>Prepare at least two types of images:&lt;/p>
+&lt;ul>
+&lt;li>Images of dented or torn packages to test whether Amazon Rekognition detects the image content correctly.&lt;/li>
+&lt;li>Images with clear shipping labels or tracking codes to test whether Amazon Textract extracts text correctly.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="52---upload-images-to-s3">5.2 - Upload Images to S3&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open the S3 bucket &lt;strong>logistics-raw-images-&amp;lt;your-name&amp;gt;&lt;/strong>, then choose &lt;strong>Upload&lt;/strong>.&lt;/p></description></item><item><title>Worklog Week 6</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week6/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week6/</guid><description>&lt;h3 id="week-6-objectives">Week 6 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Explore the Modernize lab group on AWS Cloud Journey.&lt;/li>
+&lt;li>Understand the concepts of application modernization, serverless architecture, and event-driven processing.&lt;/li>
+&lt;li>Connect lab knowledge with the team&amp;rsquo;s workshop ideas and proposal.&lt;/li>
+&lt;li>Participate in the AWS AI &amp;amp; Cloud Operations Workshop and note content applicable to the project.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-be-carried-out-this-week">Tasks to be carried out this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Source&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Study the Modernize lab group&lt;/strong> &lt;br>  + Read the overview of modernize application content &lt;br>  + Understand how to transform applications toward cloud-native direction &lt;br>  + Take notes on services that may be related to the workshop&lt;/td>
+ &lt;td style="text-align: left">06/08/2026&lt;/td>
+ &lt;td style="text-align: left">06/08/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Practice serverless and event-driven content&lt;/strong> &lt;br>  + Review Lambda, SQS, S3 event notification &lt;br>  + Understand how to separate asynchronous processing using queues &lt;br>  + Connect with the image processing pipeline of the proposal&lt;/td>
+ &lt;td style="text-align: left">06/09/2026&lt;/td>
+ &lt;td style="text-align: left">06/09/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Research modernization in the direction of operations and monitoring&lt;/strong> &lt;br>  + Explore logging, monitoring, CloudWatch &lt;br>  + Take notes on system observation requirements for Lambda, SQS, S3, and DynamoDB&lt;/td>
+ &lt;td style="text-align: left">06/10/2026&lt;/td>
+ &lt;td style="text-align: left">06/10/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Prepare content related to workshop/proposal&lt;/strong> &lt;br>  + Summarize AWS services that can be used in the architecture &lt;br>  + Review the idea of automating product quality monitoring &lt;br>  + Prepare questions and notes for the workshop session&lt;/td>
+ &lt;td style="text-align: left">06/11/2026&lt;/td>
+ &lt;td style="text-align: left">06/11/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">6&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Attend AWS AI &amp;amp; Cloud Operations Workshop&lt;/strong> &lt;br>  + Record content on AgenticOps, AI Voice, and applications of AI in cloud operations &lt;br>  + Connect workshop knowledge with the serverless image processing topic &lt;br>  + Write a summary of the event&lt;/td>
+ &lt;td style="text-align: left">06/12/2026&lt;/td>
+ &lt;td style="text-align: left">06/12/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/4-events-participated/event_2/">AWS AI &amp;amp; Cloud Operations Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-6-results-achieved">Week 6 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Modernize Application Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Sharing and Feedback</title><link>https://chickenptt.github.io/Test-aws/7-feedback/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/7-feedback/</guid><description/></item><item><title>Clean Up Resources</title><link>https://chickenptt.github.io/Test-aws/5-workshop/7.cleanup/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/7.cleanup/</guid><description>&lt;h1 id="step-6-clean-up-resources">Step 6: Clean Up Resources&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>After completing the workshop, delete the resources you created to avoid unnecessary charges.&lt;/p>
+&lt;hr>
+&lt;h3 id="1-delete-the-sqs-queue">1. Delete the SQS Queue&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;strong>Amazon SQS&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select the queue created in the workshop, then choose &lt;strong>Delete&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Delete SQS queue" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image1.png">&lt;/p>
+&lt;ol start="3">
+&lt;li>Enter &lt;strong>Confirm&lt;/strong> to confirm the queue deletion.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Confirm SQS queue deletion" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image2.png">&lt;/p>
+&lt;hr>
+&lt;h3 id="2-delete-the-lambda-function">2. Delete the Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;strong>AWS Lambda&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select the function created in the workshop, then choose &lt;strong>Delete&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Delete Lambda function" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image3.png">&lt;/p></description></item><item><title>Worklog Week 7</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week7/</link><pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week7/</guid><description>&lt;h3 id="week-7-objectives">Week 7 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Learn labs directly related to workshop and proposal content.&lt;/li>
+&lt;li>Hold a team meeting to discuss, divide tasks, and align implementation scope.&lt;/li>
+&lt;li>Write work logs, update progress, and document completed sections.&lt;/li>
+&lt;li>Complete the architectural direction for the serverless image processing system.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-be-carried-out-this-week">Tasks to be carried out this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Source&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Learn labs related to the workshop&lt;/strong> &lt;br>  + Review IAM Role, S3, SQS, and Lambda &lt;br>  + Identify the role of each service in the image processing system &lt;br>  + Take notes on sections to include in the workshop&lt;/td>
+ &lt;td style="text-align: left">06/15/2026&lt;/td>
+ &lt;td style="text-align: left">06/15/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/">https://cloudjourney.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Research proposal content&lt;/strong> &lt;br>  + Review the product quality monitoring problem &lt;br>  + Identify the problem, proposed solution, and expected results &lt;br>  + Prepare the overall architecture description section&lt;/td>
+ &lt;td style="text-align: left">06/16/2026&lt;/td>
+ &lt;td style="text-align: left">06/16/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hold team meeting to discuss task handover&lt;/strong> &lt;br>  + Align workshop scope &lt;br>  + Divide content preparation, images, and reports &lt;br>  + Record tasks that need to be completed in the next week&lt;/td>
+ &lt;td style="text-align: left">06/17/2026&lt;/td>
+ &lt;td style="text-align: left">06/17/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Write work logs&lt;/strong> &lt;br>  + Update worklog with learned content &lt;br>  + Record proposal and workshop progress &lt;br>  + Summarize missing issues that need to be supplemented&lt;/td>
+ &lt;td style="text-align: left">06/18/2026&lt;/td>
+ &lt;td style="text-align: left">06/18/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-7-results-achieved">Week 7 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Workshop Preparation:&lt;/strong>&lt;/p></description></item><item><title>Worklog Week 8</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week8/</link><pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week8/</guid><description>&lt;h3 id="week-8-goals">Week 8 Goals:&lt;/h3>
+&lt;ul>
+&lt;li>Draw the structure/architecture of the project within 2 days.&lt;/li>
+&lt;li>Finalize the architecture diagram for the proposal and workshop.&lt;/li>
+&lt;li>Practice the main content in the workshop.&lt;/li>
+&lt;li>Start editing workshop content into a clear report file.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Material&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Draw project structure - Day 1&lt;/strong> &lt;br>  + Identify architecture layers: Frontend/Auth, Storage, Backend/AI-ML, Monitoring/Security &lt;br>  + Sketch the processing flow from image upload to result storage &lt;br>  + Select appropriate AWS services for each layer&lt;/td>
+ &lt;td style="text-align: left">06/22/2026&lt;/td>
+ &lt;td style="text-align: left">06/22/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Draw project structure - Day 2&lt;/strong> &lt;br>  + Finalize architecture diagram &lt;br>  + Review the S3 -&amp;gt; SQS -&amp;gt; Lambda -&amp;gt; Rekognition/Textract -&amp;gt; DynamoDB flow &lt;br>  + Add CloudWatch and IAM to the diagram&lt;/td>
+ &lt;td style="text-align: left">06/23/2026&lt;/td>
+ &lt;td style="text-align: left">06/23/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/image/DiagramStructure.png">DiagramStructure&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Practice workshop content&lt;/strong> &lt;br>  + Prepare IAM Role for Lambda &lt;br>  + Create SQS queue to receive image processing events &lt;br>  + Configure S3 bucket and event notification&lt;/td>
+ &lt;td style="text-align: left">06/24/2026&lt;/td>
+ &lt;td style="text-align: left">06/24/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Edit workshop report&lt;/strong> &lt;br>  + Review overview, IAM, SQS, S3 sections &lt;br>  + Standardize descriptions for each practice step &lt;br>  + Add illustrative images and verification results&lt;/td>
+ &lt;td style="text-align: left">06/25/2026&lt;/td>
+ &lt;td style="text-align: left">06/25/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-8-results-achieved">Week 8 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Architecture Design:&lt;/strong>&lt;/p></description></item><item><title>Worklog Week 9</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week9/</link><pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week9/</guid><description>&lt;h3 id="week-9-objectives">Week 9 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Continue practicing the remaining content in the workshop.&lt;/li>
+&lt;li>Complete the workshop report file from the hands-on steps.&lt;/li>
+&lt;li>Review the processing flow, illustrations, and content cleanup.&lt;/li>
+&lt;li>Verify consistency between proposal, diagram, and workshop.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Materials&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hands-on Lambda function&lt;/strong> &lt;br>  + Create a Lambda function to process messages from SQS &lt;br>  + Configure necessary permissions &lt;br>  + Check logs on CloudWatch&lt;/td>
+ &lt;td style="text-align: left">06/29/2026&lt;/td>
+ &lt;td style="text-align: left">06/29/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/5.CreateAndCode-LambdaFunction/lambda.md">Lambda Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Testing and validation&lt;/strong> &lt;br>  + Upload images to S3 to create events &lt;br>  + Check messages passing through SQS &lt;br>  + Monitor Lambda processing and logging&lt;/td>
+ &lt;td style="text-align: left">06/30/2026&lt;/td>
+ &lt;td style="text-align: left">06/30/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/6.Testing-Validation/testing.md">Testing&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Edit workshop report&lt;/strong> &lt;br>  + Review writing style of each section &lt;br>  + Add missing illustrations &lt;br>  + Check image paths and titles&lt;/td>
+ &lt;td style="text-align: left">07/01/2026&lt;/td>
+ &lt;td style="text-align: left">07/01/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Complete cleanup and summary&lt;/strong> &lt;br>  + Document the steps to delete resources to avoid additional costs &lt;br>  + Review the entire workshop report &lt;br>  + Compare content with proposal&lt;/td>
+ &lt;td style="text-align: left">07/02/2026&lt;/td>
+ &lt;td style="text-align: left">07/02/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/7.CleanUp/cleanup.md">Cleanup&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-9-results-achieved">Week 9 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Workshop Completion:&lt;/strong>&lt;/p></description></item><item><title>Worklog Week 10</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week10/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week10/</guid><description>&lt;h3 id="week-10-objectives">Week 10 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Learn the lab courses in the Data and Analytics group on AWS Cloud Journey.&lt;/li>
+&lt;li>Master basic knowledge about data collection, storage, processing, and analysis on AWS.&lt;/li>
+&lt;li>Connect data analytics knowledge with the need for reporting damaged product data in the proposal.&lt;/li>
+&lt;li>Supplement ideas for improving dashboards, statistics, and data queries for the project.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-be-carried-out-this-week">Tasks to be carried out this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Source&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Learn Data and Analytics Overview&lt;/strong> &lt;br>  + Read the introduction content of the lab group &lt;br>  + Take notes on commonly used data services on AWS &lt;br>  + Identify parts that can be applied to the project&lt;/td>
+ &lt;td style="text-align: left">07/06/2026&lt;/td>
+ &lt;td style="text-align: left">07/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Explore Data Storage and Processing&lt;/strong> &lt;br>  + Review the role of S3 and DynamoDB &lt;br>  + Understand how to store processing history and analysis results &lt;br>  + Take notes on data query requirements over time&lt;/td>
+ &lt;td style="text-align: left">07/07/2026&lt;/td>
+ &lt;td style="text-align: left">07/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Explore Data Analysis and Reporting&lt;/strong> &lt;br>  + Identify key metrics to track: number of images processed, error rate, processing status &lt;br>  + Propose a reporting direction for warehouse management &lt;br>  + Connect with DynamoDB and CloudWatch metrics&lt;/td>
+ &lt;td style="text-align: left">07/08/2026&lt;/td>
+ &lt;td style="text-align: left">07/08/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Divide the team to write 3 Blogs&lt;/strong> &lt;br>  + Search for AWS blog sources &lt;br>  + Research the structure of blog posts &lt;br>  + Finalize Week 10 worklog&lt;/td>
+ &lt;td style="text-align: left">07/09/2026&lt;/td>
+ &lt;td style="text-align: left">07/09/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-10-results-achieved">Week 10 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Data and Analytics Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Worklog Week 11</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week11/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week11/</guid><description>&lt;h3 id="week-11-objectives">Week 11 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Review the entire proposal, workshop, and worklog written.&lt;/li>
+&lt;li>Supplement missing content related to operations, security, and cost optimization.&lt;/li>
+&lt;li>Check consistency between architecture, practical content, and reports.&lt;/li>
+&lt;li>Prepare a polished version for presentation/evaluation.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-be-carried-out-this-week">Tasks to be carried out this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Source&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Search for blog post information&lt;/strong> &lt;br>  + Check the problem, solution, and architecture sections &lt;br>  + Compare AWS services used and blog content. Proceed with writing blogs to post on Facebook&lt;/td>
+ &lt;td style="text-align: left">07/13/2026&lt;/td>
+ &lt;td style="text-align: left">07/13/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Review the workshop&lt;/strong> &lt;br>  + Check the order of practice steps &lt;br>  + Check images and operation descriptions &lt;br>  + Supplement the explanation of test results&lt;/td>
+ &lt;td style="text-align: left">07/14/2026&lt;/td>
+ &lt;td style="text-align: left">07/14/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Supplement operations and security content&lt;/strong> &lt;br>  + Check IAM least privilege &lt;br>  + Supplement notes on CloudWatch logs/metrics &lt;br>  + Note cleanup to avoid incurring costs&lt;/td>
+ &lt;td style="text-align: left">07/15/2026&lt;/td>
+ &lt;td style="text-align: left">07/15/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/7.CleanUp/cleanup.md">Cleanup&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Finalize the worklog&lt;/strong> &lt;br>  + Update worklogs for missing weeks &lt;br>  + Standardize the format of task tables &lt;br>  + Check internal links&lt;/td>
+ &lt;td style="text-align: left">07/16/2026&lt;/td>
+ &lt;td style="text-align: left">07/16/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-11-results-achieved">Week 11 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Review &amp;amp; Improvement:&lt;/strong>&lt;/p></description></item><item><title>Worklog Week 12</title><link>https://chickenptt.github.io/Test-aws/1-worklog/week12/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/1-worklog/week12/</guid><description>&lt;h3 id="week-12-objectives">Week 12 Objectives:&lt;/h3>
+&lt;ul>
+&lt;li>Summarize the learning, practice, and workshop development process.&lt;/li>
+&lt;li>Complete the final documentation parts.&lt;/li>
+&lt;li>Prepare content for presenting project results.&lt;/li>
+&lt;li>Extract lessons learned about AWS knowledge, teamwork, and technical report writing.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tasks-to-complete-this-week">Tasks to complete this week:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Day&lt;/th>
+ &lt;th style="text-align: left">Task&lt;/th>
+ &lt;th style="text-align: left">Start Date&lt;/th>
+ &lt;th style="text-align: left">Completion Date&lt;/th>
+ &lt;th style="text-align: left">Reference Materials&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Summarize AWS knowledge learned&lt;/strong> &lt;br>  + Review EC2, S3, IAM, Lambda, SQS, DynamoDB, CloudWatch &lt;br>  + Consolidate services applied to proposal/workshop &lt;br>  + Document knowledge areas that need improvement&lt;/td>
+ &lt;td style="text-align: left">07/20/2026&lt;/td>
+ &lt;td style="text-align: left">07/20/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Complete final documentation&lt;/strong> &lt;br>  + Review proposal &lt;br>  + Review workshop &lt;br>  + Review worklog and events participated&lt;/td>
+ &lt;td style="text-align: left">07/21/2026&lt;/td>
+ &lt;td style="text-align: left">07/21/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Prepare project presentation&lt;/strong> &lt;br>  + Summarize problem statement and solution &lt;br>  + Prepare architecture explanation section &lt;br>  + Prepare demo/workshop walkthrough section&lt;/td>
+ &lt;td style="text-align: left">07/22/2026&lt;/td>
+ &lt;td style="text-align: left">07/22/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Lessons learned and final summary&lt;/strong> &lt;br>  + Document lessons on teamwork &lt;br>  + Document lessons on serverless design on AWS &lt;br>  + Complete week 12 worklog&lt;/td>
+ &lt;td style="text-align: left">07/23/2026&lt;/td>
+ &lt;td style="text-align: left">07/23/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="week-12-results-achieved">Week 12 Results Achieved&lt;/h3>
+&lt;p>&lt;strong>Final Summary:&lt;/strong>&lt;/p></description></item></channel></rss>

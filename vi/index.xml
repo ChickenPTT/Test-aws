@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Báo cáo thực tập</title><link>https://chickenptt.github.io/Test-aws/vi/</link><description>Recent content on Báo cáo thực tập</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chickenptt.github.io/Test-aws/vi/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog 1</title><link>https://chickenptt.github.io/Test-aws/vi/3-blogsposted/3.1-blog1/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/3-blogsposted/3.1-blog1/</guid><description>&lt;h1 id="s3-intelligent-tiering--khi-lưu-trữ-dữ-liệu-tự-biết-nên-nằm-ở-tầng-nào">S3 INTELLIGENT-TIERING – KHI LƯU TRỮ DỮ LIỆU TỰ &amp;ldquo;BIẾT&amp;rdquo; NÊN NẰM Ở TẦNG NÀO&lt;/h1>
+&lt;p>Trong quá trình xây dựng data lake trên S3, có một bài toán mà nhiều team hay gặp: dữ liệu ngày càng nhiều, nhưng mô hình truy cập của từng loại dữ liệu lại rất khó đoán trước. Có file được đọc liên tục, có file chỉ đọc vài lần rồi bỏ đó, cũng có file gần như không ai đụng tới sau khi upload. Nếu cứ để tất cả nằm ở S3 Standard thì chi phí sẽ đội lên khá nhiều, còn nếu ngồi rà soát thủ công để chuyển storage class thì lại tốn công vận hành. Đây chính là lúc &lt;strong>S3 Intelligent-Tiering&lt;/strong> phát huy tác dụng.&lt;/p></description></item><item><title>Tổng quan về Workshop</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/1.workshop-overview/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/1.workshop-overview/</guid><description>&lt;h1 id="xây-dựng-luồng-xử-lý-hình-ảnh-bất-đồng-bộ-sử-dụng-amazon-s3-sqs-và-aws-lambda">Xây dựng luồng xử lý hình ảnh bất đồng bộ sử dụng Amazon S3, SQS và AWS Lambda&lt;/h1>
+&lt;h3 id="tóm-tắt-về-workshop">Tóm tắt về workshop&lt;/h3>
+&lt;p>Workshop này hướng dẫn bạn xây dựng một luồng xử lý ảnh bất đồng bộ (asynchronous) theo mô hình Event-Driven trên AWS, giải quyết bài toán &amp;ldquo;nhiều người dùng upload ảnh cùng lúc&amp;rdquo; nhưng vẫn đảm bảo hệ thống ổn định, dễ mở rộng và kiểm soát chi phí.&lt;/p></description></item><item><title>Tuần 1</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week1/</link><pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week1/</guid><description>&lt;h3 id="mục-tiêu-tuần-1">Mục tiêu tuần 1:&lt;/h3>
+&lt;ul>
+&lt;li>Nắm vững kiến thức nền tảng về AWS Cloud Platform, các dịch vụ cơ bản và kiến trúc cloud&lt;/li>
+&lt;li>Làm quen với các công cụ quản lý AWS: AWS Management Console &amp;amp; AWS CLI&lt;/li>
+&lt;li>Nắm vững các khái niệm về quản lý chi phí, bảo mật IAM, và mạng VPC&lt;/li>
+&lt;li>Thực hành Infrastructure as Code để tự động hóa triển khai trên AWS&lt;/li>
+&lt;li>Xây dựng quan hệ tốt với các thành viên trong First Cloud AI Journey&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">Làm quen với các thành viên và các anh chị mentor tại FCAJ &lt;br> Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập &lt;br> Học 5 video lý thuyết FCAJ Workforce Bootcamp - 2026: &lt;br>  + Giới thiệu về AWS &lt;br>  + FCAJ là gì và những kiến thức bạn sẽ nhận được &lt;br>  + Gen AI trên AWS: Kuro AI &lt;br>  + Hướng dẫn Management Console: Sign in ROOT USER &amp;amp; IAM USER &lt;br>  + Cost optimization on AWS &lt;br>  + AWS Global Infrastructure: Data center, AZ, Region, Cost optimization, Edge location&lt;/td>
+ &lt;td style="text-align: left">04/05/2026&lt;/td>
+ &lt;td style="text-align: left">04/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://www.youtube.com/watch?v=Gz56QzLQ_Yo&amp;list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x">https://www.youtube.com/watch?v=Gz56QzLQ_Yo&amp;list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">Học cơ bản về cách vẽ kiến trúc AWS trên draw.io &lt;br> Tìm hiểu AWS và các loại dịch vụ &lt;br>  + Dịch vụ hạ tầng cơ bản &lt;br>  + Lưu trữ và Cơ sở dữ liệu &lt;br>  + Quản lý và Tối ưu &lt;br>&lt;/td>
+ &lt;td style="text-align: left">05/05/2026&lt;/td>
+ &lt;td style="text-align: left">05/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://www.youtube.com/watch?v=l8isyDe-GwY&amp;list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&amp;index=2">https://www.youtube.com/watch?v=l8isyDe-GwY&amp;list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&amp;index=2&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Quản lý mức chi phí sử dụng trên AWS với AWS Budgets&lt;/strong> &lt;br>  + Tạo Cost Budget &lt;br>  + Tạo Budget &lt;br>  + Tạo Usage Budget &lt;br>  + Tạo RI Budget &lt;br>  + Tạo Saving Plans Budget &lt;br> - Tìm hiểu về các yêu cầu hỗ trợ từ AWS&lt;/td>
+ &lt;td style="text-align: left">06/05/2026&lt;/td>
+ &lt;td style="text-align: left">06/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000007.awsstudygroup.com/vi/">https://000007.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000009.awsstudygroup.com/vi/3-manage-cases/">https://000009.awsstudygroup.com/vi/3-manage-cases/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Quản trị quyền truy cập với AWS Identity and Access Management (IAM)&lt;/strong> &lt;br>  + Giới thiệu về IAM &lt;br>  + Tạo IAM group và IAM user &lt;br>  + Tạo IAM role và operation user &lt;br>  + Chuyển đổi IAM Role &lt;br>&lt;strong>Thực hành lab: Amazon Virtual Private Cloud (VPC)&lt;/strong> &lt;br>  + Giới thiệu về Amazon VPC: &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.1-subnets/">Subnets&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.2-routetable/">Route Table&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.3-internetgateway/">Internet Gateway&lt;/a>, &lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/1.4-natgateway/">NAT Gateway&lt;/a> &lt;br>  + Tường lửa trong VPC &lt;br>  + Các bước chuẩn bị trước khi triển khai lên EC2 &lt;br>  + Triển khai EC2 instance&lt;/td>
+ &lt;td style="text-align: left">07/05/2026&lt;/td>
+ &lt;td style="text-align: left">08/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/">https://000003.awsstudygroup.com/vi/1-introduce/&lt;/a> &lt;br> &lt;a href="https://000002.awsstudygroup.com/vi/">https://000002.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">6&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab tiếp tục: Amazon Virtual Private Cloud (VPC)&lt;/strong> &lt;br>  + Giới thiệu về site to site VPN &lt;br>  + Thực hành: &lt;br>   • Tạo môi trường VPN &lt;br>   • Cấu hình kết nối VPN &lt;br>   • Cấu hình VPN bằng strongSwan với Transit Gateway &lt;br>  + Tự động hóa triển khai VPC với Infrastructure as Code &lt;br> Ôn lại kiến thức tuần 1&lt;/td>
+ &lt;td style="text-align: left">08/05/2026&lt;/td>
+ &lt;td style="text-align: left">08/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000003.awsstudygroup.com/vi/1-introduce/">https://000003.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-1">Kết quả đạt được tuần 1:&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Hiểu rõ các dịch vụ AWS cơ bản và các nhóm dịch vụ có bắn:
+&lt;br> + Compute (EC2)
+&lt;br> + Networking (VPC, Route 53)
+&lt;br> + Quản lý chi phí (AWS Budgets, Cost Explorer)
+&lt;br> + Bảo mật (IAM, Security Groups)&lt;/p></description></item><item><title>Chuẩn bị IAM Role cho Lambda</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/2.iam-role-prepare/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/2.iam-role-prepare/</guid><description>&lt;h1 id="bước-1-chuẩn-bị-iam-role-cho-lambda">Bước 1: Chuẩn bị IAM Role cho Lambda&lt;/h1>
+&lt;h3 id="giới-thiệu">Giới thiệu&lt;/h3>
+&lt;p>IAM Role là quyền mà Lambda sử dụng để truy cập các dịch vụ AWS cần thiết trong workshop như Amazon S3, Amazon SQS, Amazon Rekognition và Amazon Textract.&lt;/p>
+&lt;p>Trong bước này, bạn sẽ tạo một IAM Role cho Lambda và gắn các policy cần thiết để Lambda có thể đọc dữ liệu, nhận message và ghi log trong quá trình xử lý ảnh.&lt;/p></description></item><item><title>Proposal: Ước tính chi phí vận hành hệ thống trên AWS</title><link>https://chickenptt.github.io/Test-aws/vi/2-proposal/_proposal-price/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/2-proposal/_proposal-price/</guid><description>&lt;h1 id="ước-tính-chi-phí-vận-hành-hệ-thống-trên-aws">Ước tính chi phí vận hành hệ thống trên AWS&lt;/h1>
+&lt;h3 id="tóm-tắt-điều-hành">Tóm tắt điều hành&lt;/h3>
+&lt;p>Tài liệu này ước tính chi phí AWS cho hệ thống phát hiện và xử lý hàng hóa hư hỏng trong kho vận, dựa trên kiến trúc serverless sử dụng Amplify, Cognito, API Gateway, S3, SQS, Lambda, Rekognition, Textract, DynamoDB, SNS, CloudWatch và IAM.&lt;/p>
+&lt;p>Ước tính được xây dựng cho kịch bản thử nghiệm / vận hành thực tế trong 1 tuần, với khối lượng khoảng 245 ảnh/tuần và ~30 người dùng hoạt động. Trong phạm vi giả định này, tổng chi phí thực tế của tài khoản AWS mới vẫn là $0,00 do toàn bộ mức sử dụng nằm trong Free Tier tương ứng. Nếu tính theo đơn giá chuẩn mà không áp Free Tier, tổng chi phí 1 tuần vào khoảng $1,57 USD.&lt;/p></description></item><item><title>Tuần 2</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week2/</link><pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week2/</guid><description>&lt;h3 id="mục-tiêu-tuần-2">Mục tiêu tuần 2:&lt;/h3>
+&lt;ul>
+&lt;li>Nắm vững kiến thức nền tảng về Amazon EC2 và các tính năng cơ bản như Instance types, AMI, Snapshots&lt;/li>
+&lt;li>Thực hành triển khai ứng dụng Node.js trên EC2 instances chạy Amazon Linux và Windows&lt;/li>
+&lt;li>Hiểu rõ cách quản lý quyền truy cập và giới hạn tài nguyên sử dụng bằng AWS IAM&lt;/li>
+&lt;li>Làm quen với AWS Cloud9 IDE để phát triển ứng dụng trực tiếp trên cloud&lt;/li>
+&lt;li>Thành thạo việc hosting static website trên Amazon S3 với các tính năng nâng cao&lt;/li>
+&lt;li>Tối ưu hóa hiệu suất website bằng CloudFront CDN&lt;/li>
+&lt;li>Quản lý phiên bản object và thực hiện sao chép dữ liệu giữa các regions trên S3&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Bắt đầu và triển khai ứng dụng trên Amazon Compute Cloud (Amazon EC2)&lt;/strong> &lt;br>  + Giới thiệu về AWS (Amazon Elastic Compute Cloud) - EC2 &lt;br>   • Instance type &lt;br>   • AMI/BackUp/Keypair &lt;br>  + Các bước chuẩn bị: &lt;br>   • Tạo VPC Linux/Window &lt;br>   • Security group Linux/Window &lt;br>  + Khởi tạo Window/Linux instance &lt;br>  + EC2 cơ bản: &lt;br>   • Thay đổi cấu hình EC2 &lt;br>   • Tạo snapshot &lt;br>   • Custom AMI &lt;br>   • Tạo instance từ Custom AMI &lt;br>   • Truy cập EC2 khi mất keypair Linux và Window &lt;br>   • Cấu hình giao diện desktop cho EC2-ubuntu 22.04 &lt;br>   • Amazon EBS Snapshot archive&lt;/td>
+ &lt;td style="text-align: left">11/05/2026&lt;/td>
+ &lt;td style="text-align: left">12/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/5-amazonec2basic/">https://000004.awsstudygroup.com/vi/5-amazonec2basic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tiếp tục hoàn thành bài thực hành lab EC2&lt;/strong> &lt;br>  + Triển khai app Node.js trên Amazon Linux: &lt;br>   • Download LAMP web server &lt;br>   • Chuẩn bị LAMP &lt;br>   • Cấu hình và cài đặt phpMyAdmin &lt;br>   • Cài đặt Node.js trên Linux &lt;br>   • Triển khai app trên Linux instance &lt;br>  + Triển khai app Node.js trên Amazon Window: &lt;br>   • Cài XAMPP trên Window instance &lt;br>   • Cài Node.js trên Window instance &lt;br>   • Triển khai trên Window instance &lt;br>  + Giới hạn tài nguyên sử dụng bằng service IAM &lt;br>   • Cho sử dụng theo Region cụ thể &lt;br>   • Giới hạn EC2 theo instance family &lt;br>   • Giới hạn EC2 theo instance type &lt;br>   • Giới hạn EBS volume &lt;br>   • Giới hạn quyền xóa tài nguyên &lt;br>   • Giới hạn xóa tài nguyên theo khoảng thời gian &lt;br> &lt;strong>Thực hành lab: Cấp quyền cho ứng dụng truy cập dịch vụ AWS với IAM Role&lt;/strong> &lt;br>  + Tạo EC2 instance &lt;br>  + Tạo S3 bucket &lt;br>  + Sử dụng access key: Tạo IAM user, access key, dùng access key &lt;br>  + Tạo IAM role &lt;br>  + Sử dụng IAM role&lt;/td>
+ &lt;td style="text-align: left">12/05/2026&lt;/td>
+ &lt;td style="text-align: left">12/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000048.awsstudygroup.com/vi/3-iamroleec2/">https://000048.awsstudygroup.com/vi/3-iamroleec2/&lt;/a> &lt;br> &lt;a href="https://000004.awsstudygroup.com/vi/5-amazonec2basic/">https://000004.awsstudygroup.com/vi/5-amazonec2basic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Sử dụng Cloud IDE trên trình duyệt với AWS Cloud9&lt;/strong> &lt;br>  + Tổng quan về AWS Cloud9 &lt;br>  + Tạo Cloud9 instance &lt;br>  + Tính năng cơ bản: &lt;br>   • Dùng command line &lt;br>   • Làm việc với file text &lt;br>   • Giao diện dashboard &lt;br>  + Dùng AWS CLI &lt;br> &lt;strong>Thực hành lab: Hosting static website với Amazon S3&lt;/strong> &lt;br>  + Giới thiệu tổng quan lý thuyết &lt;br>  + Tạo S3 bucket &lt;br>  + Tải dữ liệu &lt;br>  + Bật tính năng static website &lt;br>  + Cấu hình Block Public Access &lt;br>  + Cấu hình public object &lt;br>  + Kiểm tra Website&lt;/td>
+ &lt;td style="text-align: left">13/05/2026&lt;/td>
+ &lt;td style="text-align: left">14/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000057.awsstudygroup.com/vi/1-introduce/">https://000057.awsstudygroup.com/vi/1-introduce/&lt;/a> &lt;br> &lt;a href="https://000049.awsstudygroup.com/vi/">https://000049.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Hosting static website với Amazon S3 (tiếp tục)&lt;/strong> &lt;br>  + Tăng tốc static website với CloudFront &lt;br>  + Chặn truy cập công cộng vào S3 &lt;br>  + Cấu hình Amazon CloudFront &lt;br>  + Kiểm tra Amazon CloudFront &lt;br>  + Bucket versioning: &lt;br>   • Giới thiệu &lt;br>   • Cách thực hoạt động &lt;br>   • Hướng dẫn thực hiện &lt;br>  + Di chuyển Object &lt;br>  + Sao chép S3 Object sang region khác&lt;/td>
+ &lt;td style="text-align: left">14/05/2026&lt;/td>
+ &lt;td style="text-align: left">14/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000057.awsstudygroup.com/vi/1-introduce/">https://000057.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-2">Kết quả đạt được tuần 2&lt;/h3>
+&lt;p>&lt;strong>EC2 Core Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Blog 3</title><link>https://chickenptt.github.io/Test-aws/vi/3-blogsposted/3.3-blog3/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/3-blogsposted/3.3-blog3/</guid><description>&lt;h1 id="đảm-bảo-công-bằng-bằng-cách-phát-hiện-và-ngăn-chặn-việc-thay-đổi-hồ-sơ-với-amazon-textract">ĐẢM BẢO CÔNG BẰNG BẰNG CÁCH PHÁT HIỆN VÀ NGĂN CHẶN VIỆC THAY ĐỔI HỒ SƠ VỚI AMAZON TEXTRACT&lt;/h1>
+&lt;p>Trong quá trình phát triển và vận hành các trò chơi trực tuyến nhiều người chơi, việc duy trì một môi trường chơi game công bằng và lành mạnh luôn là ưu tiên hàng đầu. Thông thường, chúng ta tập trung vào các biện pháp chống hack/gian lận trong mã nguồn trò chơi, nhưng có một hình thức gian lận rất tinh vi mà các hệ thống bảo mật truyền thống thường bỏ qua: lạm dụng ảnh đại diện.&lt;/p></description></item><item><title>Tạo hàng đợi tin nhắn Amazon SQS</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/3.create-chat-queueaws-sqs/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/3.create-chat-queueaws-sqs/</guid><description>&lt;h1 id="bước-2-tạo-hàng-đợi-tin-nhắn-amazon-sqs">Bước 2: Tạo hàng đợi tin nhắn Amazon SQS&lt;/h1>
+&lt;h3 id="giới-thiệu">Giới thiệu&lt;/h3>
+&lt;p>Amazon SQS đóng vai trò là hàng đợi trung gian giữa Amazon S3 và AWS Lambda.&lt;/p>
+&lt;p>Khi người dùng tải ảnh lên S3, S3 sẽ gửi thông báo vào SQS. Lambda sẽ đọc message từ SQS và xử lý dần dần, giúp hệ thống ổn định hơn khi có nhiều ảnh được tải lên cùng lúc.&lt;/p>
+&lt;hr>
+&lt;h3 id="các-bước-thực-hiện">Các bước thực hiện&lt;/h3>
+&lt;ol>
+&lt;li>Truy cập &lt;strong>AWS Console&lt;/strong>, tìm dịch vụ &lt;strong>Amazon SQS&lt;/strong>, sau đó chọn &lt;strong>Create queue&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Tìm Amazon SQS" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/3.Create-Chat-Queue(AWS-SQS)/images/image13.png">&lt;/p></description></item><item><title>Tuần 3</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week3/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week3/</guid><description>&lt;h3 id="mục-tiêu-tuần-3">Mục tiêu tuần 3:&lt;/h3>
+&lt;ul>
+&lt;li>Nắm vững cơ bản kiến thức về Amazon Relational Database Service (Amazon RDS) và các tính năng quản lý cơ sở dữ liệu&lt;/li>
+&lt;li>Thực hành tạo và cấu hình RDS database instance trên AWS&lt;/li>
+&lt;li>Hiểu rõ cách thiết lập VPC, Security Groups, và DB Subnet Groups cho RDS&lt;/li>
+&lt;li>Thực hành Backup và Restore dữ liệu trên RDS&lt;/li>
+&lt;li>Làm quen với Amazon Lightsail để triển khai ứng dụng nhẹ và hiệu quả về chi phí&lt;/li>
+&lt;li>Hiểu về triển khai các ứng dụng trên Lightsail (WordPress, PrestaShop, Akaunting)&lt;/li>
+&lt;li>Nắm khái niệm các tính năng quản lý Lightsail như Snapshots, scaling instances, và monitoring&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Tạo cơ sở dữ liệu trên Amazon Relational Database Service (Amazon RDS)&lt;/strong> &lt;br>  + Tổng quan giới thiệu &lt;br>  + Các bước chuẩn bị: &lt;br>   • Tạo VPC &lt;br>   • Tạo EC2 security group &lt;br>   • Tạo RDS subnet group &lt;br>   • Tạo DB Subnet group &lt;br>  + Tạo ec2 instance &lt;br>  + Tạo RDS database instance &lt;br>  + Triển khai ứng dụng &lt;br>  + Backup và restore&lt;/td>
+ &lt;td style="text-align: left">18/05/2026&lt;/td>
+ &lt;td style="text-align: left">18/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000005.awsstudygroup.com/vi/">https://000005.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Tối ưu chi phí tính toán với Amazon Lightsail&lt;/strong> &lt;br>  + Tổng quan và giới thiệu &lt;br>  + Triển khai lightsail database &lt;br>  + Triển khai Wordpress Instance: &lt;br>   • Triển khai instance &lt;br>   • Cấu hình ubuntu &lt;br>   • Cấu hình Networking &lt;br>   • Cấu hình WordPress &lt;br>  + Triển khai Prestashop E-Commerce Instance: &lt;br>   • Triển khai instance &lt;br>   • Cấu hình Networking &lt;br>   • Triển khai ứng dụng &lt;br>  + Triển khai Akaunting Instance: &lt;br>   • Triển khai instance &lt;br>   • Cấu hình networking &lt;br>   • Triển khai ứng dụng &lt;br>  + Bảo mật ứng dụng &lt;br>  + Tạo Snapshot &lt;br>  + Chuyển sang instance lớn hơn khi lượng tài nguyên truy cập ứng dụng tăng lên &lt;br>  + Tạo cảnh báo khi sử dụng tài nguyên CPU tăng cao&lt;/td>
+ &lt;td style="text-align: left">19/05/2026&lt;/td>
+ &lt;td style="text-align: left">20/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000045.awsstudygroup.com/vi/8-create-alarms/">https://000045.awsstudygroup.com/vi/8-create-alarms/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Tự động mở rộng qui mô ứng dụng với Amazon EC2 Autoscaling&lt;/strong> &lt;br>  + Tổng quan và lợi ích của Auto Scaling Group &lt;br>  + Giới thiệu về Auto Scaling Group &lt;br>  + Các bước chuẩn bị: &lt;br>   • Thiết lập hạ tầng mạng &lt;br>   • Khởi tạo ec2 instance &lt;br>   • Khởi tạo Database instance với RDS &lt;br>   • Cài dữ liệu database &lt;br>   • Triển khai máy chủ web &lt;br>   • Chuẩn bị các metric cho Predictive Scaling &lt;br>   • Tạo Launch Template&lt;/td>
+ &lt;td style="text-align: left">20/05/2026&lt;/td>
+ &lt;td style="text-align: left">20/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000006.awsstudygroup.com/vi/1-introduction/">https://000006.awsstudygroup.com/vi/1-introduction/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tiếp tục thực hành lab: Tự động mở rộng qui mô ứng dụng với Amazon EC2 Autoscaling&lt;/strong> &lt;br>  + Thiết lập load balancer &lt;br>  + Kiểm tra kết quả &lt;br>  + Tạo auto scaling group &lt;br>  + Kiểm thử các giải pháp: &lt;br>   • Manual scaling &lt;br>   • Scheduled scaling &lt;br>   • Dynamic scaling &lt;br>   • Predictive scaling &lt;br>  + Ôn lại bài lab Autoscaling&lt;/td>
+ &lt;td style="text-align: left">21/05/2026&lt;/td>
+ &lt;td style="text-align: left">21/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000006.awsstudygroup.com/vi/1-introduction/">https://000006.awsstudygroup.com/vi/1-introduction/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-3">Kết quả đạt được tuần 3&lt;/h3>
+&lt;p>&lt;strong>RDS Core Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Cấu hình lưu trữ và sự kiện Amazon S3</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/4.congif-save-and-eventaws-s3/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/4.congif-save-and-eventaws-s3/</guid><description>&lt;h1 id="bước-3-cấu-hình-lưu-trữ-và-sự-kiện-amazon-s3">Bước 3: Cấu hình lưu trữ và sự kiện Amazon S3&lt;/h1>
+&lt;h3 id="mục-tiêu">Mục tiêu&lt;/h3>
+&lt;p>Trong bước này, bạn sẽ tạo S3 bucket để lưu ảnh và cấu hình để mỗi khi có ảnh mới được tải lên, Amazon S3 tự động gửi thông báo vào SQS queue đã tạo ở bước trước.&lt;/p>
+&lt;hr>
+&lt;h3 id="31---tạo-s3-bucket">3.1 - Tạo S3 Bucket&lt;/h3>
+&lt;ol>
+&lt;li>Truy cập &lt;strong>Amazon S3&lt;/strong>, sau đó chọn &lt;strong>Create bucket&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Tạo S3 bucket" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image19.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Đặt tên bucket theo định dạng &lt;strong>logistics-raw-images-&amp;lt;tên-bạn&amp;gt;&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>Tên bucket phải là duy nhất trên toàn bộ AWS.&lt;/p></description></item><item><title>AWS AI &amp; Cloud Operations Workshop</title><link>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_2/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_2/</guid><description>&lt;h1 id="bài-thu-hoạch-aws-ai--cloud-operations-workshop">Bài thu hoạch &amp;ldquo;AWS AI &amp;amp; Cloud Operations Workshop&amp;rdquo;&lt;/h1>
+&lt;h3 id="mục-đích-của-sự-kiện">Mục Đích Của Sự Kiện&lt;/h3>
+&lt;ul>
+&lt;li>Cập nhật xu hướng ứng dụng AI Agent trong vận hành hạ tầng cloud, DevOps và xử lý sự cố hệ thống.&lt;/li>
+&lt;li>Tìm hiểu các bài toán thực tế về AI Voice, xử lý tiếng Việt, độ trễ phản hồi và trải nghiệm hội thoại tự nhiên.&lt;/li>
+&lt;li>Khám phá cách AI hỗ trợ doanh nghiệp trong tuyển dụng, onboarding, đánh giá ứng viên và tối ưu quy trình nhân sự.&lt;/li>
+&lt;li>Liên hệ kiến thức sự kiện với proposal ước tính chi phí AWS cho hệ thống serverless xử lý hàng hóa hư hỏng.&lt;/li>
+&lt;/ul>
+&lt;h3 id="danh-sách-diễn-giả">Danh Sách Diễn Giả&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Truong Tran&lt;/strong> – AI Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Steve Tran&lt;/strong> – CTO/Founder, CloudThinker&lt;/li>
+&lt;li>&lt;strong>Trung Vu&lt;/strong> – CEO, Revve AI&lt;/li>
+&lt;li>&lt;strong>Anh Dang&lt;/strong> – Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Nghi Danh&lt;/strong> – AI Engineer, Renova Cloud&lt;/li>
+&lt;li>&lt;strong>Kiet Tran&lt;/strong> – AI Engineer, AWS Student Builder Group&lt;/li>
+&lt;li>&lt;strong>Bao Phan&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Nguyen Nguyen&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Toan Nguyen&lt;/strong> – AWS Security Builder&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="nội-dung-nổi-bật">Nội Dung Nổi Bật&lt;/h3>
+&lt;h4 id="agenticops-for-your-cloud">AgenticOps for Your Cloud&lt;/h4>
+&lt;p>Diễn giả &lt;strong>Steve Tran&lt;/strong> chia sẻ về thực trạng vận hành cloud trong các hệ thống microservices phức tạp. Khi log, tracing, metric và alert bị phân tán ở nhiều nơi, kỹ sư vận hành thường mất nhiều thời gian để điều tra nguyên nhân gốc rễ của sự cố.&lt;/p></description></item><item><title>Tuần 4</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week4/</link><pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week4/</guid><description>&lt;h3 id="mục-tiêu-tuần-4">Mục tiêu tuần 4:&lt;/h3>
+&lt;ul>
+&lt;li>Nắm vững kiến thức về Amazon CloudWatch để theo dõi và giám sát tài nguyên AWS&lt;/li>
+&lt;li>Thực hành tạo metrics, logs, alarms và dashboards trên CloudWatch&lt;/li>
+&lt;li>Hiểu rõ cách thiết lập hybrid DNS với Route 53 Resolver&lt;/li>
+&lt;li>Làm quen với AWS CLI và cách sử dụng nó trên EC2 instances&lt;/li>
+&lt;li>Thực hành AWS CLI với các dịch vụ AWS khác nhau (S3, SNS, IAM, VPC)&lt;/li>
+&lt;li>Ôn lại kiến thức về các dịch vụ cơ bản: EC2, VPC, IAM Role, S3&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Tạo bảng theo dõi hệ thống với Amazon CloudWatch&lt;/strong> &lt;br>  + Giới thiệu về CloudWatch &lt;br>  + Thiết lập AWS CloudFormation Stack &lt;br>  + CloudWatch Metric: &lt;br>   • Xem các metric &lt;br>   • Thực hiện các phép tìm kiếm &lt;br>   • Thực hiện các phép toán học &lt;br>   • Tạo dynamic labels &lt;br>  + CloudWatch Logs: &lt;br>   • CloudWatch Logs Insight &lt;br>   • CloudWatch Metric Filter &lt;br>  + CloudWatch Alarm &lt;br>  + CloudWatch Dashboards&lt;/td>
+ &lt;td style="text-align: left">25/05/2026&lt;/td>
+ &lt;td style="text-align: left">25/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000008.awsstudygroup.com/vi/">https://000008.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Thiết lập Hybrid DNS với Route 53 Resolver&lt;/strong> &lt;br>  + Giới thiệu về Route 53 &lt;br>  + Bước chuẩn bị: &lt;br>   • Tạo keypair &lt;br>   • Tạo Cloud Formation Template &lt;br>   • Khởi tạo security group &lt;br>   • Kết nối đến RDGW (Remote Desktop Gateway) &lt;br>   • Triển khai Microsoft AD &lt;br>   • Thiết lập DNS &lt;br>  + Tạo Route 53 Outbound Endpoint &lt;br>  + Tạo Route 53 Resolver Rules &lt;br>  + Tạo Route 53 Inbound Endpoints &lt;br>  + Test result&lt;/td>
+ &lt;td style="text-align: left">26/05/2026&lt;/td>
+ &lt;td style="text-align: left">26/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000010.awsstudygroup.com/vi/">https://000010.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Sử dụng AWS CLI trên các Amazon EC2 (Windows/Ubuntu)&lt;/strong> &lt;br>  + Làm quen với AWS CLI: &lt;br>   • AWS CLI là gì? &lt;br>   • Môi trường hỗ trợ &lt;br>   • Khả năng của AWS CLI &lt;br>   • Định dạng đầu ra &lt;br>   • Thiết lập cơ bản &lt;br>  + IAM User Group: &lt;br>   • IAM User &lt;br>   • AWS Access Key &lt;br>   • EC2 Instance và thiết lập quyền truy cập SSH &lt;br>   • Cài đặt AWS CLI &lt;br>  + Kiểm tra tài nguyên qua CLI &lt;br>  + AWS CLI với Amazon S3 &lt;br>  + AWS CLI với Amazon SNS &lt;br>  + AWS CLI với Amazon IAM &lt;br>  + AWS CLI với Amazon VPC &lt;br>  + Tạo EC2 và sử dụng AWS CLI &lt;br>  + Khắc phục lỗi&lt;/td>
+ &lt;td style="text-align: left">27/05/2026&lt;/td>
+ &lt;td style="text-align: left">27/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000011.awsstudygroup.com/vi/1-introduce/">https://000011.awsstudygroup.com/vi/1-introduce/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Ôn lại dịch vụ của các lab&lt;/strong> &lt;br>  + EC2 &lt;br>  + VPC &lt;br>  + IAM Role (AWS IAM) &lt;br>  + S3 bucket&lt;/td>
+ &lt;td style="text-align: left">28/05/2026&lt;/td>
+ &lt;td style="text-align: left">28/05/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/">https://000004.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000003.awsstudygroup.com/vi/">https://000003.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000048.awsstudygroup.com/vi/">https://000048.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000057.awsstudygroup.com/vi/">https://000057.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-4">Kết quả đạt được tuần 4&lt;/h3>
+&lt;p>&lt;strong>Amazon CloudWatch Knowledge:&lt;/strong>&lt;/p></description></item><item><title>AWS Community Day 2026</title><link>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_1/</link><pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_1/</guid><description>&lt;h1 id="bài-thu-hoạch-aws-community-day-workshop">Bài thu hoạch “AWS Community Day Workshop”&lt;/h1>
+&lt;h3 id="mục-đích-của-sự-kiện">Mục Đích Của Sự Kiện&lt;/h3>
+&lt;ul>
+&lt;li>Chia sẻ các best practices trong thiết kế ứng dụng hiện đại và phương pháp học tập hiệu quả.&lt;/li>
+&lt;li>Cung cấp thông tin chuyên sâu, kiến thức thực tế và các case study ứng dụng của Amazon CloudFront.&lt;/li>
+&lt;li>Giới thiệu các công cụ và mô hình AI tiên tiến nhằm hỗ trợ tối ưu hóa toàn bộ development lifecycle.&lt;/li>
+&lt;/ul>
+&lt;h3 id="danh-sách-diễn-giả">Danh Sách Diễn Giả&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Vy Lam&lt;/strong> – Senior Business Systems Analyst, VPBank&lt;/li>
+&lt;li>&lt;strong>Duc Dao&lt;/strong> – Solutions Architect, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Thao Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Mai Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Uyen Le&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Anh Pham&lt;/strong> – Cloud Consultant, G-AsiaPacific Vietnam&lt;/li>
+&lt;li>&lt;strong>Tinh Truong&lt;/strong> – Platform Engineer, GoTymeX&lt;/li>
+&lt;li>&lt;strong>Thinh Nguyen&lt;/strong> – DevOps Engineer, FCAJ&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="nội-dung-nổi-bật">Nội Dung Nổi Bật&lt;/h3>
+&lt;h4 id="dự-án-thực-chiến-trong-cuộc-thi-36h-code">Dự án thực chiến trong cuộc thi 36H Code&lt;/h4>
+&lt;ul>
+&lt;li>Chia sẻ hành trình vượt qua áp lực thời gian từ đội ngũ GenAI Engineers (&lt;strong>Thao Nguyen, Mai Nguyen, Uyen Le&lt;/strong>).&lt;/li>
+&lt;li>Cách phân rã bài toán lớn thành các tác vụ nhỏ và áp dụng Generative AI để tăng tốc độ viết code, hoàn thiện sản phẩm prototype nhanh chóng.&lt;/li>
+&lt;/ul>
+&lt;h4 id="xu-hướng-và-tư-duy-trí-tuệ-nhân-tạo-ai">Xu hướng và Tư duy Trí tuệ nhân tạo (AI)&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>AI-first Mindset&lt;/strong>: Định hình lại cách giải quyết vấn đề, đặt AI làm trung tâm của quy trình vận hành và tối ưu hóa hệ thống để đạt hiệu suất cao nhất.&lt;/li>
+&lt;li>&lt;strong>Second AI Brain&lt;/strong>: Khái niệm xây dựng một &amp;ldquo;bộ não phụ trợ&amp;rdquo; bằng AI, hỗ trợ con người trong việc lưu trữ tri thức, phân tích dữ liệu chuyên sâu và đưa ra quyết định chính xác hơn.&lt;/li>
+&lt;/ul>
+&lt;h4 id="khung-tư-duy-track-line-content-mean">Khung tư duy Track Line Content Mean&lt;/h4>
+&lt;p>Mô hình hóa phương pháp truyền tải nội dung mạch lạc và thuyết phục thông qua cấu trúc 4 bước cốt lõi:&lt;/p></description></item><item><title>Tạo và viết code cho AWS Lambda</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/5.createandcode-lambdafunction/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/5.createandcode-lambdafunction/</guid><description>&lt;h1 id="bước-4-tạo-và-viết-code-cho-aws-lambda">Bước 4: Tạo và viết code cho AWS Lambda&lt;/h1>
+&lt;h3 id="mục-tiêu">Mục tiêu&lt;/h3>
+&lt;p>Trong bước này, bạn sẽ tạo Lambda Function để nhận message từ Amazon SQS, đọc thông tin ảnh được upload lên Amazon S3 và gọi các dịch vụ AI như Amazon Rekognition và Amazon Textract để phân tích ảnh.&lt;/p>
+&lt;hr>
+&lt;h3 id="41---tạo-lambda-function">4.1 - Tạo Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>Truy cập &lt;strong>AWS Lambda&lt;/strong>, chọn &lt;strong>Create function&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Truy cập AWS Lambda" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image1.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Chọn &lt;strong>Author from scratch&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Chọn Author from scratch" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image2.png">&lt;/p></description></item><item><title>Tuần 5</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week5/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week5/</guid><description>&lt;h3 id="mục-tiêu-tuần-5">Mục tiêu tuần 5:&lt;/h3>
+&lt;ul>
+&lt;li>Nắm vững cách tối ưu chi phí EC2 sử dụng AWS Lambda&lt;/li>
+&lt;li>Thực hành tạo Lambda functions để tự động hóa việc điều khiển EC2 instances&lt;/li>
+&lt;li>Ôn lại toàn bộ kiến thức đã học từ các tuần trước (Week 1-4)&lt;/li>
+&lt;li>Hệ thống hóa các dịch vụ AWS cơ bản và cách sử dụng chúng&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành lab: Tối ưu chi phí EC2 với Lambda&lt;/strong> &lt;br>  + Giới thiệu &lt;br>  + Các bước chuẩn bị: &lt;br>   • Tạo VPC &lt;br>   • Tạo Security Group &lt;br>   • EC2 instance &lt;br>   • Incoming Web-hooks stack &lt;br>   • Tạo tag cho instance &lt;br>   • Tạo role cho lambda &lt;br>  + Tạo lambda function: &lt;br>   • Function stop &lt;br>   • Function start &lt;br>  + Kiểm tra kết quả&lt;/td>
+ &lt;td style="text-align: left">01/06/2026&lt;/td>
+ &lt;td style="text-align: left">01/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000022.awsstudygroup.com/vi/">https://000022.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Ôn lại nội dung tương ứng từng tuần&lt;/strong> &lt;br>  + Week 1: AWS Foundation &amp;amp; IAM &lt;br>  + Week 2: EC2, S3, CloudFront, CloudFormation &lt;br>  + Week 3: RDS, Lightsail, EC2 Autoscaling &lt;br> &lt;strong>Làm Worklog&lt;/strong> + Week 1 và Week 2&lt;br>&lt;/td>
+ &lt;td style="text-align: left">02/06/2026&lt;/td>
+ &lt;td style="text-align: left">02/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000004.awsstudygroup.com/vi/">https://000004.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000005.awsstudygroup.com/vi/">https://000005.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000045.awsstudygroup.com/vi/">https://000045.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Ôn lại nội dung tương ứng từng tuần&lt;/strong> &lt;br>  + Week 4: CloudWatch, Route 53 Resolver, AWS CLI &lt;br>  &lt;strong>Làm Worklog&lt;/strong> + Week 3 và Week 4&lt;/td>
+ &lt;td style="text-align: left">03/06/2026&lt;/td>
+ &lt;td style="text-align: left">03/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://000008.awsstudygroup.com/vi/">https://000008.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000010.awsstudygroup.com/vi/">https://000010.awsstudygroup.com/vi/&lt;/a> &lt;br> &lt;a href="https://000011.awsstudygroup.com/vi/">https://000011.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Làm Worklog&lt;/strong> &lt;br>+ Week 5&lt;br>&lt;strong>Lên Kế Hoạch Cho WorkShop&lt;/strong> &lt;br>+ Xem ý tưởng của thành viên trong nhóm &lt;br> + Lên thời gian họp &lt;br> + tìm hiểu về các dự án mẫu của workshop và cách viết proposal &lt;br> + tìm hiểu về những yêu cầu của workshop và proposal &lt;br> + TÌm hiểu về kiến trúc theo ý tưởng của nhóm&lt;/td>
+ &lt;td style="text-align: left">04/06/2026&lt;/td>
+ &lt;td style="text-align: left">04/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-5">Kết quả đạt được tuần 5&lt;/h3>
+&lt;p>&lt;strong>AWS Lambda Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Kiểm thử hệ thống</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/6.testing-validation/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/6.testing-validation/</guid><description>&lt;h1 id="bước-5-kiểm-thử-hệ-thống">Bước 5: Kiểm thử hệ thống&lt;/h1>
+&lt;h3 id="mục-tiêu">Mục tiêu&lt;/h3>
+&lt;p>Xác nhận toàn bộ luồng &lt;strong>S3 -&amp;gt; SQS -&amp;gt; Lambda -&amp;gt; AI&lt;/strong> hoạt động đúng.&lt;/p>
+&lt;p>Trong bước này, bạn sẽ upload ảnh lên S3, kiểm tra Lambda xử lý message từ SQS và xem kết quả phân tích trong CloudWatch Logs.&lt;/p>
+&lt;hr>
+&lt;h3 id="51---chuẩn-bị-ảnh-test">5.1 - Chuẩn bị ảnh test&lt;/h3>
+&lt;p>Chuẩn bị ít nhất 2 loại ảnh:&lt;/p>
+&lt;ul>
+&lt;li>Ảnh kiện hàng bị móp hoặc rách để kiểm tra Amazon Rekognition phát hiện đúng nội dung ảnh.&lt;/li>
+&lt;li>Ảnh có nhãn dán với mã vận đơn rõ ràng để kiểm tra Amazon Textract trích xuất đúng văn bản.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="52---tải-ảnh-lên-s3">5.2 - Tải ảnh lên S3&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Vào S3 bucket &lt;strong>logistics-raw-images-&amp;lt;tên-bạn&amp;gt;&lt;/strong>, sau đó chọn &lt;strong>Upload&lt;/strong>.&lt;/p></description></item><item><title>Tuần 6</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week6/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week6/</guid><description>&lt;h3 id="mục-tiêu-tuần-6">Mục tiêu tuần 6:&lt;/h3>
+&lt;ul>
+&lt;li>Tìm hiểu nhóm bài lab Modernize trên AWS Cloud Journey.&lt;/li>
+&lt;li>Nắm các khái niệm hiện đại hóa ứng dụng, kiến trúc serverless và xử lý sự kiện.&lt;/li>
+&lt;li>Liên hệ kiến thức lab với ý tưởng workshop và proposal của nhóm.&lt;/li>
+&lt;li>Tham gia sự kiện AWS AI &amp;amp; Cloud Operations Workshop và ghi nhận nội dung có thể áp dụng vào dự án.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Học nhóm bài lab Modernize&lt;/strong> &lt;br>  + Đọc tổng quan nội dung modernize application &lt;br>  + Tìm hiểu cách chuyển đổi ứng dụng theo hướng cloud-native &lt;br>  + Ghi chú các dịch vụ có thể liên quan đến workshop&lt;/td>
+ &lt;td style="text-align: left">08/06/2026&lt;/td>
+ &lt;td style="text-align: left">08/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành các nội dung về serverless và event-driven&lt;/strong> &lt;br>  + Ôn lại Lambda, SQS, S3 event notification &lt;br>  + Tìm hiểu cách tách xử lý bất đồng bộ bằng hàng đợi &lt;br>  + Liên hệ với pipeline xử lý ảnh của proposal&lt;/td>
+ &lt;td style="text-align: left">09/06/2026&lt;/td>
+ &lt;td style="text-align: left">09/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Nghiên cứu modernize theo hướng vận hành và giám sát&lt;/strong> &lt;br>  + Tìm hiểu logging, monitoring, CloudWatch &lt;br>  + Ghi chú yêu cầu quan sát hệ thống cho Lambda, SQS, S3 và DynamoDB&lt;/td>
+ &lt;td style="text-align: left">10/06/2026&lt;/td>
+ &lt;td style="text-align: left">10/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Chuẩn bị nội dung liên hệ với workshop/proposal&lt;/strong> &lt;br>  + Tổng hợp các dịch vụ AWS có thể dùng trong kiến trúc &lt;br>  + Rà soát ý tưởng tự động hóa giám sát chất lượng hàng hóa &lt;br>  + Chuẩn bị câu hỏi và ghi chú cho buổi workshop&lt;/td>
+ &lt;td style="text-align: left">11/06/2026&lt;/td>
+ &lt;td style="text-align: left">11/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/4-modernize/">https://cloudjourney.awsstudygroup.com/vi/4-modernize/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">6&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tham gia AWS AI &amp;amp; Cloud Operations Workshop&lt;/strong> &lt;br>  + Ghi nhận nội dung về AgenticOps, AI Voice và ứng dụng AI trong vận hành cloud &lt;br>  + Liên hệ kiến thức sự kiện với đề tài serverless xử lý hình ảnh &lt;br>  + Viết bài thu hoạch sự kiện&lt;/td>
+ &lt;td style="text-align: left">12/06/2026&lt;/td>
+ &lt;td style="text-align: left">12/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/vi/4-Events%20Participated/Event_2/">AWS AI &amp;amp; Cloud Operations Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-6">Kết quả đạt được tuần 6&lt;/h3>
+&lt;p>&lt;strong>Modernize Application Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Feedback and Sharing</title><link>https://chickenptt.github.io/Test-aws/vi/7-feedback/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/7-feedback/</guid><description/></item><item><title>Dọn dẹp tài nguyên</title><link>https://chickenptt.github.io/Test-aws/vi/5-workshop/7.cleanup/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/5-workshop/7.cleanup/</guid><description>&lt;h1 id="bước-6-dọn-dẹp-tài-nguyên">Bước 6: Dọn dẹp tài nguyên&lt;/h1>
+&lt;h3 id="mục-tiêu">Mục tiêu&lt;/h3>
+&lt;p>Sau khi hoàn thành workshop, bạn cần xóa các tài nguyên đã tạo để tránh phát sinh chi phí không cần thiết.&lt;/p>
+&lt;hr>
+&lt;h3 id="1-xóa-sqs-queue">1. Xóa SQS Queue&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Truy cập &lt;strong>Amazon SQS&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Chọn queue đã tạo trong workshop, sau đó chọn &lt;strong>Delete&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Xóa SQS queue" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image1.png">&lt;/p>
+&lt;ol start="3">
+&lt;li>Nhập &lt;strong>Confirm&lt;/strong> để xác nhận xóa queue.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Xác nhận xóa SQS queue" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image2.png">&lt;/p>
+&lt;hr>
+&lt;h3 id="2-xóa-lambda-function">2. Xóa Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Truy cập &lt;strong>AWS Lambda&lt;/strong>.&lt;/p></description></item><item><title>Tuần 7</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week7/</link><pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week7/</guid><description>&lt;h3 id="mục-tiêu-tuần-7">Mục tiêu tuần 7:&lt;/h3>
+&lt;ul>
+&lt;li>Học các bài lab liên quan trực tiếp đến nội dung workshop và proposal.&lt;/li>
+&lt;li>Họp team để bàn giao, phân chia công việc và thống nhất phạm vi triển khai.&lt;/li>
+&lt;li>Viết nhật ký làm việc, cập nhật tiến độ và các phần đã hoàn thành.&lt;/li>
+&lt;li>Hoàn thiện định hướng kiến trúc cho hệ thống serverless xử lý hình ảnh.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Học lab liên quan đến workshop&lt;/strong> &lt;br>  + Ôn lại IAM Role, S3, SQS và Lambda &lt;br>  + Xác định vai trò từng dịch vụ trong hệ thống xử lý ảnh &lt;br>  + Ghi chú các phần cần đưa vào workshop&lt;/td>
+ &lt;td style="text-align: left">15/06/2026&lt;/td>
+ &lt;td style="text-align: left">15/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/">https://cloudjourney.awsstudygroup.com/vi/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Nghiên cứu nội dung proposal&lt;/strong> &lt;br>  + Rà soát bài toán giám sát chất lượng hàng hóa &lt;br>  + Xác định vấn đề, giải pháp đề xuất và kết quả kỳ vọng &lt;br>  + Chuẩn bị phần mô tả kiến trúc tổng quan&lt;/td>
+ &lt;td style="text-align: left">16/06/2026&lt;/td>
+ &lt;td style="text-align: left">16/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Họp team bàn giao công việc&lt;/strong> &lt;br>  + Thống nhất phạm vi workshop &lt;br>  + Chia phần chuẩn bị nội dung, hình ảnh và báo cáo &lt;br>  + Ghi nhận các việc cần hoàn thành trong tuần tiếp theo&lt;/td>
+ &lt;td style="text-align: left">17/06/2026&lt;/td>
+ &lt;td style="text-align: left">17/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Viết nhật ký làm việc&lt;/strong> &lt;br>  + Cập nhật worklog các nội dung đã học &lt;br>  + Ghi lại tiến độ proposal và workshop &lt;br>  + Tổng hợp vấn đề còn thiếu cần bổ sung&lt;/td>
+ &lt;td style="text-align: left">18/06/2026&lt;/td>
+ &lt;td style="text-align: left">18/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-7">Kết quả đạt được tuần 7&lt;/h3>
+&lt;p>&lt;strong>Workshop Preparation:&lt;/strong>&lt;/p></description></item><item><title>Tuần 8</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week8/</link><pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week8/</guid><description>&lt;h3 id="mục-tiêu-tuần-8">Mục tiêu tuần 8:&lt;/h3>
+&lt;ul>
+&lt;li>Vẽ structure/architecture của project trong 2 ngày.&lt;/li>
+&lt;li>Hoàn thiện sơ đồ kiến trúc cho proposal và workshop.&lt;/li>
+&lt;li>Thực hành các nội dung chính trong workshop.&lt;/li>
+&lt;li>Bắt đầu chỉnh sửa nội dung workshop thành file báo cáo rõ ràng.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Vẽ structure của project - ngày 1&lt;/strong> &lt;br>  + Xác định các lớp kiến trúc: Frontend/Auth, Storage, Backend/AI-ML, Monitoring/Security &lt;br>  + Phác thảo luồng xử lý từ upload ảnh đến lưu kết quả &lt;br>  + Chọn dịch vụ AWS phù hợp cho từng lớp&lt;/td>
+ &lt;td style="text-align: left">22/06/2026&lt;/td>
+ &lt;td style="text-align: left">22/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Vẽ structure của project - ngày 2&lt;/strong> &lt;br>  + Hoàn thiện diagram kiến trúc &lt;br>  + Kiểm tra lại luồng S3 -&amp;gt; SQS -&amp;gt; Lambda -&amp;gt; Rekognition/Textract -&amp;gt; DynamoDB &lt;br>  + Bổ sung CloudWatch và IAM vào sơ đồ&lt;/td>
+ &lt;td style="text-align: left">23/06/2026&lt;/td>
+ &lt;td style="text-align: left">23/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/image/DiagramStructure.png">DiagramStructure&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành nội dung workshop&lt;/strong> &lt;br>  + Chuẩn bị IAM Role cho Lambda &lt;br>  + Tạo SQS queue nhận sự kiện xử lý ảnh &lt;br>  + Cấu hình S3 bucket và event notification&lt;/td>
+ &lt;td style="text-align: left">24/06/2026&lt;/td>
+ &lt;td style="text-align: left">24/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Chỉnh sửa báo cáo workshop&lt;/strong> &lt;br>  + Rà soát phần overview, IAM, SQS, S3 &lt;br>  + Chuẩn hóa mô tả từng bước thực hành &lt;br>  + Bổ sung hình ảnh minh họa và kết quả kiểm tra&lt;/td>
+ &lt;td style="text-align: left">25/06/2026&lt;/td>
+ &lt;td style="text-align: left">25/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-8">Kết quả đạt được tuần 8&lt;/h3>
+&lt;p>&lt;strong>Architecture Design:&lt;/strong>&lt;/p></description></item><item><title>Tuần 9</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week9/</link><pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week9/</guid><description>&lt;h3 id="mục-tiêu-tuần-9">Mục tiêu tuần 9:&lt;/h3>
+&lt;ul>
+&lt;li>Tiếp tục thực hành các nội dung còn lại trong workshop.&lt;/li>
+&lt;li>Hoàn thiện file báo cáo workshop từ các bước thực hành.&lt;/li>
+&lt;li>Kiểm tra lại luồng xử lý, hình ảnh minh họa và nội dung cleanup.&lt;/li>
+&lt;li>Rà soát tính nhất quán giữa proposal, diagram và workshop.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Thực hành Lambda function&lt;/strong> &lt;br>  + Tạo Lambda function xử lý message từ SQS &lt;br>  + Cấu hình permission cần thiết &lt;br>  + Kiểm tra log trên CloudWatch&lt;/td>
+ &lt;td style="text-align: left">29/06/2026&lt;/td>
+ &lt;td style="text-align: left">29/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/5.CreateAndCode-LambdaFunction/lambda.md">Lambda Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Testing và validation&lt;/strong> &lt;br>  + Upload ảnh vào S3 để tạo event &lt;br>  + Kiểm tra message đi qua SQS &lt;br>  + Theo dõi Lambda xử lý và ghi log&lt;/td>
+ &lt;td style="text-align: left">30/06/2026&lt;/td>
+ &lt;td style="text-align: left">30/06/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/6.Testing-Validation/testing.md">Testing&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Chỉnh sửa báo cáo workshop&lt;/strong> &lt;br>  + Rà soát văn phong từng phần &lt;br>  + Bổ sung ảnh minh họa còn thiếu &lt;br>  + Kiểm tra đường dẫn ảnh và tiêu đề&lt;/td>
+ &lt;td style="text-align: left">01/07/2026&lt;/td>
+ &lt;td style="text-align: left">01/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hoàn thiện cleanup và tổng kết&lt;/strong> &lt;br>  + Ghi lại các bước xóa tài nguyên để tránh phát sinh chi phí &lt;br>  + Kiểm tra lại toàn bộ báo cáo workshop &lt;br>  + Đối chiếu nội dung với proposal&lt;/td>
+ &lt;td style="text-align: left">02/07/2026&lt;/td>
+ &lt;td style="text-align: left">02/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/7.CleanUp/cleanup.md">Cleanup&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-9">Kết quả đạt được tuần 9&lt;/h3>
+&lt;p>&lt;strong>Workshop Completion:&lt;/strong>&lt;/p></description></item><item><title>Tuần 10</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week10/</link><pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week10/</guid><description>&lt;h3 id="mục-tiêu-tuần-10">Mục tiêu tuần 10:&lt;/h3>
+&lt;ul>
+&lt;li>Học các bài lab thuộc nhóm Data and Analytics trên AWS Cloud Journey.&lt;/li>
+&lt;li>Nắm kiến thức cơ bản về thu thập, lưu trữ, xử lý và phân tích dữ liệu trên AWS.&lt;/li>
+&lt;li>Liên hệ kiến thức data analytics với nhu cầu báo cáo dữ liệu hư hỏng hàng hóa trong proposal.&lt;/li>
+&lt;li>Bổ sung ý tưởng cải thiện dashboard, thống kê và truy vấn dữ liệu cho project.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Học tổng quan Data and Analytics&lt;/strong> &lt;br>  + Đọc nội dung giới thiệu nhóm lab &lt;br>  + Ghi chú các dịch vụ dữ liệu thường dùng trên AWS &lt;br>  + Xác định phần có thể áp dụng vào project&lt;/td>
+ &lt;td style="text-align: left">06/07/2026&lt;/td>
+ &lt;td style="text-align: left">06/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tìm hiểu lưu trữ và xử lý dữ liệu&lt;/strong> &lt;br>  + Ôn lại vai trò của S3 và DynamoDB &lt;br>  + Tìm hiểu cách lưu lịch sử xử lý và kết quả phân tích &lt;br>  + Ghi chú nhu cầu truy vấn dữ liệu theo thời gian&lt;/td>
+ &lt;td style="text-align: left">07/07/2026&lt;/td>
+ &lt;td style="text-align: left">07/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tìm hiểu phân tích và báo cáo dữ liệu&lt;/strong> &lt;br>  + Xác định các chỉ số cần thống kê: số ảnh xử lý, tỷ lệ lỗi, trạng thái xử lý &lt;br>  + Đề xuất hướng làm báo cáo cho quản lý kho &lt;br>  + Liên hệ với DynamoDB và CloudWatch metrics&lt;/td>
+ &lt;td style="text-align: left">08/07/2026&lt;/td>
+ &lt;td style="text-align: left">08/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Phân chia nhóm để làm 3 Blogs&lt;/strong> &lt;br>  + Tìm kiếm nguồn blog của AWS &lt;br>  + Nghiên cứu cấu trúc bài blogs &lt;br>  + Hoàn thiện worklog tuần 10&lt;/td>
+ &lt;td style="text-align: left">09/07/2026&lt;/td>
+ &lt;td style="text-align: left">09/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/">https://cloudjourney.awsstudygroup.com/vi/6-dataandanalytic/&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-10">Kết quả đạt được tuần 10&lt;/h3>
+&lt;p>&lt;strong>Data and Analytics Knowledge:&lt;/strong>&lt;/p></description></item><item><title>Tuần 11</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week11/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week11/</guid><description>&lt;h3 id="mục-tiêu-tuần-11">Mục tiêu tuần 11:&lt;/h3>
+&lt;ul>
+&lt;li>Rà soát lại toàn bộ proposal, workshop và worklog đã viết.&lt;/li>
+&lt;li>Bổ sung nội dung còn thiếu liên quan đến vận hành, bảo mật và tối ưu chi phí.&lt;/li>
+&lt;li>Kiểm tra tính thống nhất giữa kiến trúc, nội dung thực hành và báo cáo.&lt;/li>
+&lt;li>Chuẩn bị bản hoàn thiện để trình bày/đánh giá.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tìm kiếm thông tin về bài blog&lt;/strong> &lt;br>  + Kiểm tra phần vấn đề, giải pháp và kiến trúc &lt;br>  + Đối chiếu dịch vụ AWS sử dụng và nội dung bài blogs. Tiến hành viết blog đăng trên facebook&lt;/td>
+ &lt;td style="text-align: left">13/07/2026&lt;/td>
+ &lt;td style="text-align: left">13/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Rà soát workshop&lt;/strong> &lt;br>  + Kiểm tra thứ tự các bước thực hành &lt;br>  + Kiểm tra hình ảnh và mô tả thao tác &lt;br>  + Bổ sung phần giải thích kết quả kiểm thử&lt;/td>
+ &lt;td style="text-align: left">14/07/2026&lt;/td>
+ &lt;td style="text-align: left">14/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Bổ sung nội dung vận hành và bảo mật&lt;/strong> &lt;br>  + Kiểm tra IAM least privilege &lt;br>  + Bổ sung lưu ý CloudWatch log/metric &lt;br>  + Ghi chú cleanup để tránh phát sinh chi phí&lt;/td>
+ &lt;td style="text-align: left">15/07/2026&lt;/td>
+ &lt;td style="text-align: left">15/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/7.CleanUp/cleanup.md">Cleanup&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hoàn thiện nhật ký làm việc&lt;/strong> &lt;br>  + Cập nhật worklog các tuần còn thiếu &lt;br>  + Chuẩn hóa format bảng công việc &lt;br>  + Kiểm tra liên kết nội bộ&lt;/td>
+ &lt;td style="text-align: left">16/07/2026&lt;/td>
+ &lt;td style="text-align: left">16/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-11">Kết quả đạt được tuần 11&lt;/h3>
+&lt;p>&lt;strong>Review &amp;amp; Improvement:&lt;/strong>&lt;/p></description></item><item><title>Tuần 12</title><link>https://chickenptt.github.io/Test-aws/vi/1-worklog/week12/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/1-worklog/week12/</guid><description>&lt;h3 id="mục-tiêu-tuần-12">Mục tiêu tuần 12:&lt;/h3>
+&lt;ul>
+&lt;li>Tổng kết quá trình học tập, thực hành và xây dựng workshop.&lt;/li>
+&lt;li>Hoàn thiện các phần tài liệu cuối cùng.&lt;/li>
+&lt;li>Chuẩn bị nội dung trình bày kết quả project.&lt;/li>
+&lt;li>Rút kinh nghiệm về kiến thức AWS, làm việc nhóm và viết báo cáo kỹ thuật.&lt;/li>
+&lt;/ul>
+&lt;h3 id="các-công-việc-cần-triển-khai-trong-tuần-này">Các công việc cần triển khai trong tuần này:&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Thứ&lt;/th>
+ &lt;th style="text-align: left">Công việc&lt;/th>
+ &lt;th style="text-align: left">Ngày bắt đầu&lt;/th>
+ &lt;th style="text-align: left">Ngày hoàn thành&lt;/th>
+ &lt;th style="text-align: left">Nguồn tài liệu&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">2&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Tổng kết kiến thức AWS đã học&lt;/strong> &lt;br>  + Ôn lại EC2, S3, IAM, Lambda, SQS, DynamoDB, CloudWatch &lt;br>  + Tổng hợp dịch vụ đã áp dụng vào proposal/workshop &lt;br>  + Ghi chú kiến thức còn cần cải thiện&lt;/td>
+ &lt;td style="text-align: left">20/07/2026&lt;/td>
+ &lt;td style="text-align: left">20/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">3&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Hoàn thiện tài liệu cuối cùng&lt;/strong> &lt;br>  + Kiểm tra proposal &lt;br>  + Kiểm tra workshop &lt;br>  + Kiểm tra worklog và event participated&lt;/td>
+ &lt;td style="text-align: left">21/07/2026&lt;/td>
+ &lt;td style="text-align: left">21/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/2.%20Proposal/_proposal.md">Proposal&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">4&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Chuẩn bị trình bày project&lt;/strong> &lt;br>  + Tóm tắt bài toán và giải pháp &lt;br>  + Chuẩn bị phần giải thích kiến trúc &lt;br>  + Chuẩn bị phần demo/luồng thực hành workshop&lt;/td>
+ &lt;td style="text-align: left">22/07/2026&lt;/td>
+ &lt;td style="text-align: left">22/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://chickenptt.github.io/Test-aws/Content/5.%20Workshop/1.WorkShop-overview/OverView.md">Workshop&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">5&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Rút kinh nghiệm và tổng kết&lt;/strong> &lt;br>  + Ghi nhận bài học về làm việc nhóm &lt;br>  + Ghi nhận bài học về thiết kế serverless trên AWS &lt;br>  + Hoàn thiện worklog tuần 12&lt;/td>
+ &lt;td style="text-align: left">23/07/2026&lt;/td>
+ &lt;td style="text-align: left">23/07/2026&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="kết-quả-đạt-được-tuần-12">Kết quả đạt được tuần 12&lt;/h3>
+&lt;p>&lt;strong>Final Summary:&lt;/strong>&lt;/p></description></item></channel></rss>

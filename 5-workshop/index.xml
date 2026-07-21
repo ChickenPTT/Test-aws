@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Workshop on Internship Report</title><link>https://chickenptt.github.io/Test-aws/5-workshop/</link><description>Recent content in Workshop on Internship Report</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chickenptt.github.io/Test-aws/5-workshop/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshop Overview</title><link>https://chickenptt.github.io/Test-aws/5-workshop/1.workshop-overview/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/1.workshop-overview/</guid><description>&lt;h1 id="build-an-asynchronous-image-processing-flow-with-amazon-s3-sqs-and-aws-lambda">Build an Asynchronous Image Processing Flow with Amazon S3, SQS, and AWS Lambda&lt;/h1>
+&lt;h3 id="workshop-summary">Workshop Summary&lt;/h3>
+&lt;p>This workshop guides you through building an asynchronous image processing flow using an event-driven architecture on AWS. The goal is to handle the case where many users upload images at the same time while keeping the system stable, scalable, and cost-aware.&lt;/p>
+&lt;hr>
+&lt;h3 id="main-objectives">Main Objectives&lt;/h3>
+&lt;ul>
+&lt;li>Design an &lt;strong>S3 -&amp;gt; SQS -&amp;gt; Lambda&lt;/strong> architecture to process images through a queue, preventing Lambda from being invoked too aggressively when many uploads happen at the same time.&lt;/li>
+&lt;li>Write a Lambda function in Python to:
+&lt;ul>
+&lt;li>Receive messages from SQS that contain S3 events.&lt;/li>
+&lt;li>Download images from S3.&lt;/li>
+&lt;li>Call Amazon Rekognition to detect labels or identify package conditions, such as damaged parcels.&lt;/li>
+&lt;li>Call Amazon Textract to extract text from package labels, such as tracking codes, route information, phone numbers, and other details.&lt;/li>
+&lt;li>Write processing results to CloudWatch Logs for observation and testing.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="what-you-will-learn">What You Will Learn&lt;/h3>
+&lt;ul>
+&lt;li>Why SQS is needed as a buffer between S3 and Lambda in high-load systems.&lt;/li>
+&lt;li>How to configure an IAM Role using the least privilege principle.&lt;/li>
+&lt;li>How to create and configure:
+&lt;ul>
+&lt;li>An S3 bucket and Event Notification.&lt;/li>
+&lt;li>An SQS Standard Queue with important settings such as Visibility Timeout and retention.&lt;/li>
+&lt;li>A Lambda trigger from SQS with a small batch size for easier observation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to run end-to-end testing and validation.&lt;/li>
+&lt;li>How to clean up resources to avoid unnecessary costs.&lt;/li>
+&lt;/ul></description></item><item><title>Prepare IAM Role for Lambda</title><link>https://chickenptt.github.io/Test-aws/5-workshop/2.iam-role-prepare/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/2.iam-role-prepare/</guid><description>&lt;h1 id="step-1-prepare-an-iam-role-for-lambda">Step 1: Prepare an IAM Role for Lambda&lt;/h1>
+&lt;h3 id="introduction">Introduction&lt;/h3>
+&lt;p>An IAM Role defines the permissions that Lambda uses to access the AWS services required in this workshop, such as Amazon S3, Amazon SQS, Amazon Rekognition, and Amazon Textract.&lt;/p>
+&lt;p>In this step, you will create an IAM Role for Lambda and attach the required policies so Lambda can read data, receive messages, and write logs while processing images.&lt;/p>
+&lt;hr>
+&lt;h3 id="implementation-steps">Implementation Steps&lt;/h3>
+&lt;ol>
+&lt;li>Open the &lt;strong>AWS Console&lt;/strong> and search for the &lt;strong>IAM&lt;/strong> service.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Search for IAM service" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/2.IAM-Role-Prepare/images/image1.png">&lt;/p></description></item><item><title>Create an Amazon SQS Message Queue</title><link>https://chickenptt.github.io/Test-aws/5-workshop/3.create-chat-queueaws-sqs/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/3.create-chat-queueaws-sqs/</guid><description>&lt;h1 id="step-2-create-an-amazon-sqs-message-queue">Step 2: Create an Amazon SQS Message Queue&lt;/h1>
+&lt;h3 id="introduction">Introduction&lt;/h3>
+&lt;p>Amazon SQS acts as an intermediate message queue between Amazon S3 and AWS Lambda.&lt;/p>
+&lt;p>When a user uploads an image to S3, S3 sends a notification to SQS. Lambda then reads messages from SQS and processes them gradually, helping the system remain stable when many images are uploaded at the same time.&lt;/p>
+&lt;hr>
+&lt;h3 id="implementation-steps">Implementation Steps&lt;/h3>
+&lt;ol>
+&lt;li>Open the &lt;strong>AWS Console&lt;/strong>, search for &lt;strong>Amazon SQS&lt;/strong>, then choose &lt;strong>Create queue&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Search for Amazon SQS" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/3.Create-Chat-Queue(AWS-SQS)/images/image13.png">&lt;/p></description></item><item><title>Configure Amazon S3 Storage and Events</title><link>https://chickenptt.github.io/Test-aws/5-workshop/4.congif-save-and-eventaws-s3/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/4.congif-save-and-eventaws-s3/</guid><description>&lt;h1 id="step-3-configure-amazon-s3-storage-and-events">Step 3: Configure Amazon S3 Storage and Events&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>In this step, you will create an S3 bucket to store images and configure Amazon S3 to automatically send a notification to the SQS queue created in the previous step whenever a new image is uploaded.&lt;/p>
+&lt;hr>
+&lt;h3 id="31---create-an-s3-bucket">3.1 - Create an S3 Bucket&lt;/h3>
+&lt;ol>
+&lt;li>Open &lt;strong>Amazon S3&lt;/strong>, then choose &lt;strong>Create bucket&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Create S3 bucket" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/4.Congif-Save-And-Event(AWS-S3)/images/image19.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Name the bucket using the format &lt;strong>logistics-raw-images-&amp;lt;your-name&amp;gt;&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>The bucket name must be globally unique across AWS.&lt;/p></description></item><item><title>Create and Code an AWS Lambda Function</title><link>https://chickenptt.github.io/Test-aws/5-workshop/5.createandcode-lambdafunction/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/5.createandcode-lambdafunction/</guid><description>&lt;h1 id="step-4-create-and-code-an-aws-lambda-function">Step 4: Create and Code an AWS Lambda Function&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>In this step, you will create a Lambda Function that receives messages from Amazon SQS, reads information about images uploaded to Amazon S3, and calls AI services such as Amazon Rekognition and Amazon Textract to analyze the images.&lt;/p>
+&lt;hr>
+&lt;h3 id="41---create-a-lambda-function">4.1 - Create a Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>Open &lt;strong>AWS Lambda&lt;/strong> and choose &lt;strong>Create function&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Open AWS Lambda" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image1.png">&lt;/p>
+&lt;ol start="2">
+&lt;li>Select &lt;strong>Author from scratch&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Select Author from scratch" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/5.CreateAndCode-LambdaFunction/images/image2.png">&lt;/p></description></item><item><title>Test the System</title><link>https://chickenptt.github.io/Test-aws/5-workshop/6.testing-validation/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/6.testing-validation/</guid><description>&lt;h1 id="step-5-test-the-system">Step 5: Test the System&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>Confirm that the full &lt;strong>S3 -&amp;gt; SQS -&amp;gt; Lambda -&amp;gt; AI&lt;/strong> flow works correctly.&lt;/p>
+&lt;p>In this step, you will upload images to S3, verify that Lambda processes messages from SQS, and review the analysis results in CloudWatch Logs.&lt;/p>
+&lt;hr>
+&lt;h3 id="51---prepare-test-images">5.1 - Prepare Test Images&lt;/h3>
+&lt;p>Prepare at least two types of images:&lt;/p>
+&lt;ul>
+&lt;li>Images of dented or torn packages to test whether Amazon Rekognition detects the image content correctly.&lt;/li>
+&lt;li>Images with clear shipping labels or tracking codes to test whether Amazon Textract extracts text correctly.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="52---upload-images-to-s3">5.2 - Upload Images to S3&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open the S3 bucket &lt;strong>logistics-raw-images-&amp;lt;your-name&amp;gt;&lt;/strong>, then choose &lt;strong>Upload&lt;/strong>.&lt;/p></description></item><item><title>Clean Up Resources</title><link>https://chickenptt.github.io/Test-aws/5-workshop/7.cleanup/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/5-workshop/7.cleanup/</guid><description>&lt;h1 id="step-6-clean-up-resources">Step 6: Clean Up Resources&lt;/h1>
+&lt;h3 id="objective">Objective&lt;/h3>
+&lt;p>After completing the workshop, delete the resources you created to avoid unnecessary charges.&lt;/p>
+&lt;hr>
+&lt;h3 id="1-delete-the-sqs-queue">1. Delete the SQS Queue&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;strong>Amazon SQS&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select the queue created in the workshop, then choose &lt;strong>Delete&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Delete SQS queue" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image1.png">&lt;/p>
+&lt;ol start="3">
+&lt;li>Enter &lt;strong>Confirm&lt;/strong> to confirm the queue deletion.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Confirm SQS queue deletion" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image2.png">&lt;/p>
+&lt;hr>
+&lt;h3 id="2-delete-the-lambda-function">2. Delete the Lambda Function&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;strong>AWS Lambda&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select the function created in the workshop, then choose &lt;strong>Delete&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img alt="Delete Lambda function" src="https://chickenptt.github.io/Test-aws/images/5-Workshop/7.CleanUp/images/image3.png">&lt;/p></description></item></channel></rss>

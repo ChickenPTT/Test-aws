@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events Participated on Internship Report</title><link>https://chickenptt.github.io/Test-aws/4-events-participated/</link><description>Recent content in Events Participated on Internship Report</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chickenptt.github.io/Test-aws/4-events-participated/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS AI &amp; Cloud Operations Workshop</title><link>https://chickenptt.github.io/Test-aws/4-events-participated/event_2/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/4-events-participated/event_2/</guid><description>&lt;h1 id="aws-ai--cloud-operations-workshop-learning-summary">&amp;ldquo;AWS AI &amp;amp; Cloud Operations Workshop&amp;rdquo; Learning Summary&lt;/h1>
+&lt;h3 id="purpose-of-the-event">Purpose of the Event&lt;/h3>
+&lt;ul>
+&lt;li>Get up to date on trends in applying AI Agents to cloud infrastructure operations, DevOps, and incident handling.&lt;/li>
+&lt;li>Explore real-world problems in AI Voice, Vietnamese language processing, response latency, and natural conversational experience.&lt;/li>
+&lt;li>Discover how AI supports businesses in recruitment, onboarding, candidate evaluation, and HR process optimization.&lt;/li>
+&lt;li>Connect the event&amp;rsquo;s knowledge to an AWS cost-estimation proposal for a serverless system that handles damaged goods.&lt;/li>
+&lt;/ul>
+&lt;h3 id="list-of-speakers">List of Speakers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Truong Tran&lt;/strong> – AI Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Steve Tran&lt;/strong> – CTO/Founder, CloudThinker&lt;/li>
+&lt;li>&lt;strong>Trung Vu&lt;/strong> – CEO, Revve AI&lt;/li>
+&lt;li>&lt;strong>Anh Dang&lt;/strong> – Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Nghi Danh&lt;/strong> – AI Engineer, Renova Cloud&lt;/li>
+&lt;li>&lt;strong>Kiet Tran&lt;/strong> – AI Engineer, AWS Student Builder Group&lt;/li>
+&lt;li>&lt;strong>Bao Phan&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Nguyen Nguyen&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Toan Nguyen&lt;/strong> – AWS Security Builder&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;h4 id="agenticops-for-your-cloud">AgenticOps for Your Cloud&lt;/h4>
+&lt;p>Speaker &lt;strong>Steve Tran&lt;/strong> shared insights on the current state of cloud operations in complex microservices systems. When logs, tracing, metrics, and alerts are scattered across many locations, operations engineers often spend a great deal of time investigating the root cause of an incident.&lt;/p></description></item><item><title>AWS Community Day 2026</title><link>https://chickenptt.github.io/Test-aws/4-events-participated/event_1/</link><pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/4-events-participated/event_1/</guid><description>&lt;h1 id="aws-community-day-workshop-learning-summary">&amp;ldquo;AWS Community Day Workshop&amp;rdquo; Learning Summary&lt;/h1>
+&lt;h3 id="purpose-of-the-event">Purpose of the Event&lt;/h3>
+&lt;ul>
+&lt;li>Share best practices in modern application design and effective learning methods.&lt;/li>
+&lt;li>Provide in-depth information, practical knowledge, and real-world case studies on Amazon CloudFront applications.&lt;/li>
+&lt;li>Introduce advanced AI tools and models to help optimize the entire development lifecycle.&lt;/li>
+&lt;/ul>
+&lt;h3 id="list-of-speakers">List of Speakers&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Vy Lam&lt;/strong> – Senior Business Systems Analyst, VPBank&lt;/li>
+&lt;li>&lt;strong>Duc Dao&lt;/strong> – Solutions Architect, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Thao Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Mai Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Uyen Le&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Anh Pham&lt;/strong> – Cloud Consultant, G-AsiaPacific Vietnam&lt;/li>
+&lt;li>&lt;strong>Tinh Truong&lt;/strong> – Platform Engineer, GoTymeX&lt;/li>
+&lt;li>&lt;strong>Thinh Nguyen&lt;/strong> – DevOps Engineer, FCAJ&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;h4 id="real-world-project-from-the-36h-code-competition">Real-World Project from the 36H Code Competition&lt;/h4>
+&lt;ul>
+&lt;li>Shared the journey of overcoming time pressure from the GenAI Engineers team (&lt;strong>Thao Nguyen, Mai Nguyen, Uyen Le&lt;/strong>).&lt;/li>
+&lt;li>How to break down a large problem into smaller tasks and apply Generative AI to speed up coding and quickly complete a working prototype.&lt;/li>
+&lt;/ul>
+&lt;h4 id="ai-trends-and-mindset">AI Trends and Mindset&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>AI-first Mindset&lt;/strong>: Reshaping how problems are solved by placing AI at the center of operational processes and system optimization to achieve the highest performance.&lt;/li>
+&lt;li>&lt;strong>Second AI Brain&lt;/strong>: The concept of building an AI-powered &amp;ldquo;auxiliary brain&amp;rdquo; to help people store knowledge, perform in-depth data analysis, and make more accurate decisions.&lt;/li>
+&lt;/ul>
+&lt;h4 id="the-track-line-content-mean-thinking-framework">The &amp;ldquo;Track Line Content Mean&amp;rdquo; Thinking Framework&lt;/h4>
+&lt;p>Modeling a method for delivering coherent and persuasive content through a 4-step core structure:&lt;/p></description></item></channel></rss>

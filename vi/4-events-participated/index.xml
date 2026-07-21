@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events Participated on Báo cáo thực tập</title><link>https://chickenptt.github.io/Test-aws/vi/4-events-participated/</link><description>Recent content in Events Participated on Báo cáo thực tập</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chickenptt.github.io/Test-aws/vi/4-events-participated/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS AI &amp; Cloud Operations Workshop</title><link>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_2/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_2/</guid><description>&lt;h1 id="bài-thu-hoạch-aws-ai--cloud-operations-workshop">Bài thu hoạch &amp;ldquo;AWS AI &amp;amp; Cloud Operations Workshop&amp;rdquo;&lt;/h1>
+&lt;h3 id="mục-đích-của-sự-kiện">Mục Đích Của Sự Kiện&lt;/h3>
+&lt;ul>
+&lt;li>Cập nhật xu hướng ứng dụng AI Agent trong vận hành hạ tầng cloud, DevOps và xử lý sự cố hệ thống.&lt;/li>
+&lt;li>Tìm hiểu các bài toán thực tế về AI Voice, xử lý tiếng Việt, độ trễ phản hồi và trải nghiệm hội thoại tự nhiên.&lt;/li>
+&lt;li>Khám phá cách AI hỗ trợ doanh nghiệp trong tuyển dụng, onboarding, đánh giá ứng viên và tối ưu quy trình nhân sự.&lt;/li>
+&lt;li>Liên hệ kiến thức sự kiện với proposal ước tính chi phí AWS cho hệ thống serverless xử lý hàng hóa hư hỏng.&lt;/li>
+&lt;/ul>
+&lt;h3 id="danh-sách-diễn-giả">Danh Sách Diễn Giả&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Truong Tran&lt;/strong> – AI Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Steve Tran&lt;/strong> – CTO/Founder, CloudThinker&lt;/li>
+&lt;li>&lt;strong>Trung Vu&lt;/strong> – CEO, Revve AI&lt;/li>
+&lt;li>&lt;strong>Anh Dang&lt;/strong> – Solution Sales, Noventiq&lt;/li>
+&lt;li>&lt;strong>Nghi Danh&lt;/strong> – AI Engineer, Renova Cloud&lt;/li>
+&lt;li>&lt;strong>Kiet Tran&lt;/strong> – AI Engineer, AWS Student Builder Group&lt;/li>
+&lt;li>&lt;strong>Bao Phan&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Nguyen Nguyen&lt;/strong> – Cloud Engineer, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Toan Nguyen&lt;/strong> – AWS Security Builder&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="nội-dung-nổi-bật">Nội Dung Nổi Bật&lt;/h3>
+&lt;h4 id="agenticops-for-your-cloud">AgenticOps for Your Cloud&lt;/h4>
+&lt;p>Diễn giả &lt;strong>Steve Tran&lt;/strong> chia sẻ về thực trạng vận hành cloud trong các hệ thống microservices phức tạp. Khi log, tracing, metric và alert bị phân tán ở nhiều nơi, kỹ sư vận hành thường mất nhiều thời gian để điều tra nguyên nhân gốc rễ của sự cố.&lt;/p></description></item><item><title>AWS Community Day 2026</title><link>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_1/</link><pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate><guid>https://chickenptt.github.io/Test-aws/vi/4-events-participated/event_1/</guid><description>&lt;h1 id="bài-thu-hoạch-aws-community-day-workshop">Bài thu hoạch “AWS Community Day Workshop”&lt;/h1>
+&lt;h3 id="mục-đích-của-sự-kiện">Mục Đích Của Sự Kiện&lt;/h3>
+&lt;ul>
+&lt;li>Chia sẻ các best practices trong thiết kế ứng dụng hiện đại và phương pháp học tập hiệu quả.&lt;/li>
+&lt;li>Cung cấp thông tin chuyên sâu, kiến thức thực tế và các case study ứng dụng của Amazon CloudFront.&lt;/li>
+&lt;li>Giới thiệu các công cụ và mô hình AI tiên tiến nhằm hỗ trợ tối ưu hóa toàn bộ development lifecycle.&lt;/li>
+&lt;/ul>
+&lt;h3 id="danh-sách-diễn-giả">Danh Sách Diễn Giả&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Vy Lam&lt;/strong> – Senior Business Systems Analyst, VPBank&lt;/li>
+&lt;li>&lt;strong>Duc Dao&lt;/strong> – Solutions Architect, Cloud Kinetics&lt;/li>
+&lt;li>&lt;strong>Thao Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Mai Nguyen&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Uyen Le&lt;/strong> – GenAI Engineer&lt;/li>
+&lt;li>&lt;strong>Anh Pham&lt;/strong> – Cloud Consultant, G-AsiaPacific Vietnam&lt;/li>
+&lt;li>&lt;strong>Tinh Truong&lt;/strong> – Platform Engineer, GoTymeX&lt;/li>
+&lt;li>&lt;strong>Thinh Nguyen&lt;/strong> – DevOps Engineer, FCAJ&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="nội-dung-nổi-bật">Nội Dung Nổi Bật&lt;/h3>
+&lt;h4 id="dự-án-thực-chiến-trong-cuộc-thi-36h-code">Dự án thực chiến trong cuộc thi 36H Code&lt;/h4>
+&lt;ul>
+&lt;li>Chia sẻ hành trình vượt qua áp lực thời gian từ đội ngũ GenAI Engineers (&lt;strong>Thao Nguyen, Mai Nguyen, Uyen Le&lt;/strong>).&lt;/li>
+&lt;li>Cách phân rã bài toán lớn thành các tác vụ nhỏ và áp dụng Generative AI để tăng tốc độ viết code, hoàn thiện sản phẩm prototype nhanh chóng.&lt;/li>
+&lt;/ul>
+&lt;h4 id="xu-hướng-và-tư-duy-trí-tuệ-nhân-tạo-ai">Xu hướng và Tư duy Trí tuệ nhân tạo (AI)&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>AI-first Mindset&lt;/strong>: Định hình lại cách giải quyết vấn đề, đặt AI làm trung tâm của quy trình vận hành và tối ưu hóa hệ thống để đạt hiệu suất cao nhất.&lt;/li>
+&lt;li>&lt;strong>Second AI Brain&lt;/strong>: Khái niệm xây dựng một &amp;ldquo;bộ não phụ trợ&amp;rdquo; bằng AI, hỗ trợ con người trong việc lưu trữ tri thức, phân tích dữ liệu chuyên sâu và đưa ra quyết định chính xác hơn.&lt;/li>
+&lt;/ul>
+&lt;h4 id="khung-tư-duy-track-line-content-mean">Khung tư duy Track Line Content Mean&lt;/h4>
+&lt;p>Mô hình hóa phương pháp truyền tải nội dung mạch lạc và thuyết phục thông qua cấu trúc 4 bước cốt lõi:&lt;/p></description></item></channel></rss>
