@@ -45,7 +45,7 @@ Thay vì mất hàng tuần để xây dựng các bộ lọc OCR không ổn đ
 
 ### Sơ Đồ Kiến Trúc
 
-![Image 1](../../../static/images/Blog/Blog3/blog3.png)
+![Image 1](./images/Blog/Blog3/blog3.png)
 
 ### Điểm Nổi Bật Về Triển Khai Kỹ Thuật
 

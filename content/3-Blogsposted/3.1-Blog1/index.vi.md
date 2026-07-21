@@ -24,7 +24,7 @@ Các điểm chính cần nắm:
 Tính năng này đặc biệt hữu ích khi khối lượng dữ liệu lớn, mô hình truy cập thay đổi liên tục theo thời gian và team không muốn tốn công sức vận hành để theo dõi, chuyển đổi storage class thủ công.
 
 ### Hình ảnh minh họa kiến trúc
-![Hình ảnh 1](../../../static/images/Blog/Blog1/hinh1.png)
+![Image 1](./images/Blog/Blog1/hinh1.png)
 ### Nguồn tham khảo & Bài viết đã đăng
 - [Manage Amazon S3 storage costs granularly and at scale using S3 Intelligent-Tiering](https://aws.amazon.com/vi/blogs/storage/manage-amazon-s3-storage-costs-granularly-and-at-scale-using-s3-intelligent-tiering/)
 - [Bài đăng trên cộng đồng AWS Study Group FCJ: ](https://www.facebook.com/groups/awsstudygroupfcj/posts/2205182253580068/?__cft__[0]=AZbu5cOv4xtEKWKrodKp7X_xKqVg4rNSva2B9IQn4pMhfNym4CPkPRWKqlreoQbv5f_WcvDZJsWbR76KMJRVWa7Kpzx7u9AwI-1XxQ9rWwmnoEbYljZ9P4hcxxFkLSQ71UVR4Nh7uJlQyTplPDaddTwt7slrTmQRRGcK27qFBjUWBMQEuAsDLj6p8W_UQsPCxIIDGCofT1ygQBeAhtYkXBmo&__tn__=%2CO%2CP-R)

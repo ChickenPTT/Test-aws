@@ -24,7 +24,7 @@ Key points to know:
 This feature is particularly useful when data volume is large, access patterns change over time, and the team prefers to avoid the operational effort of monitoring and manually changing storage classes.
 
 ### Architecture Diagram
-![Image 1](../../../static/images/Blog/Blog1/hinh1.png)
+![Image 1](./images/Blog/Blog1/hinh1.png)
 ### References & Published Posts
 - [Manage Amazon S3 storage costs granularly and at scale using S3 Intelligent-Tiering](https://aws.amazon.com/vi/blogs/storage/manage-amazon-s3-storage-costs-granularly-and-at-scale-using-s3-intelligent-tiering/)
 - [Post on AWS Study Group FCJ Community:](https://www.facebook.com/groups/awsstudygroupfcj/posts/2205182253580068/?__cft__[0]=AZbu5cOv4xtEKWKrodKp7X_xKqVg4rNSva2B9IQn4pMhfNym4CPkPRWKqlreoQbv5f_WcvDZJsWbR76KMJRVWa7Kpzx7u9AwI-1XxQ9rWwmnoEbYljZ9P4hcxxFkLSQ71UVR4Nh7uJlQyTplPDaddTwt7slrTmQRRGcK27qFBjUWBMQEuAsDLj6p8W_UQsPCxIIDGCofT1ygQBeAhtYkXBmo&__tn__=%2CO%2CP-R)
